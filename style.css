@@ -366,3 +366,101 @@ body.incorrect-feedback { background-color: #f8d7da; }
     background-color: #e0e0e0;
     box-shadow: none;
 }
+/* --- 2025-11-05 추가: 학습 통계 --- */
+#stats-screen {
+    width: 100%;
+    text-align: left;
+    max-width: 800px;
+}
+
+#stats-screen h2, #stats-screen h3 {
+    text-align: center;
+}
+
+.stats-summary {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap; /* 모바일에서 줄바꿈 */
+}
+
+.summary-box {
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 150px;
+    margin: 5px;
+}
+
+.summary-box h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.summary-box p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.summary-box.weak { background-color: #f8d7da; } /* 오답 */
+.summary-box.strong { background-color: #d4edda; } /* 정답 */
+.summary-box.total { background-color: #e2e3e5; }
+
+.stats-bar-graph-container {
+    width: 100%;
+    margin: 25px 0;
+    padding: 20px;
+    border: 1px solid #EEE;
+    border-radius: 8px;
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bar-label {
+    width: 120px; /* 과목명 레이블 너비 */
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+.bar-wrapper {
+    flex-grow: 1;
+    height: 30px;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    position: relative; /* 텍스트 표시용 */
+}
+
+.bar {
+    height: 100%;
+    background-color: #87CEEB; /* 스킬바 색상 */
+    border-radius: 5px;
+    transition: width 0.5s ease-out;
+    /* 바 안에 텍스트 표시 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 8px;
+    overflow: hidden; /* 텍스트가 바를 넘지 않도록 */
+}
+
+/* 75% 이상이면 다른 색 */
+.bar.high-accuracy {
+    background-color: #28a745;
+}
+
+/* 40% 미만이면 다른 색 */
+.bar.low-accuracy {
+    background-color: #dc3545;
+}
