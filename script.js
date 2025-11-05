@@ -18,6 +18,7 @@ const numSelectScreen = document.getElementById('num-select-screen');
 const customNumScreen = document.getElementById('custom-num-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultsScreen = document.getElementById('results-screen');
+const problemListScreen = document.getElementById('problem-list-screen');
 
 // --- 앱 초기화 ---
 window.addEventListener('DOMContentLoaded', loadApp);
@@ -67,9 +68,9 @@ function saveIncorrectLog() {
 
 // --- 1. 메인 메뉴 (PyQt: show_subject_selection_menu) ---
 function showMainMenu() {
-    showScreen('main-menu-screen'); // <-- [수정] 화면 전환 코드를 각 함수 시작 시 호출
+    showScreen('main-menu-screen'); // 화면 전환을 맨 위로 이동
     const subjects = [...new Set(QUESTIONS_DB.map(q => q.subject || "기타"))].sort();
-    
+
     let subjectCheckboxesHTML = subjects.map(subject => `
         <label class="subject-item">
             <input type="checkbox" class="subject-checkbox" value="${subject}">
@@ -85,10 +86,11 @@ function showMainMenu() {
         </div>
         <div class="subject-grid">${subjectCheckboxesHTML}</div>
         <button id="start-quiz-btn">선택한 과목으로 퀴즈 시작</button>
+        <button id="problem-list-btn">문제 목록 보기 (전체 ${QUESTIONS_DB.length}개)</button>
         <button id="review-btn">오답 노트 풀기 (${INCORRECT_LOG.length}개)</button>
         <button id="exit-btn">종료 (새로고침)</button>
     `;
-    
+
     // 이벤트 리스너 연결
     document.getElementById('select-all-btn').addEventListener('click', () => {
         document.querySelectorAll('.subject-checkbox').forEach(cb => cb.checked = true);
@@ -97,8 +99,61 @@ function showMainMenu() {
         document.querySelectorAll('.subject-checkbox').forEach(cb => cb.checked = false);
     });
     document.getElementById('start-quiz-btn').addEventListener('click', handleQuizStart);
-    document.getElementById('review-btn').addEventListener('click', startReviewQuiz);
+
+    // ▼▼▼ 이벤트 리스너 추가 ▼▼▼
+    document.getElementById('problem-list-btn').addEventListener('click', showProblemList);
+
+    const reviewBtn = document.getElementById('review-btn');
+    reviewBtn.addEventListener('click', startReviewQuiz);
+    // 오답이 없으면 비활성화
+    if (INCORRECT_LOG.length === 0) {
+        reviewBtn.disabled = true;
+    }
+
     document.getElementById('exit-btn').addEventListener('click', () => location.reload());
+}
+
+// --- (신규) 문제 목록 표시 ---
+function showProblemList() {
+    showScreen('problem-list-screen');
+
+    // map을 사용하여 각 문제에 대한 HTML 문자열 리스트를 만듭니다.
+    const listItemsHTML = QUESTIONS_DB.map(q => {
+        // 질문 텍스트가 너무 길면 자릅니다.
+        const questionPreview = q.question.length > 50 ? q.question.substring(0, 50) + "..." : q.question;
+        // data-id 속성에 문제 ID를 저장합니다.
+        return `<li class="problem-list-item" data-id="${q.id}">
+            <strong>ID ${q.id} (${q.subject}):</strong> ${questionPreview}
+        </li>`;
+    }).join(''); // 배열을 하나의 긴 문자열로 합칩니다.
+
+    problemListScreen.innerHTML = `
+        <h2>문제 목록</h2>
+        <ul class="problem-list-container">
+            ${listItemsHTML}
+        </ul>
+        <button id="back-to-main-btn" style="max-width: 800px;">메인 메뉴로 돌아가기</button>
+    `;
+
+    // 메인 메뉴로 돌아가기 버튼
+    document.getElementById('back-to-main-btn').addEventListener('click', showMainMenu);
+
+    // 목록의 각 항목(li)에 클릭 이벤트 리스너를 추가합니다.
+    problemListScreen.querySelectorAll('.problem-list-item').forEach(item => {
+        item.addEventListener('click', (event) => {
+            // data-id 속성에서 문제 ID를 가져옵니다.
+            const questionId = parseInt(event.currentTarget.dataset.id, 10);
+            startSingleProblem(questionId);
+        });
+    });
+}
+
+// --- (신규) 단일 문제 풀기 시작 ---
+function startSingleProblem(questionId) {
+    // DB에서 해당 ID의 문제 1개만 찾아서 배열로 만듭니다.
+    const question = [QUESTIONS_DB.find(q => q.id === questionId)];
+    // 세 번째 인자(isSingleProblemMode)를 true로 설정하여 퀴즈를 실행합니다.
+    runQuiz(question, false, true); 
 }
 
 // --- 2. 퀴즈 시작 처리 (PyQt: handle_quiz_start) ---
@@ -200,6 +255,8 @@ function runQuiz(questionList, isReview = false) {
     score = 0;
     newIncorrect = [];
     isReviewMode = isReview;
+
+    self.isSingleProblemMode = isSingleProblemMode; // 단일 문제 모드인지 저장
     
     // ▼▼▼ 추가 ▼▼▼
     quizStartTime = new Date(); // 퀴즈 시작 시간 기록
@@ -211,14 +268,16 @@ function runQuiz(questionList, isReview = false) {
 
 // --- 9. 문제 표시 (PyQt: show_question) ---
 function showQuestion() {
-    // ▼▼▼ 추가 ▼▼▼
-    problemStartTime = new Date(); // 현재 문제 시작 시간 기록
-    // ▲▲▲ 추가 ▲▲▲
+    problemStartTime = new Date(); 
 
     showScreen('quiz-screen');
     const q = currentQuestions[currentIndex];
-    // ... (이하 코드는 기존과 동일) ...
-    
+
+    // ▼▼▼ 추가: 뒤로가기 버튼 HTML 생성 ▼▼▼
+    const backBtnHTML = self.isSingleProblemMode ? 
+        '<button id="back-to-list-btn" class="back-button">&lt;</button>' : '';
+    // ▲▲▲ 추가 ▲▲▲
+
     let inputHTML = '';
     if (q.type === "multiple_choice") {
         const optionsHTML = q.options.map(option => `
@@ -235,29 +294,33 @@ function showQuestion() {
     }
 
     quizScreen.innerHTML = `
-        <img id="quiz-image" src="${q.image_path}" alt="문제 이미지 (${q.image_path})" onerror="this.src=''; this.alt='이미지 로드 실패: ${q.image_path}';">
+        ${backBtnHTML} <img id="quiz-image" src="${q.image_path}" alt="문제 이미지 (${q.image_path})" onerror="this.src=''; this.alt='이미지 로드 실패: ${q.image_path}';">
         <p id="question-text">문제 ${currentIndex + 1}/${currentQuestions.length}\n\n${q.question}</p>
         <div id="feedback-label"></div>
         ${inputHTML}
         <div id="button-container">
             <button id="submit-btn">제출</button>
         </div>
-        `;
-    
+    `;
+
     document.getElementById('submit-btn').addEventListener('click', checkAnswer);
+
+    // ▼▼▼ 추가: 뒤로가기 버튼 이벤트 연결 ▼▼▼
+    if (self.isSingleProblemMode) {
+        document.getElementById('back-to-list-btn').addEventListener('click', showProblemList);
+    }
+    // ▲▲▲ 추가 ▲▲▲
 }
 
 // --- 10. 정답 확인 (PyQt: check_answer) ---
 function checkAnswer() {
-    // ▼▼▼ 수정: 제출 버튼 비활성화로 중복 클릭 방지 ▼▼▼
     const submitBtn = document.getElementById('submit-btn');
     if (submitBtn) {
-        submitBtn.disabled = true; // 클릭 즉시 비활성화
+        submitBtn.disabled = true; 
     }
-    
+
     const q = currentQuestions[currentIndex];
-    
-    // ▼▼▼ 추가: 모든 입력 필드 비활성화 ▼▼▼
+
     if (q.type === "multiple_choice") {
         document.querySelectorAll('input[name="answer"]').forEach(radio => {
             radio.disabled = true;
@@ -266,7 +329,6 @@ function checkAnswer() {
         const inputField = document.getElementById('answer-input');
         if (inputField) inputField.disabled = true;
     }
-    // ▲▲▲ 추가 ▲▲▲
 
     const feedbackLabel = document.getElementById('feedback-label');
     let userAns = "";
@@ -275,12 +337,10 @@ function checkAnswer() {
         const checkedRadio = document.querySelector('input[name="answer"]:checked');
         if (!checkedRadio) {
             alert("답을 선택하세요.");
-            // ▼▼▼ 수정: 비활성화/버튼 복구 ▼▼▼
-            if (submitBtn) submitBtn.disabled = false; // 버튼 활성화
+            if (submitBtn) submitBtn.disabled = false;
             document.querySelectorAll('input[name="answer"]').forEach(radio => {
-                radio.disabled = false; // 라디오 버튼 활성화
+                radio.disabled = false;
             });
-            // ▲▲▲ 수정 ▲▲▲
             return;
         }
         userAns = checkedRadio.value;
@@ -289,18 +349,17 @@ function checkAnswer() {
         userAns = inputField.value.trim();
         if (!userAns) {
             alert("답을 입력하세요.");
-            // ▼▼▼ 수정: 비활성화/버튼 복구 ▼▼▼
-            if (submitBtn) submitBtn.disabled = false; // 버튼 활성화
-            if (inputField) inputField.disabled = false; // 입력 필드 활성화
-            // ▲▲▲ 수정 ▲▲▲
+            if (submitBtn) submitBtn.disabled = false;
+            if (inputField) inputField.disabled = false;
             return;
         }
     }
-    
-    // 유효성 검사 통과 후 '제출' 버튼 숨기기
+
     if (submitBtn) submitBtn.style.display = 'none';
 
     let feedbackText = "";
+    const buttonContainer = document.getElementById('button-container');
+
     if (userAns === q.answer) {
         feedbackText = "✅ 정답입니다!";
         document.body.className = 'correct-feedback';
@@ -309,9 +368,22 @@ function checkAnswer() {
         if (isReviewMode && INCORRECT_LOG.includes(q.id)) {
             INCORRECT_LOG = INCORRECT_LOG.filter(id => id !== q.id);
         }
-        
-        // 정답: 1.2초 뒤 자동 이동
-        setTimeout(goToNextQuestionOrFinish, 1200);
+
+        // ▼▼▼ 수정: 정답 시 로직 분기 ▼▼▼
+        if (self.isSingleProblemMode) {
+            // 싱글 문제 모드: 1.2초 피드백 후 '목록으로' 버튼 표시
+            setTimeout(() => { 
+                const returnBtn = document.createElement('button');
+                returnBtn.id = 'return-btn';
+                returnBtn.textContent = '목록으로 돌아가기';
+                returnBtn.onclick = showProblemList;
+                if(buttonContainer) buttonContainer.appendChild(returnBtn);
+            }, 1200);
+        } else {
+            // 일반 퀴즈 모드: 1.2초 뒤 자동 이동
+            setTimeout(goToNextQuestionOrFinish, 1200);
+        }
+        // ▲▲▲ 수정 ▲▲▲
 
     } else {
         feedbackText = `❌ 오답입니다. 정답: ${q.answer}\n[해설] ${q.explanation}`;
@@ -321,24 +393,30 @@ function checkAnswer() {
             newIncorrect.push(q.id);
         }
 
-        // 오답: "다음 문제" 버튼 생성
+        // ▼▼▼ 수정: 오답 시 로직 분기 ▼▼▼
         const nextBtn = document.createElement('button');
-        nextBtn.id = 'next-btn';
-        nextBtn.textContent = '다음 문제';
-        nextBtn.onclick = goToNextQuestionOrFinish; // 클릭 시 다음 문제로 이동
-        
-        const buttonContainer = document.getElementById('button-container');
+        if (self.isSingleProblemMode) {
+            // 싱글 문제 모드: '목록으로' 버튼 생성
+            nextBtn.id = 'return-btn';
+            nextBtn.textContent = '목록으로 돌아가기';
+            nextBtn.onclick = showProblemList;
+        } else {
+            // 일반 퀴즈 모드: '다음 문제' 버튼 생성
+            nextBtn.id = 'next-btn';
+            nextBtn.textContent = '다음 문제';
+            nextBtn.onclick = goToNextQuestionOrFinish;
+        }
         if(buttonContainer) buttonContainer.appendChild(nextBtn);
+        // ▲▲▲ 수정 ▲▲▲
     }
-    
+
     feedbackLabel.textContent = feedbackText;
-// ▼▼▼ 추가: 문제 소요 시간 기록 ▼▼▼
+
     const timeTaken = new Date() - problemStartTime;
     problemTimes.push({ 
         questionText: q.question, 
         time: timeTaken 
     });
-    // ▲▲▲ 추가 ▲▲▲
 }
 
 // --- 11. 다음 문제 이동 (PyQt: go_to_next_question_or_finish) ---
