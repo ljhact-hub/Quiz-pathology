@@ -7,6 +7,7 @@ let currentIndex = 0;
 let score = 0;
 let newIncorrect = [];
 let isReviewMode = false;
+let isSingleProblemMode = false;
 const INCORRECT_LOG_KEY = "clinicalPathologyQuizLog"; // localStorage 키
 
 // --- DOM 요소 참조 ---
@@ -249,19 +250,19 @@ function prepareAndRunQuiz(num) {
 }
 
 // --- 8. 퀴즈 실행 (PyQt: run_quiz) ---
-function runQuiz(questionList, isReview = false) {
+function runQuiz(questionList, isReview = false, isSingleMode = false) { // 파라미터 이름 변경
     currentQuestions = questionList;
     currentIndex = 0;
     score = 0;
     newIncorrect = [];
     isReviewMode = isReview;
-
-    self.isSingleProblemMode = isSingleProblemMode; // 단일 문제 모드인지 저장
     
-    // ▼▼▼ 추가 ▼▼▼
-    quizStartTime = new Date(); // 퀴즈 시작 시간 기록
-    problemTimes = []; // 문제별 소요 시간 기록용 배열
-    // ▲▲▲ 추가 ▲▲▲
+    // ▼▼▼ 수정: 'self' 대신 전역 변수 사용 ▼▼▼
+    isSingleProblemMode = isSingleMode; // 'self.isSingleProblemMode' 대신 전역 변수 설정
+    // ▲▲▲ 수정 ▲▲▲
+
+    quizStartTime = new Date(); 
+    problemTimes = []; 
 
     showQuestion();
 }
@@ -272,11 +273,11 @@ function showQuestion() {
 
     showScreen('quiz-screen');
     const q = currentQuestions[currentIndex];
-
-    // ▼▼▼ 추가: 뒤로가기 버튼 HTML 생성 ▼▼▼
-    const backBtnHTML = self.isSingleProblemMode ? 
+    
+    // ▼▼▼ 수정: 'self' 대신 전역 변수 사용 ▼▼▼
+    const backBtnHTML = isSingleProblemMode ? // 'self' 대신 전역 변수 사용
         '<button id="back-to-list-btn" class="back-button">&lt;</button>' : '';
-    // ▲▲▲ 추가 ▲▲▲
+    // ▲▲▲ 수정 ▲▲▲
 
     let inputHTML = '';
     if (q.type === "multiple_choice") {
@@ -302,14 +303,14 @@ function showQuestion() {
             <button id="submit-btn">제출</button>
         </div>
     `;
-
+    
     document.getElementById('submit-btn').addEventListener('click', checkAnswer);
 
-    // ▼▼▼ 추가: 뒤로가기 버튼 이벤트 연결 ▼▼▼
-    if (self.isSingleProblemMode) {
+    // ▼▼▼ 수정: 'self' 대신 전역 변수 사용 ▼▼▼
+    if (isSingleProblemMode) { // 'self' 대신 전역 변수 사용
         document.getElementById('back-to-list-btn').addEventListener('click', showProblemList);
     }
-    // ▲▲▲ 추가 ▲▲▲
+    // ▲▲▲ 수정 ▲▲▲
 }
 
 // --- 10. 정답 확인 (PyQt: check_answer) ---
@@ -318,9 +319,9 @@ function checkAnswer() {
     if (submitBtn) {
         submitBtn.disabled = true; 
     }
-
+    
     const q = currentQuestions[currentIndex];
-
+    
     if (q.type === "multiple_choice") {
         document.querySelectorAll('input[name="answer"]').forEach(radio => {
             radio.disabled = true;
@@ -354,7 +355,7 @@ function checkAnswer() {
             return;
         }
     }
-
+    
     if (submitBtn) submitBtn.style.display = 'none';
 
     let feedbackText = "";
@@ -368,9 +369,9 @@ function checkAnswer() {
         if (isReviewMode && INCORRECT_LOG.includes(q.id)) {
             INCORRECT_LOG = INCORRECT_LOG.filter(id => id !== q.id);
         }
-
-        // ▼▼▼ 수정: 정답 시 로직 분기 ▼▼▼
-        if (self.isSingleProblemMode) {
+        
+        // ▼▼▼ 수정: 'self' 대신 전역 변수 사용 ▼▼▼
+        if (isSingleProblemMode) { // 'self' 대신 전역 변수 사용
             // 싱글 문제 모드: 1.2초 피드백 후 '목록으로' 버튼 표시
             setTimeout(() => { 
                 const returnBtn = document.createElement('button');
@@ -393,9 +394,9 @@ function checkAnswer() {
             newIncorrect.push(q.id);
         }
 
-        // ▼▼▼ 수정: 오답 시 로직 분기 ▼▼▼
+        // ▼▼▼ 수정: 'self' 대신 전역 변수 사용 ▼▼▼
         const nextBtn = document.createElement('button');
-        if (self.isSingleProblemMode) {
+        if (isSingleProblemMode) { // 'self' 대신 전역 변수 사용
             // 싱글 문제 모드: '목록으로' 버튼 생성
             nextBtn.id = 'return-btn';
             nextBtn.textContent = '목록으로 돌아가기';
@@ -409,7 +410,7 @@ function checkAnswer() {
         if(buttonContainer) buttonContainer.appendChild(nextBtn);
         // ▲▲▲ 수정 ▲▲▲
     }
-
+    
     feedbackLabel.textContent = feedbackText;
 
     const timeTaken = new Date() - problemStartTime;
