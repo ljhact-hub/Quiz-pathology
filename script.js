@@ -200,13 +200,24 @@ function runQuiz(questionList, isReview = false) {
     score = 0;
     newIncorrect = [];
     isReviewMode = isReview;
+    
+    // ▼▼▼ 추가 ▼▼▼
+    quizStartTime = new Date(); // 퀴즈 시작 시간 기록
+    problemTimes = []; // 문제별 소요 시간 기록용 배열
+    // ▲▲▲ 추가 ▲▲▲
+
     showQuestion();
 }
 
 // --- 9. 문제 표시 (PyQt: show_question) ---
 function showQuestion() {
+    // ▼▼▼ 추가 ▼▼▼
+    problemStartTime = new Date(); // 현재 문제 시작 시간 기록
+    // ▲▲▲ 추가 ▲▲▲
+
     showScreen('quiz-screen');
     const q = currentQuestions[currentIndex];
+    // ... (이하 코드는 기존과 동일) ...
     
     let inputHTML = '';
     if (q.type === "multiple_choice") {
@@ -321,6 +332,13 @@ function checkAnswer() {
     }
     
     feedbackLabel.textContent = feedbackText;
+// ▼▼▼ 추가: 문제 소요 시간 기록 ▼▼▼
+    const timeTaken = new Date() - problemStartTime;
+    problemTimes.push({ 
+        questionText: q.question, 
+        time: timeTaken 
+    });
+    // ▲▲▲ 추가 ▲▲▲
 }
 
 // --- 11. 다음 문제 이동 (PyQt: go_to_next_question_or_finish) ---
@@ -339,16 +357,33 @@ function finishQuiz() {
     if (isReviewMode) {
         saveIncorrectLog();
     } else {
-        // 중복 제거 후 저장 (PyQt: sorted(list(set(...))))
         const updatedLog = [...new Set([...INCORRECT_LOG, ...newIncorrect])].sort((a, b) => a - b);
         INCORRECT_LOG = updatedLog;
         saveIncorrectLog();
     }
     
-    showScreen('results-screen'); // <-- 이 함수에도 원래부터 있었습니다 (정상)
+    showScreen('results-screen');
     const total = currentQuestions.length;
     const incorrectCount = newIncorrect.length;
     const accuracy = total > 0 ? (score / total) * 100 : 0;
+
+    // ▼▼▼ 추가: 시간 계산 ▼▼▼
+    // 총 소요 시간 계산
+    const totalTimeTaken = new Date() - quizStartTime;
+    const minutes = Math.floor(totalTimeTaken / 60000);
+    const seconds = Math.floor((totalTimeTaken % 60000) / 1000);
+    const totalTimeText = `${minutes}분 ${seconds}초`;
+
+    // 가장 오래 걸린 문제 찾기
+    let slowestProblemText = "N/A";
+    if (problemTimes.length > 0) {
+        const slowestProblem = problemTimes.reduce((max, current) => {
+            return current.time > max.time ? current : max;
+        });
+        const slowestTimeSeconds = (slowestProblem.time / 1000).toFixed(1);
+        slowestProblemText = `(${slowestTimeSeconds}초) ${slowestProblem.questionText.substring(0, 50)}...`;
+    }
+    // ▲▲▲ 추가 ▲▲▲
 
     // (PyQt: ResultsDialog)
     resultsScreen.innerHTML = `
@@ -364,7 +399,11 @@ function finishQuiz() {
             맞힌 개수: ${score}개<br>
             틀린 개수: ${incorrectCount}개
         </p>
-        
+
+        <div style="background-color: #f8f8f8; padding: 15px; border-radius: 8px; text-align: left; max-width: 600px; width: 100%; margin: 15px 0;">
+            <p style="font-size: 18px; margin: 5px 0;"><strong>⏱️ 총 소요 시간:</strong> ${totalTimeText}</p>
+            <p style="font-size: 18px; margin: 5px 0;"><strong>🐌 가장 오래 걸린 문제:</strong> ${slowestProblemText}</p>
+        </div>
         <button id="review-new-mistakes-btn">방금 틀린 문제 복습하기 (${incorrectCount}개)</button>
         <button id="back-to-main-menu-btn">메인 메뉴로 돌아가기</button>
     `;
