@@ -314,3 +314,55 @@ body.incorrect-feedback { background-color: #f8d7da; }
         font-size: 20px;
     }
 }
+/* --- 2025-11-05 추가: 문제 목록 --- */
+#problem-list-screen {
+    width: 100%;
+}
+
+.problem-list-container {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    overflow-y: auto; /* 목록이 길어지면 스크롤 */
+    border: 1px solid #EEE;
+    border-radius: 8px;
+}
+
+.problem-list-item {
+    padding: 10px 15px;
+    font-size: 18px;
+    border-bottom: 1px solid #EEE;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: left; /* 목록은 왼쪽 정렬 */
+}
+
+.problem-list-item:hover {
+    background-color: #F8F8F8;
+}
+
+.problem-list-item:last-child {
+    border-bottom: none;
+}
+
+/* 퀴즈 화면의 뒤로가기 버튼 */
+.back-button {
+    position: absolute; /* 화면 왼쪽 위에 고정 */
+    top: 15px;
+    left: 15px;
+    font-size: 30px; /* 크기 키움 */
+    font-weight: bold;
+    padding: 0 15px;
+    min-width: 50px; /* 최소 너비 */
+    max-width: 60px; /* 최대 너비 */
+    background-color: #f0f0f0; /* 배경색 */
+    color: #555; /* 글자색 */
+    border: 1px solid #ddd;
+    line-height: 45px;
+}
+.back-button:hover {
+    background-color: #e0e0e0;
+    box-shadow: none;
+}
