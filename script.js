@@ -205,7 +205,7 @@ function runQuiz(questionList, isReview = false) {
 
 // --- 9. 문제 표시 (PyQt: show_question) ---
 function showQuestion() {
-    showScreen('quiz-screen'); // <-- 이 함수에는 원래부터 있었습니다 (정상)
+    showScreen('quiz-screen');
     const q = currentQuestions[currentIndex];
     
     let inputHTML = '';
@@ -228,16 +228,35 @@ function showQuestion() {
         <p id="question-text">문제 ${currentIndex + 1}/${currentQuestions.length}\n\n${q.question}</p>
         <div id="feedback-label"></div>
         ${inputHTML}
-        <button id="submit-btn">제출</button>
-    `;
+        <div id="button-container">
+            <button id="submit-btn">제출</button>
+        </div>
+        `;
     
     document.getElementById('submit-btn').addEventListener('click', checkAnswer);
 }
 
 // --- 10. 정답 확인 (PyQt: check_answer) ---
 function checkAnswer() {
-    document.getElementById('submit-btn').style.display = 'none';
+    // ▼▼▼ 수정: 제출 버튼 비활성화로 중복 클릭 방지 ▼▼▼
+    const submitBtn = document.getElementById('submit-btn');
+    if (submitBtn) {
+        submitBtn.disabled = true; // 클릭 즉시 비활성화
+    }
+    
     const q = currentQuestions[currentIndex];
+    
+    // ▼▼▼ 추가: 모든 입력 필드 비활성화 ▼▼▼
+    if (q.type === "multiple_choice") {
+        document.querySelectorAll('input[name="answer"]').forEach(radio => {
+            radio.disabled = true;
+        });
+    } else {
+        const inputField = document.getElementById('answer-input');
+        if (inputField) inputField.disabled = true;
+    }
+    // ▲▲▲ 추가 ▲▲▲
+
     const feedbackLabel = document.getElementById('feedback-label');
     let userAns = "";
 
@@ -245,7 +264,12 @@ function checkAnswer() {
         const checkedRadio = document.querySelector('input[name="answer"]:checked');
         if (!checkedRadio) {
             alert("답을 선택하세요.");
-            document.getElementById('submit-btn').style.display = 'block';
+            // ▼▼▼ 수정: 비활성화/버튼 복구 ▼▼▼
+            if (submitBtn) submitBtn.disabled = false; // 버튼 활성화
+            document.querySelectorAll('input[name="answer"]').forEach(radio => {
+                radio.disabled = false; // 라디오 버튼 활성화
+            });
+            // ▲▲▲ 수정 ▲▲▲
             return;
         }
         userAns = checkedRadio.value;
@@ -254,11 +278,17 @@ function checkAnswer() {
         userAns = inputField.value.trim();
         if (!userAns) {
             alert("답을 입력하세요.");
-            document.getElementById('submit-btn').style.display = 'block';
+            // ▼▼▼ 수정: 비활성화/버튼 복구 ▼▼▼
+            if (submitBtn) submitBtn.disabled = false; // 버튼 활성화
+            if (inputField) inputField.disabled = false; // 입력 필드 활성화
+            // ▲▲▲ 수정 ▲▲▲
             return;
         }
     }
     
+    // 유효성 검사 통과 후 '제출' 버튼 숨기기
+    if (submitBtn) submitBtn.style.display = 'none';
+
     let feedbackText = "";
     if (userAns === q.answer) {
         feedbackText = "✅ 정답입니다!";
@@ -268,6 +298,10 @@ function checkAnswer() {
         if (isReviewMode && INCORRECT_LOG.includes(q.id)) {
             INCORRECT_LOG = INCORRECT_LOG.filter(id => id !== q.id);
         }
+        
+        // 정답: 1.2초 뒤 자동 이동
+        setTimeout(goToNextQuestionOrFinish, 1200);
+
     } else {
         feedbackText = `❌ 오답입니다. 정답: ${q.answer}\n[해설] ${q.explanation}`;
         document.body.className = 'incorrect-feedback';
@@ -275,11 +309,18 @@ function checkAnswer() {
         if (!isReviewMode && !newIncorrect.includes(q.id)) {
             newIncorrect.push(q.id);
         }
+
+        // 오답: "다음 문제" 버튼 생성
+        const nextBtn = document.createElement('button');
+        nextBtn.id = 'next-btn';
+        nextBtn.textContent = '다음 문제';
+        nextBtn.onclick = goToNextQuestionOrFinish; // 클릭 시 다음 문제로 이동
+        
+        const buttonContainer = document.getElementById('button-container');
+        if(buttonContainer) buttonContainer.appendChild(nextBtn);
     }
     
     feedbackLabel.textContent = feedbackText;
-    // (PyQt: QTimer.singleShot)
-    setTimeout(goToNextQuestionOrFinish, 1200); 
 }
 
 // --- 11. 다음 문제 이동 (PyQt: go_to_next_question_or_finish) ---
