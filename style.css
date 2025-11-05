@@ -14,32 +14,30 @@ body {
     font-family: 'NanumBarunGothic', 'Malgun Gothic', sans-serif;
     background-color: #FAFAFA;
     margin: 0;
-    /* [수정] 모바일에서 여백이 너무 많지 않도록 조정 */
     padding: 10px;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* [수정] 상단 정렬 */
+    align-items: flex-start; 
     min-height: 100vh;
     color: #333;
 }
 
 /* --- 화면 전환 로직 --- */
 .screen {
-    display: none; /* 평소엔 숨김 */
+    display: none; 
     width: 100%;
     max-width: 1000px;
     flex-direction: column;
     align-items: center;
 }
 .screen.active {
-    display: flex; /* 활성화된 화면만 보임 */
+    display: flex; 
 }
 
 /* --- 앱 컨테이너 (PyQt: QWidget) --- */
 #app-container {
     width: 100%;
     max-width: 1000px;
-    /* [수정] 모바일에서는 최소 높이 제한을 없앰 */
     min-height: auto; 
     padding: 20px;
     background-color: #FFFFFF;
@@ -59,13 +57,20 @@ h2 {
     font-weight: bold;
     text-align: center;
 }
+h3 {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 500px;
+}
 
 button {
     font-family: inherit;
     font-size: 24px;
     padding: 15px;
     min-height: 50px;
-    min-width: 200px; /* [수정] 이 부분은 PC에서만 유효하도록 아래 미디어쿼리에서 조정 */
+    min-width: 200px; 
     max-width: 500px;
     width: 100%;
     margin: 8px 0;
@@ -99,8 +104,6 @@ select, input[type="text"] {
     border-radius: 8px;
 }
 
-/* --- [신규] '전체/해제' 버튼을 담는 행 스타일 --- */
-/* (참고: JS파일 수정 없이 CSS만으로 해결하기 위해 버튼의 부모 div를 선택) */
 #main-menu-screen > div:nth-of-type(1) {
     display: flex;
     gap: 10px;
@@ -108,7 +111,7 @@ select, input[type="text"] {
     max-width: 500px;
 }
 #main-menu-screen > div:nth-of-type(1) > button {
-    flex: 1; /* 버튼들이 공간을 나눠 가짐 */
+    flex: 1; 
 }
 
 /* --- 과목 선택 (PyQt: QGridLayout) --- */
@@ -140,16 +143,29 @@ select, input[type="text"] {
 /* --- 퀴즈 화면 (PyQt: show_question) --- */
 #quiz-screen {
     text-align: center;
+    position: relative; 
+}
+
+/* ▼▼▼ 시험 모드 타이머 ▼▼▼ */
+#timer-display {
+    font-size: 28px;
+    font-weight: bold;
+    color: #dc3545; 
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    width: 200px;
+    text-align: center;
+    display: none; 
 }
 
 #quiz-image {
-    /* [수정] 이미지가 화면 밖으로 나가지 않도록 100%로 제한 */
     max-width: 100%; 
     max-height: 400px;
-    /* [수정] PC에서는 500px을 넘지 않도록 제한 */
     width: 100%;
     max-width: 500px; 
-    
     height: auto;
     object-fit: contain;
     border-radius: 10px;
@@ -159,14 +175,14 @@ select, input[type="text"] {
 
 #question-text {
     font-size: 24px;
-    white-space: pre-wrap; /* \n 줄바꿈 인식 */
+    white-space: pre-wrap; 
     margin: 15px 0;
 }
 
 #feedback-label {
     font-size: 20px;
     font-weight: bold;
-    min-height: 60px; /* PyQt와 유사하게 최소 높이 확보 */
+    min-height: 60px; 
     padding: 15px;
     border-radius: 10px;
     margin-top: 15px;
@@ -186,7 +202,7 @@ body.incorrect-feedback { background-color: #f8d7da; }
 .options-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* 왼쪽 정렬 */
+    align-items: flex-start; 
     width: 100%;
     max-width: 700px;
     margin: 15px auto;
@@ -232,18 +248,16 @@ body.incorrect-feedback { background-color: #f8d7da; }
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    /* conic-gradient로 차트 그리기 */
-    /* --accuracy 변수는 JS에서 채워줍니다 */
     background: conic-gradient(
         #87CEEB 0% var(--accuracy, 0%), 
         #F0F0F0 var(--accuracy, 0%) 100%
     );
-    transition: --accuracy 1s; /* (애니메이션, 고급) */
+    transition: --accuracy 1s; 
 }
 
 .donut-chart-center {
     position: absolute;
-    top: 20px; /* 220*0.1 (펜 두께 20) */
+    top: 20px; 
     left: 20px;
     right: 20px;
     bottom: 20px;
@@ -264,57 +278,43 @@ body.incorrect-feedback { background-color: #f8d7da; }
 */
 @media (max-width: 600px) {
     body {
-        /* [수정] body의 기본 padding을 줄여서 앱 컨테이너를 더 넓게 씀 */
         padding: 5px;
     }
     
     #app-container {
-        /* [수정] 모바일에서는 꽉 차게 보이고, 그림자/패딩도 줄임 */
-        min-height: 100vh; /* 화면 전체 높이 사용 */
+        min-height: 100vh; 
         padding: 15px;
         border-radius: 0;
         box-shadow: none;
     }
     
-    /* [수정] 제목 글꼴 크기 축소 */
     h1 { font-size: 24px; }
     h2 { font-size: 22px; }
 
-    /* [수정] 버튼 스타일 모바일 최적화 (가장 중요!) */
     button {
-        font-size: 20px; /* 글꼴 크기 축소 */
-        padding: 12px;   /* 상하 여백 축소 */
-        min-width: 0;    /* [핵심] 최소 가로폭 제한을 없애서 버튼이 작아질 수 있게 함 */
+        font-size: 20px; 
+        padding: 12px;  
+        min-width: 0;    
     }
     
-    /* [수정] "전체/해제" 버튼 행을 세로로 쌓기 (선택사항) */
-    /* #main-menu-screen > div:nth-of-type(1) {
-        flex-direction: column; 
-    }
-    */
-    /* (위 주석을 풀면 세로로 쌓입니다. 지금은 '최소폭 제거'만으로도 해결됩니다.) */
-    
-    
-    /* [수정] 과목 그리드 모바일 최적화 (2열로 보이게) */
     .subject-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
     .subject-item {
-        font-size: 18px; /* 글꼴 축소 */
+        font-size: 18px; 
         padding: 10px;
     }
     
-    /* [수정] 퀴즈 화면 글꼴 축소 */
     #question-text { font-size: 20px; }
     .option-label { font-size: 18px; }
     
-    /* [수정] 입력창 글꼴 축소 */
     select, input[type="text"] {
         font-size: 20px;
     }
 }
-/* --- 2025-11-05 추가: 문제 목록 --- */
+
+/* --- 문제 목록 --- */
 #problem-list-screen {
     width: 100%;
 }
@@ -325,7 +325,7 @@ body.incorrect-feedback { background-color: #f8d7da; }
     width: 100%;
     max-width: 800px;
     max-height: 600px;
-    overflow-y: auto; /* 목록이 길어지면 스크롤 */
+    overflow-y: auto; 
     border: 1px solid #EEE;
     border-radius: 8px;
 }
@@ -336,7 +336,7 @@ body.incorrect-feedback { background-color: #f8d7da; }
     border-bottom: 1px solid #EEE;
     cursor: pointer;
     transition: background-color 0.2s;
-    text-align: left; /* 목록은 왼쪽 정렬 */
+    text-align: left; 
 }
 
 .problem-list-item:hover {
@@ -349,20 +349,249 @@ body.incorrect-feedback { background-color: #f8d7da; }
 
 /* 퀴즈 화면의 뒤로가기 버튼 */
 .back-button {
-    position: absolute; /* 화면 왼쪽 위에 고정 */
+    position: absolute; 
     top: 15px;
     left: 15px;
-    font-size: 30px; /* 크기 키움 */
+    font-size: 30px; 
     font-weight: bold;
     padding: 0 15px;
-    min-width: 50px; /* 최소 너비 */
-    max-width: 60px; /* 최대 너비 */
-    background-color: #f0f0f0; /* 배경색 */
-    color: #555; /* 글자색 */
+    min-width: 50px; 
+    max-width: 60px; 
+    background-color: #f0f0f0; 
+    color: #555; 
     border: 1px solid #ddd;
     line-height: 45px;
 }
 .back-button:hover {
     background-color: #e0e0e0;
     box-shadow: none;
+}
+
+/* --- 학습 통계 --- */
+#stats-screen {
+    width: 100%;
+    max-width: 800px;
+    /* [버그 수정] text-align: left; 삭제 */
+}
+
+#stats-screen h2, #stats-screen h3 {
+    text-align: center;
+}
+
+.stats-summary {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+
+.summary-box {
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 150px;
+    margin: 5px;
+}
+
+.summary-box h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.summary-box p {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.summary-box.weak { background-color: #f8d7da; } 
+.summary-box.strong { background-color: #d4edda; } 
+.summary-box.total { background-color: #e2e3e5; }
+
+.stats-bar-graph-container {
+    width: 100%;
+    margin: 25px auto; /* [버그 수정] auto 마진으로 중앙 정렬 */
+    padding: 20px;
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* [추가] 연습 그래프 너비 제한 */
+}
+
+.stats-bar-graph-container .bar-item {
+    width: 100%;
+    max-width: 600px; 
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.bar-label {
+    width: 120px; 
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 10px;
+}
+
+.bar-wrapper {
+    flex-grow: 1;
+    height: 30px;
+    background-color: #F0F0F0;
+    border-radius: 5px;
+    position: relative; 
+}
+
+.bar {
+    height: 100%;
+    background-color: #87CEEB; 
+    border-radius: 5px;
+    transition: width 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-right: 8px;
+    overflow: hidden; 
+}
+
+.bar.high-accuracy {
+    background-color: #28a745;
+}
+.bar.low-accuracy {
+    background-color: #dc3545;
+}
+
+/* --- 통계 탭 --- */
+.tab-btn {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #555;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 0;
+    min-width: 100px;
+}
+.tab-btn:hover {
+    background-color: #f8f8f8;
+    box-shadow: none;
+}
+.tab-btn.active {
+    color: #87CEEB;
+    border-bottom-color: #87CEEB;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none; 
+    width: 100%;
+}
+.tab-content.active {
+    /* ▼▼▼ [버그 수정] block -> flex 로 변경하여 중앙 정렬 ▼▼▼ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* ▲▲▲ [버그 수정] ▲▲▲ */
+}
+
+/* --- 시험 통계 (세로 막대그래프) --- */
+.exam-bar-graph-container {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch; 
+    width: 100%;
+    max-width: 600px; /* [추가] 너비 제한 */
+    /* ▼▼▼ [버그 수정] 높이와 패딩 수정 ▼▼▼ */
+    height: 280px; 
+    padding: 45px 10px 0 10px; /* 라벨을 위한 상단 여백 확보 */
+    /* ▲▲▲ [버그 수정] ▲▲▲ */
+    margin: 25px auto; /* [버그 수정] auto 마진으로 중앙 정렬 */
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    overflow-x: auto; 
+    background: #fcfcfc;
+}
+
+.bar-vertical-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+    min-width: 60px; 
+    height: 100%; 
+    justify-content: flex-end; 
+}
+
+.bar-vertical {
+    width: 50px; 
+    background-color: #87CEEB;
+    border-radius: 5px 5px 0 0;
+    transition: background-color 0.2s, height 0.5s ease-out;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.bar-vertical:hover {
+    background-color: #76bada;
+}
+
+.bar-vertical .bar-percentage {
+    position: absolute;
+    top: -25px; 
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+.bar-vertical-label {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+/* --- 상세 보기 모달 (Modal) --- */
+.modal-backdrop {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+.modal-backdrop.active {
+    display: flex; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin-top: 0;
 }
