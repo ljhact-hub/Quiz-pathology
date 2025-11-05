@@ -14,10 +14,11 @@ body {
     font-family: 'NanumBarunGothic', 'Malgun Gothic', sans-serif;
     background-color: #FAFAFA;
     margin: 0;
-    padding: 20px;
+    /* [수정] 모바일에서 여백이 너무 많지 않도록 조정 */
+    padding: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* [수정] 상단 정렬 */
     min-height: 100vh;
     color: #333;
 }
@@ -38,7 +39,8 @@ body {
 #app-container {
     width: 100%;
     max-width: 1000px;
-    min-height: 800px;
+    /* [수정] 모바일에서는 최소 높이 제한을 없앰 */
+    min-height: auto; 
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 15px;
@@ -63,7 +65,7 @@ button {
     font-size: 24px;
     padding: 15px;
     min-height: 50px;
-    min-width: 200px;
+    min-width: 200px; /* [수정] 이 부분은 PC에서만 유효하도록 아래 미디어쿼리에서 조정 */
     max-width: 500px;
     width: 100%;
     margin: 8px 0;
@@ -95,6 +97,18 @@ select, input[type="text"] {
     margin: 10px 0;
     border: 2px solid #DDD;
     border-radius: 8px;
+}
+
+/* --- [신규] '전체/해제' 버튼을 담는 행 스타일 --- */
+/* (참고: JS파일 수정 없이 CSS만으로 해결하기 위해 버튼의 부모 div를 선택) */
+#main-menu-screen > div:nth-of-type(1) {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+#main-menu-screen > div:nth-of-type(1) > button {
+    flex: 1; /* 버튼들이 공간을 나눠 가짐 */
 }
 
 /* --- 과목 선택 (PyQt: QGridLayout) --- */
@@ -129,9 +143,13 @@ select, input[type="text"] {
 }
 
 #quiz-image {
-    max-width: 500px;
+    /* [수정] 이미지가 화면 밖으로 나가지 않도록 100%로 제한 */
+    max-width: 100%; 
     max-height: 400px;
-    width: auto;
+    /* [수정] PC에서는 500px을 넘지 않도록 제한 */
+    width: 100%;
+    max-width: 500px; 
+    
     height: auto;
     object-fit: contain;
     border-radius: 10px;
@@ -236,4 +254,63 @@ body.incorrect-feedback { background-color: #f8d7da; }
     align-items: center;
     font-size: 28px;
     font-weight: bold;
+}
+
+
+/* ================================================================
+   [신규] 📱 모바일 반응형 수정 
+   화면 가로폭이 600px 이하일 때 적용됩니다.
+================================================================
+*/
+@media (max-width: 600px) {
+    body {
+        /* [수정] body의 기본 padding을 줄여서 앱 컨테이너를 더 넓게 씀 */
+        padding: 5px;
+    }
+    
+    #app-container {
+        /* [수정] 모바일에서는 꽉 차게 보이고, 그림자/패딩도 줄임 */
+        min-height: 100vh; /* 화면 전체 높이 사용 */
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    /* [수정] 제목 글꼴 크기 축소 */
+    h1 { font-size: 24px; }
+    h2 { font-size: 22px; }
+
+    /* [수정] 버튼 스타일 모바일 최적화 (가장 중요!) */
+    button {
+        font-size: 20px; /* 글꼴 크기 축소 */
+        padding: 12px;   /* 상하 여백 축소 */
+        min-width: 0;    /* [핵심] 최소 가로폭 제한을 없애서 버튼이 작아질 수 있게 함 */
+    }
+    
+    /* [수정] "전체/해제" 버튼 행을 세로로 쌓기 (선택사항) */
+    /* #main-menu-screen > div:nth-of-type(1) {
+        flex-direction: column; 
+    }
+    */
+    /* (위 주석을 풀면 세로로 쌓입니다. 지금은 '최소폭 제거'만으로도 해결됩니다.) */
+    
+    
+    /* [수정] 과목 그리드 모바일 최적화 (2열로 보이게) */
+    .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    .subject-item {
+        font-size: 18px; /* 글꼴 축소 */
+        padding: 10px;
+    }
+    
+    /* [수정] 퀴즈 화면 글꼴 축소 */
+    #question-text { font-size: 20px; }
+    .option-label { font-size: 18px; }
+    
+    /* [수정] 입력창 글꼴 축소 */
+    select, input[type="text"] {
+        font-size: 20px;
+    }
 }
