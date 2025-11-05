@@ -7,7 +7,10 @@ let currentIndex = 0;
 let score = 0;
 let newIncorrect = [];
 let isReviewMode = false;
+let QUIZ_STATS = {}; // 과목별 통계 저장용 객체
+let currentQuizResults = []; // 현재 퀴즈의 정답/오답 기록용
 const INCORRECT_LOG_KEY = "clinicalPathologyQuizLog"; // localStorage 키
+const STATS_KEY = "clinicalPathologyQuizStats"; // 통계용 새 localStorage 키
 
 // --- DOM 요소 참조 ---
 const appContainer = document.getElementById('app-container');
@@ -19,6 +22,7 @@ const customNumScreen = document.getElementById('custom-num-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultsScreen = document.getElementById('results-screen');
 const problemListScreen = document.getElementById('problem-list-screen');
+const statsScreen = document.getElementById('stats-screen');
 
 // --- 앱 초기화 ---
 window.addEventListener('DOMContentLoaded', loadApp);
@@ -27,10 +31,11 @@ async function loadApp() {
     try {
         await loadQuestionsFromJson();
         loadIncorrectLog();
+        loadQuizStats(); // ▼▼▼ 통계 데이터 로드 추가 ▼▼▼
         if (QUESTIONS_DB.length === 0) {
             throw new Error("questions.json 파일이 비어있습니다.");
         }
-        // showScreen('main-menu-screen'); // <-- [수정] showMainMenu에서 직접 호출
+        showScreen('main-menu-screen');
         showMainMenu();
     } catch (error) {
         console.error("앱 로딩 실패:", error);
@@ -62,15 +67,39 @@ function loadIncorrectLog() {
     INCORRECT_LOG = JSON.parse(localStorage.getItem(INCORRECT_LOG_KEY)) || [];
 }
 
+// ▼▼▼ 추가: 통계 로드 함수 ▼▼▼
+function loadQuizStats() {
+    QUIZ_STATS = JSON.parse(localStorage.getItem(STATS_KEY)) || {};
+    
+    // DB의 모든 과목이 통계 객체에 있는지 확인 (새로 추가된 과목 대비)
+    let statsUpdated = false;
+    const subjects = [...new Set(QUESTIONS_DB.map(q => q.subject || "기타"))];
+    subjects.forEach(subject => {
+        if (!QUIZ_STATS[subject]) {
+            QUIZ_STATS[subject] = { correct: 0, total: 0 };
+            statsUpdated = true;
+        }
+    });
+
+    if (statsUpdated) {
+        saveQuizStats(); // 새 과목이 추가되었으면 파일에 저장
+    }
+}
+
+// ▼▼▼ 추가: 통계 저장 함수 ▼▼▼
+function saveQuizStats() {
+    localStorage.setItem(STATS_KEY, JSON.stringify(QUIZ_STATS));
+}
+
 function saveIncorrectLog() {
     localStorage.setItem(INCORRECT_LOG_KEY, JSON.stringify(INCORRECT_LOG));
 }
 
 // --- 1. 메인 메뉴 (PyQt: show_subject_selection_menu) ---
 function showMainMenu() {
-    showScreen('main-menu-screen'); // 화면 전환을 맨 위로 이동
+    showScreen('main-menu-screen'); 
     const subjects = [...new Set(QUESTIONS_DB.map(q => q.subject || "기타"))].sort();
-
+    
     let subjectCheckboxesHTML = subjects.map(subject => `
         <label class="subject-item">
             <input type="checkbox" class="subject-checkbox" value="${subject}">
@@ -88,9 +117,10 @@ function showMainMenu() {
         <button id="start-quiz-btn">선택한 과목으로 퀴즈 시작</button>
         <button id="problem-list-btn">문제 목록 보기 (전체 ${QUESTIONS_DB.length}개)</button>
         <button id="review-btn">오답 노트 풀기 (${INCORRECT_LOG.length}개)</button>
+        <button id="stats-btn" style="background-color: #6c757d;">📊 학습 통계</button>
         <button id="exit-btn">종료 (새로고침)</button>
     `;
-
+    
     // 이벤트 리스너 연결
     document.getElementById('select-all-btn').addEventListener('click', () => {
         document.querySelectorAll('.subject-checkbox').forEach(cb => cb.checked = true);
@@ -99,20 +129,19 @@ function showMainMenu() {
         document.querySelectorAll('.subject-checkbox').forEach(cb => cb.checked = false);
     });
     document.getElementById('start-quiz-btn').addEventListener('click', handleQuizStart);
-
-    // ▼▼▼ 이벤트 리스너 추가 ▼▼▼
     document.getElementById('problem-list-btn').addEventListener('click', showProblemList);
-
+    
     const reviewBtn = document.getElementById('review-btn');
     reviewBtn.addEventListener('click', startReviewQuiz);
-    // 오답이 없으면 비활성화
     if (INCORRECT_LOG.length === 0) {
         reviewBtn.disabled = true;
     }
-
+    
+    // ▼▼▼ "학습 통계" 버튼 이벤트 리스너 추가 ▼▼▼
+    document.getElementById('stats-btn').addEventListener('click', showStatsScreen);
+    
     document.getElementById('exit-btn').addEventListener('click', () => location.reload());
 }
-
 // --- (신규) 문제 목록 표시 ---
 function showProblemList() {
     showScreen('problem-list-screen');
@@ -249,19 +278,20 @@ function prepareAndRunQuiz(num) {
 }
 
 // --- 8. 퀴즈 실행 (PyQt: run_quiz) ---
-function runQuiz(questionList, isReview = false) {
+function runQuiz(questionList, isReview = false, isSingleMode = false) { 
     currentQuestions = questionList;
     currentIndex = 0;
     score = 0;
     newIncorrect = [];
     isReviewMode = isReview;
-
-    self.isSingleProblemMode = isSingleProblemMode; // 단일 문제 모드인지 저장
+    isSingleProblemMode = isSingleMode; 
     
-    // ▼▼▼ 추가 ▼▼▼
-    quizStartTime = new Date(); // 퀴즈 시작 시간 기록
-    problemTimes = []; // 문제별 소요 시간 기록용 배열
+    // ▼▼▼ 추가: 현재 퀴즈 기록 초기화 ▼▼▼
+    currentQuizResults = [];
     // ▲▲▲ 추가 ▲▲▲
+
+    quizStartTime = new Date(); 
+    problemTimes = []; 
 
     showQuestion();
 }
@@ -318,9 +348,9 @@ function checkAnswer() {
     if (submitBtn) {
         submitBtn.disabled = true; 
     }
-
+    
     const q = currentQuestions[currentIndex];
-
+    
     if (q.type === "multiple_choice") {
         document.querySelectorAll('input[name="answer"]').forEach(radio => {
             radio.disabled = true;
@@ -354,13 +384,14 @@ function checkAnswer() {
             return;
         }
     }
-
+    
     if (submitBtn) submitBtn.style.display = 'none';
 
     let feedbackText = "";
     const buttonContainer = document.getElementById('button-container');
+    let isCorrect = (userAns === q.answer); // ▼▼▼ 정답 여부 미리 계산 ▼▼▼
 
-    if (userAns === q.answer) {
+    if (isCorrect) {
         feedbackText = "✅ 정답입니다!";
         document.body.className = 'correct-feedback';
         feedbackLabel.className = 'correct';
@@ -368,10 +399,8 @@ function checkAnswer() {
         if (isReviewMode && INCORRECT_LOG.includes(q.id)) {
             INCORRECT_LOG = INCORRECT_LOG.filter(id => id !== q.id);
         }
-
-        // ▼▼▼ 수정: 정답 시 로직 분기 ▼▼▼
-        if (self.isSingleProblemMode) {
-            // 싱글 문제 모드: 1.2초 피드백 후 '목록으로' 버튼 표시
+        
+        if (isSingleProblemMode) { 
             setTimeout(() => { 
                 const returnBtn = document.createElement('button');
                 returnBtn.id = 'return-btn';
@@ -380,10 +409,8 @@ function checkAnswer() {
                 if(buttonContainer) buttonContainer.appendChild(returnBtn);
             }, 1200);
         } else {
-            // 일반 퀴즈 모드: 1.2초 뒤 자동 이동
             setTimeout(goToNextQuestionOrFinish, 1200);
         }
-        // ▲▲▲ 수정 ▲▲▲
 
     } else {
         feedbackText = `❌ 오답입니다. 정답: ${q.answer}\n[해설] ${q.explanation}`;
@@ -393,23 +420,19 @@ function checkAnswer() {
             newIncorrect.push(q.id);
         }
 
-        // ▼▼▼ 수정: 오답 시 로직 분기 ▼▼▼
         const nextBtn = document.createElement('button');
-        if (self.isSingleProblemMode) {
-            // 싱글 문제 모드: '목록으로' 버튼 생성
+        if (isSingleProblemMode) { 
             nextBtn.id = 'return-btn';
             nextBtn.textContent = '목록으로 돌아가기';
             nextBtn.onclick = showProblemList;
         } else {
-            // 일반 퀴즈 모드: '다음 문제' 버튼 생성
             nextBtn.id = 'next-btn';
             nextBtn.textContent = '다음 문제';
             nextBtn.onclick = goToNextQuestionOrFinish;
         }
         if(buttonContainer) buttonContainer.appendChild(nextBtn);
-        // ▲▲▲ 수정 ▲▲▲
     }
-
+    
     feedbackLabel.textContent = feedbackText;
 
     const timeTaken = new Date() - problemStartTime;
@@ -417,6 +440,15 @@ function checkAnswer() {
         questionText: q.question, 
         time: timeTaken 
     });
+
+    // ▼▼▼ 추가: 통계용 결과 기록 (오답/싱글모드 제외) ▼▼▼
+    if (!isReviewMode && !isSingleProblemMode) {
+        currentQuizResults.push({
+            subject: q.subject || "기타",
+            isCorrect: isCorrect
+        });
+    }
+    // ▲▲▲ 추가 ▲▲▲
 }
 
 // --- 11. 다음 문제 이동 (PyQt: go_to_next_question_or_finish) ---
@@ -432,6 +464,24 @@ function goToNextQuestionOrFinish() {
 
 // --- 12. 퀴즈 종료 (PyQt: finish_quiz) ---
 function finishQuiz() {
+    // ▼▼▼ 수정: 통계 저장 로직 추가 ▼▼▼
+    if (!isReviewMode && !isSingleProblemMode && currentQuizResults.length > 0) {
+        // 1. 통계 누적
+        currentQuizResults.forEach(result => {
+            if (!QUIZ_STATS[result.subject]) { // 혹시 모를 새 과목 대비
+                QUIZ_STATS[result.subject] = { correct: 0, total: 0 };
+            }
+            QUIZ_STATS[result.subject].total += 1;
+            if (result.isCorrect) {
+                QUIZ_STATS[result.subject].correct += 1;
+            }
+        });
+        // 2. localStorage에 저장
+        saveQuizStats();
+    }
+    // ▲▲▲ 수정 ▲▲▲
+
+    // 오답노트 저장 로직 (기존과 동일)
     if (isReviewMode) {
         saveIncorrectLog();
     } else {
@@ -445,14 +495,12 @@ function finishQuiz() {
     const incorrectCount = newIncorrect.length;
     const accuracy = total > 0 ? (score / total) * 100 : 0;
 
-    // ▼▼▼ 추가: 시간 계산 ▼▼▼
-    // 총 소요 시간 계산
+    // 시간 계산 (기존과 동일)
     const totalTimeTaken = new Date() - quizStartTime;
     const minutes = Math.floor(totalTimeTaken / 60000);
     const seconds = Math.floor((totalTimeTaken % 60000) / 1000);
     const totalTimeText = `${minutes}분 ${seconds}초`;
 
-    // 가장 오래 걸린 문제 찾기
     let slowestProblemText = "N/A";
     if (problemTimes.length > 0) {
         const slowestProblem = problemTimes.reduce((max, current) => {
@@ -461,9 +509,8 @@ function finishQuiz() {
         const slowestTimeSeconds = (slowestProblem.time / 1000).toFixed(1);
         slowestProblemText = `(${slowestTimeSeconds}초) ${slowestProblem.questionText.substring(0, 50)}...`;
     }
-    // ▲▲▲ 추가 ▲▲▲
 
-    // (PyQt: ResultsDialog)
+    // 결과 화면 HTML (기존과 동일)
     resultsScreen.innerHTML = `
         <h2>📊 퀴즈 결과</h2>
         
@@ -482,6 +529,7 @@ function finishQuiz() {
             <p style="font-size: 18px; margin: 5px 0;"><strong>⏱️ 총 소요 시간:</strong> ${totalTimeText}</p>
             <p style="font-size: 18px; margin: 5px 0;"><strong>🐌 가장 오래 걸린 문제:</strong> ${slowestProblemText}</p>
         </div>
+        
         <button id="review-new-mistakes-btn">방금 틀린 문제 복습하기 (${incorrectCount}개)</button>
         <button id="back-to-main-menu-btn">메인 메뉴로 돌아가기</button>
     `;
@@ -514,4 +562,106 @@ function startReviewQuiz() {
     }
     const reviewQuestions = QUESTIONS_DB.filter(q => INCORRECT_LOG.includes(q.id));
     runQuiz(reviewQuestions, true); // 오답 노트 모드 활성화
+}
+
+// --- (신규) 3. 학습 통계 화면 표시 ---
+function showStatsScreen() {
+    showScreen('stats-screen');
+
+    let totalCorrect = 0;
+    let totalAttempts = 0;
+    let subjectStats = []; // 정렬 및 분석용 배열
+
+    // 1. 통계 데이터 계산
+    for (const subject in QUIZ_STATS) {
+        const stats = QUIZ_STATS[subject];
+        totalCorrect += stats.correct;
+        totalAttempts += stats.total;
+        
+        let accuracy = 0;
+        if (stats.total > 0) {
+            accuracy = (stats.correct / stats.total) * 100;
+        }
+        
+        subjectStats.push({
+            name: subject,
+            correct: stats.correct,
+            total: stats.total,
+            accuracy: accuracy
+        });
+    }
+
+    const overallAccuracy = totalAttempts > 0 ? (totalCorrect / totalAttempts) * 100 : 0;
+
+    // 2. 취약/우수 과목 분석 (최소 10문제 이상 푼 과목 대상)
+    const MIN_ATTEMPTS = 10;
+    const analyzedSubjects = subjectStats.filter(s => s.total >= MIN_ATTEMPTS);
+    let weakSubject = { name: "N/A", accuracy: 101 };
+    let strongSubject = { name: "N/A", accuracy: -1 };
+
+    if (analyzedSubjects.length > 0) {
+        weakSubject = analyzedSubjects.reduce((min, s) => s.accuracy < min.accuracy ? s : min);
+        strongSubject = analyzedSubjects.reduce((max, s) => s.accuracy > max.accuracy ? s : max);
+    }
+    
+    // 3. 막대 그래프 HTML 생성 (정답률 높은 순으로 정렬)
+    subjectStats.sort((a, b) => b.accuracy - a.accuracy); // 정답률 내림차순 정렬
+    
+    const barGraphHTML = subjectStats.map(s => {
+        let barClass = '';
+        if (s.total > 0) {
+            if (s.accuracy >= 75) barClass = 'high-accuracy';
+            else if (s.accuracy < 40) barClass = 'low-accuracy';
+        }
+        
+        return `
+            <div class="bar-item">
+                <div class="bar-label" title="${s.name}">${s.name}</div>
+                <div class="bar-wrapper">
+                    <div class="bar ${barClass}" style="width: ${s.accuracy.toFixed(1)}%;">
+                        ${s.accuracy >= 50 ? `${s.accuracy.toFixed(1)}%` : ''}
+                    </div>
+                </div>
+                <div class="bar-label" style="width: 100px; text-align: right; font-size: 15px;">(${s.correct}/${s.total})</div>
+            </div>
+        `;
+    }).join('');
+
+    // 4. 최종 HTML 렌더링
+    statsScreen.innerHTML = `
+        <h2>📊 학습 통계</h2>
+        
+        <div class="stats-summary">
+            <div class="summary-box total">
+                <h4>총 정답률</h4>
+                <p>${overallAccuracy.toFixed(1)}%</p>
+            </div>
+            <div class="summary-box total">
+                <h4>누적 푼 문제</h4>
+                <p>${totalAttempts}개</p>
+            </div>
+        </div>
+        
+        <div class="stats-summary">
+            <div class="summary-box weak">
+                <h4>📉 취약 과목</h4>
+                <p>${weakSubject.name}</p>
+                <span style="font-size: 16px;">(정답률 ${weakSubject.accuracy.toFixed(1)}%)</span>
+            </div>
+            <div class="summary-box strong">
+                <h4>📈 우수 과목</h4>
+                <p>${strongSubject.name}</p>
+                <span style="font-size: 16px;">(정답률 ${strongSubject.accuracy.toFixed(1)}%)</span>
+            </div>
+        </div>
+        
+        <h3>과목별 정답률 (정답률 순)</h3>
+        <div class="stats-bar-graph-container">
+            ${barGraphHTML}
+        </div>
+        
+        <button id="back-to-main-btn">메인 메뉴로 돌아가기</button>
+    `;
+
+    document.getElementById('back-to-main-btn').addEventListener('click', showMainMenu);
 }
