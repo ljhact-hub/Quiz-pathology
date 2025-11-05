@@ -1,0 +1,239 @@
+/* --- 폰트 로드 (PyQt: QFontDatabase.addApplicationFont) --- */
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('fonts/NanumBarunGothicUltraLight.ttf') format('truetype');
+    font-weight: 300;
+}
+
+/* --- 기본 스타일 (PyQt: app.setFont) --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'NanumBarunGothic', 'Malgun Gothic', sans-serif;
+    background-color: #FAFAFA;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* --- 화면 전환 로직 --- */
+.screen {
+    display: none; /* 평소엔 숨김 */
+    width: 100%;
+    max-width: 1000px;
+    flex-direction: column;
+    align-items: center;
+}
+.screen.active {
+    display: flex; /* 활성화된 화면만 보임 */
+}
+
+/* --- 앱 컨테이너 (PyQt: QWidget) --- */
+#app-container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 800px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 위젯 스타일 (PyQt: setStyleSheet) --- */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+button {
+    font-family: inherit;
+    font-size: 24px;
+    padding: 15px;
+    min-height: 50px;
+    min-width: 200px;
+    max-width: 500px;
+    width: 100%;
+    margin: 8px 0;
+    cursor: pointer;
+    background-color: #87CEEB;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background-color: #76bada;
+    box-shadow: 0 4px 15px rgba(135, 206, 235, 0.4);
+}
+
+button:disabled {
+    background-color: #E0E0E0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+select, input[type="text"] {
+    font-family: inherit;
+    font-size: 24px;
+    padding: 10px;
+    max-width: 500px;
+    width: 100%;
+    margin: 10px 0;
+    border: 2px solid #DDD;
+    border-radius: 8px;
+}
+
+/* --- 과목 선택 (PyQt: QGridLayout) --- */
+.subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+    padding: 10px;
+}
+
+.subject-item {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    background-color: #F8F8F8;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #EEE;
+}
+
+.subject-item input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+/* --- 퀴즈 화면 (PyQt: show_question) --- */
+#quiz-screen {
+    text-align: center;
+}
+
+#quiz-image {
+    max-width: 500px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #EEE;
+    margin-bottom: 20px;
+}
+
+#question-text {
+    font-size: 24px;
+    white-space: pre-wrap; /* \n 줄바꿈 인식 */
+    margin: 15px 0;
+}
+
+#feedback-label {
+    font-size: 20px;
+    font-weight: bold;
+    min-height: 60px; /* PyQt와 유사하게 최소 높이 확보 */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    width: 100%;
+    max-width: 800px;
+}
+
+/* --- 정답/오답 피드백 (PyQt: setPalette) --- */
+body.correct-feedback { background-color: #d4edda; }
+#feedback-label.correct { background-color: #d4edda; opacity: 1; }
+
+body.incorrect-feedback { background-color: #f8d7da; }
+#feedback-label.incorrect { background-color: #f8d7da; opacity: 1; }
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */
+    width: 100%;
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+.option-label {
+    font-size: 22px;
+    padding: 12px;
+    margin: 5px 0;
+    width: 100%;
+    border: 2px solid #EEE;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.option-label:hover {
+    background-color: #F8F8F8;
+}
+
+.option-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 15px;
+}
+
+/* --- 결과 화면 (PyQt: ResultsDialog) --- */
+#results-screen {
+    text-align: center;
+}
+
+/* --- 도넛 차트 (PyQt: DonutChartWidget) --- */
+.donut-chart-container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 20px auto;
+}
+
+.donut-chart {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* conic-gradient로 차트 그리기 */
+    /* --accuracy 변수는 JS에서 채워줍니다 */
+    background: conic-gradient(
+        #87CEEB 0% var(--accuracy, 0%), 
+        #F0F0F0 var(--accuracy, 0%) 100%
+    );
+    transition: --accuracy 1s; /* (애니메이션, 고급) */
+}
+
+.donut-chart-center {
+    position: absolute;
+    top: 20px; /* 220*0.1 (펜 두께 20) */
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+}
