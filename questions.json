@@ -5438,5 +5438,2037 @@
             "4. 랑그한스형 세포",
             "5. 랑게르한스섬 세포"
         ]
-    }
+    },
+    {
+    "id": 342,
+    "subject": "조직학",
+    "image_path": "images/342.png",
+    "type": "multiple_choice",
+    "question": "H&E 염색을 완성한 후 조직표본 내에서 관찰된 것이다. 무엇때문에 생긴 것인가?",
+    "options": [
+      "1. 자가 융해",
+      "2. 박절 결함",
+      "3. 기포 발생",
+      "4. 포매 불량",
+      "5. 탈수 불충분"
+    ],
+    "answer": "3",
+    "explanation": "사진 중앙에 표본이 떠 있는 기포가 관찰된다."
+  },
+  {
+    "id": 343,
+    "subject": "조직학",
+    "image_path": "images/343.png",
+    "type": "multiple_choice",
+    "question": "특수염색사진이다. 염색 표본의 주시 약은?",
+    "options": [
+      "1. Hematoxylin",
+      "2. Aniline blue",
+      "3. Acid fuchsin",
+      "4. Schiff reagent",
+      "5. Methylene blue"
+    ],
+    "answer": "4",
+    "explanation": "PAS 염색은 다당류, 점액, 당단백, 글리코겐 등을 염색하여 붉은색으로 나타내는 염색이다.\n Periodic acid가 알데하이드기로 산화시키고 shiff 시약이 알데하이드기와 반응하여 붉은색으로 변색한다."
+  },
+  {
+    "id": 344,
+    "subject": "조직학",
+    "image_path": "images/344.png",
+    "type": "multiple_choice",
+    "question": "사진의 특수염색명과 검출하고자 하는 물질은?",
+    "options": [
+      "1. PAS-중성점액",
+      "2. von Kossa - 칼슘",
+      "3. Alcian blue - 산성점액",
+      "4. Fontana-Masson - 멜라닌",
+      "5. Prussian blue - 페의 석면소체"
+    ],
+    "answer": "5",
+    "explanation": "prussian blue 염색은 철과 페로시안화칼륨이 반응하여 청색 침전물을 생성. \n 사진은 석면소체가 Prussian blue에 의해 파랗게 염색된것이다."
+  },
+  {
+    "id": 345,
+    "subject": "조직학",
+    "image_path": "images/345.png",
+    "type": "multiple_choice",
+    "question": "아래 사진의 장비로 하지 않는 검사는?",
+    "options": [
+      "1. 신속한 검사",
+      "2. 전자현미경검사",
+      "3. 효소조직화학검사",
+      "4. 면역조직화학검사",
+      "5. 지방검출을 위한 검사"
+    ],
+    "answer": "2",
+    "explanation": "동결절편으로 신속한 검사 가능, 지질, 효소, 항원 보존에 우수하다."
+  },
+  {
+    "id": 346,
+    "subject": "조직학",
+    "image_path": "images/346.png",
+    "type": "multiple_choice",
+    "question": "사진의 기구를 사용하는 절편법의 포매제는?",
+    "options": [
+      "1. MMA",
+      "2. 파라핀",
+      "3. 셀로이딘",
+      "4. 카보왁스",
+      "5. OCT 컴파운드"
+    ],
+    "answer": "5",
+    "explanation": "동결절편용 포매제로 OCT 컴파운드이다."
+  },
+  {
+    "id": 347,
+    "subject": "조직학",
+    "image_path": "images/347.png",
+    "type": "multiple_choice",
+    "question": "이 사진의 염색 시 산화제로 적당한 것은?",
+    "options": [
+      "1. Silver nitrate",
+      "2. Chromic acid",
+      "3. Sod. metabisulfite",
+      "4. 1% Periodic acid",
+      "5. Pot. permanganate"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 348,
+    "subject": "세포학",
+    "image_path": "images/348.png",
+    "type": "multiple_choice",
+    "question": "사진의 세포검사 고정방법은?",
+    "options": [
+      "1. 습윤고정",
+      "2. 건조고정",
+      "3. 피복고정",
+      "4. 증기고정",
+      "5. 담금고정"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 349,
+    "subject": "세포학",
+    "image_path": "images/349.png",
+    "type": "multiple_choice",
+    "question": "사진에서 관찰되는 세포는?",
+    "options": [
+      "1. 이주세포",
+      "2. 주상세포",
+      "3. 기저세포",
+      "4. 중간세포",
+      "5. 표층세포"
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 350,
+    "subject": "세포학",
+    "image_path": "images/350.png",
+    "type": "multiple_choice",
+    "question": "45세 여성의 조직과 질도말표본이다. 베데스타 보고 체계에 맞는 진단은?",
+    "options": [
+      "1. 비정형증",
+      "2. 편평세포암",
+      "3. 자궁내경부 선암",
+      "4. 저등급 편평상피내 병변",
+      "5. 고등급 편평상피내 병변"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 351,
+    "subject": "세포학",
+    "image_path": "images/351.png",
+    "type": "multiple_choice",
+    "question": "여성 자궁 질도말표본이다. 관찰되는 감염증은?",
+    "options": [
+      "1. Candida",
+      "2. Chlamydia",
+      "3. Trichomonas",
+      "4. Herpes simplex virus",
+      "5. Human papilloma virus"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 352,
+    "subject": "세포학",
+    "image_path": "images/352.png",
+    "type": "multiple_choice",
+    "question": "여성의 자궁 질도말 표본이다 관찰되는 미생물은?",
+    "options": [
+      "1. 캔디다",
+      "2. 방선균",
+      "3. 질가드네넬라",
+      "4. 렙토트리키아",
+      "5. 질트리코모나스"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 353,
+    "subject": "세포학",
+    "image_path": "images/353.png",
+    "type": "multiple_choice",
+    "question": "자궁목 세포도말표본이다. 관찰되는 세포는?",
+    "options": [
+      "1. 중간세포",
+      "2. 화생세포",
+      "3. 원주세포",
+      "4. 기저결세포",
+      "5. 이형성증세포"
+    ],
+    "answer": "2",
+    "explanation": ""
+  },
+  {
+    "id": 354,
+    "subject": "세포학",
+    "image_path": "images/354.png",
+    "type": "multiple_choice",
+    "question": "사진과 같은 세포소견을 베데스타 보고체계(Bethesda system) 에 의해 보고한 것으로 옳은 것은?",
+    "options": [
+      "1. 표층세포(superficail cell)",
+      "2. 선암종(Adenocarcinoma)",
+      "3. 저등급 편평상피내병변(LSIL)",
+      "4. 고등급 편평상피내병변(HSIL)",
+      "5. 편평세포암종(Squamous cell carcinoma)"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 355,
+    "subject": "요화학",
+    "image_path": "images/355.png",
+    "type": "multiple_choice",
+    "question": "처음 요(A)를 원심분리한 요(B)이다. 옳은 것은?",
+    "options": [
+      "1. 혈뇨이다.",
+      "2. 지방뇨이다.",
+      "3. 근색소뇨이다.",
+      "4. 혈색소뇨이다.",
+      "5. 빌리루빈뇨이다."
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 356,
+    "subject": "요화학",
+    "image_path": "images/356.png",
+    "type": "multiple_choice",
+    "question": "케톤체검사 요시험지로 양성반응을 일으키는 성분은?",
+    "options": [
+      "1. 알부민",
+      "2. 포도당",
+      "3. 아질산염",
+      "4. 우로빌리노젠",
+      "5. 아세토아세트산"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 357,
+    "subject": "요화학",
+    "image_path": "images/357.png",
+    "type": "multiple_choice",
+    "question": "심한 운동 후 정상인에서 출현한 요 원주이다. 옳은 것은?",
+    "options": [
+      "1. 밀납원주",
+      "2. 지방원주",
+      "3. 유리질원주",
+      "4. 백혈구원주",
+      "5. 적혈구원주"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 358,
+    "subject": "임상화학",
+    "image_path": "images/358.png",
+    "type": "multiple_choice",
+    "question": "건습 자동화학분석기 원리이다. 해당하는 원리를 이용하는 기기는?",
+    "options": [
+      "1. 분광광도계",
+      "2. 네펠로미터",
+      "3. 형광광도계",
+      "4. 반사율광도계",
+      "5. 원자흡광광도계"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 359,
+    "subject": "임상화학",
+    "image_path": "images/359.png",
+    "type": "multiple_choice",
+    "question": "혈청 단백질 전기영동 그래프이다. β 분획의 위치는?",
+    "options": [
+      "1. A",
+      "2. B",
+      "3. C",
+      "4. D",
+      "5. E"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 360,
+    "subject": "임상화학",
+    "image_path": "images/360.png",
+    "type": "multiple_choice",
+    "question": "이온선택전극으로 측정하는 음이온 물질은?",
+    "options": [
+      "1. 칼륨(K)",
+      "2. 소듐(Na)",
+      "3. 칼슘(Ca)",
+      "4. 염화물(CI)",
+      "5. 마그네슘(Mg)"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 361,
+    "subject": "임상화학",
+    "image_path": "images/361.png",
+    "type": "multiple_choice",
+    "question": "글루코스 육탄당인산화효소(hexokinase) 법이다. 측정에 사용되는 파장은?",
+    "options": [
+      "1. 200 nm",
+      "2. 340 nm",
+      "3. 400 nm",
+      "4. 440 nm",
+      "5. 500 nm"
+    ],
+    "answer": "2",
+    "explanation": ""
+  },
+  {
+    "id": 362,
+    "subject": "임상화학",
+    "image_path": "images/362.png",
+    "type": "multiple_choice",
+    "question": "시간 경과에 따른 혈중약물농도의 변화 그래프이다. (가)의 의미로 옳은 것은?",
+    "options": [
+      "1. 치료가능한 최대효과농도",
+      "2. 치료가능한 최소독성농도",
+      "3. 투약중인 약물종류 확인농도",
+      "4. 치료범위 이하의 최저약물농도",
+      "5. 치료범위 농도의 항정상태농도"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 363,
+    "subject": "임상화학",
+    "image_path": "images/363.png",
+    "type": "multiple_choice",
+    "question": "혈액가스 분석 전 검체 처리 과정이다. 설명으로 옳은 것은?",
+    "options": [
+      "1. 응고제거",
+      "2. 혈구균질화",
+      "3. 항응고제 혼합",
+      "4. 적혈구 용혈확인",
+      "5. 주사기 내 공기제거"
+    ],
+    "answer": "2",
+    "explanation": ""
+  },
+  {
+    "id": 364,
+    "subject": "임상화학",
+    "image_path": "images/364.png",
+    "type": "multiple_choice",
+    "question": "태아와 신생아의 혈장 면역글로블린 관련 사항이다. 화살표 A에 해당하는 면역글로블린 종류로 옳은 것은?",
+    "options": [
+      "1. IgG",
+      "2. IgA",
+      "3. IgE",
+      "4. IgM",
+      "5. IgD"
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 365,
+    "subject": "임상화학",
+    "image_path": "images/365.png",
+    "type": "multiple_choice",
+    "question": "인도시아닌그린(ICG) 검사로 알 수 있는 질환은?",
+    "options": [
+      "1. 간기능",
+      "2. 뼈대사",
+      "3. 신장기능",
+      "4. 심장기능",
+      "5. 당대사이상"
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 366,
+    "subject": "임상화학",
+    "image_path": "images/366.png",
+    "type": "multiple_choice",
+    "question": "고속액체크로마토그래피(HPLC)의 모식도이다. 시료 중 혼합 성분이 분리되는 부속기구는?",
+    "options": [
+      "1. A",
+      "2. B",
+      "3. C",
+      "4. D",
+      "5. E"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 367,
+    "subject": "임상화학",
+    "image_path": "images/367.png",
+    "type": "multiple_choice",
+    "question": "표와 같이 검사 항목을 평가하는 검사 종목은?",
+    "options": [
+      "1. 요검사",
+      "2. 양수검사",
+      "3. 활액검사",
+      "4. 정액검사",
+      "5. 뇌척수액검사"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 368,
+    "subject": "임상화학",
+    "image_path": "images/368.png",
+    "type": "multiple_choice",
+    "question": "이전결과 값과 현재결과 값을 이용한 질관리에 해당하는 것은?",
+    "options": [
+      "1. 변동지수(VIS)",
+      "2. 표준편차 지수(SDI)",
+      "3. 변화치 검색(Delta check)",
+      "4. 항목간 검색(logic check)",
+      "5. 경고 검색(Panic value check)"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 369,
+    "subject": "핵의학",
+    "image_path": "images/176.png",
+    "type": "multiple_choice",
+    "question": "방사선 작업자의 오염 여부를 판단하는 기기의 명칭은?",
+    "options": [
+      "1. 필름뱃지",
+      "2. 포켓선량계",
+      "3. 감마선계측기",
+      "4. 열형광선량계",
+      "5. 전신오염측정기"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 370,
+    "subject": "핵의학",
+    "image_path": "images/370.png",
+    "type": "multiple_choice",
+    "question": "A는 방사선 동위원소 검출기 방식이며 B는 측정 결과를 나타 낸 그래프이다. 설명으로 옳은 것은?",
+    "options": [
+      "1. RIA법",
+      "2. IRMA법",
+      "3. 샌드위치법",
+      "4. 비경쟁적 방법",
+      "5. 측정단위 mCv"
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 371,
+    "subject": "핵의학",
+    "image_path": "images/371.png",
+    "type": "multiple_choice",
+    "question": "사진이 표시하는 상징은?",
+    "options": [
+      "1. 방사능 오염",
+      "2. 화재발생 위험",
+      "3. 감염가능 위험",
+      "4. 폭발가능 위험",
+      "5. 생물학적 위험"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 372,
+    "subject": "혈액학",
+    "image_path": "images/372.png",
+    "type": "multiple_choice",
+    "question": "이 염색의 결과 보고법은?",
+    "options": [
+      "1. 백혈구 100개 중 수를 %로 보고한다.",
+      "2. 적혈구 100개 중 수를 %로 보고한다.",
+      "3. 적혈구 1,000개 중 수를 %로 보고한다.",
+      "4. 백혈구 1,000개 중 수를 %로 보고한다.",
+      "5. 혈소판 1,000개 중 수를 %로 보고한다."
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 373,
+    "subject": "혈액학",
+    "image_path": "images/373.png",
+    "type": "multiple_choice",
+    "question": "아래의 사진에서 화살표가 가리키는 세포는?",
+    "options": [
+      "1. Lymphocyte",
+      "2. Large Howell-Jolly body",
+      "3. Polychromatic normoblast",
+      "4. polychromatic erythrocyte",
+      "5. Orthochromatic normoblast"
+    ],
+    "answer": "5",
+    "explanation": "정염성 적혈모구(Orthochromatic normoblast)는 적혈구 성숙과정 중 탈핵과정을 보이고 세포분열이 없는 단계이다."
+  },
+  {
+    "id": 374,
+    "subject": "혈액학",
+    "image_path": "images/374.png",
+    "type": "multiple_choice",
+    "question": "백혈구 감별 scattergram이다. 림프구에 해당하는 것은?",
+    "options": [
+      "1. A",
+      "2. B",
+      "3. C",
+      "4. D",
+      "5. E"
+    ],
+    "answer": "2",
+    "explanation": ""
+  },
+  {
+    "id": 375,
+    "subject": "혈액학",
+    "image_path": "images/375.png",
+    "type": "multiple_choice",
+    "question": "염색 후 각 세포의 grade를 정해서 계산해야하는 염색법은?",
+    "options": [
+      "1. PAS stain",
+      "2. peroxidase stain",
+      "3. specific esterase stain",
+      "4. nonspecific esterase stain",
+      "5. leukocyte alkaline phosphatase stain"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 376,
+    "subject": "혈액학",
+    "image_path": "images/376.png",
+    "type": "multiple_choice",
+    "question": "말초혈액에서 사진과 같은 현상을 보였을 때 의심되는 질환은?",
+    "options": [
+      "1. 만성빈혈(chronic anemia)",
+      "2. 다발골수종(multiple myeloma)",
+      "3. 재생불량빈혈(aplastic anemia)",
+      "4. 거적혈모구빈혈(megaloblastic anemia)",
+      "5. 한냉혈색소병(cold agglutinin disease)"
+    ],
+    "answer": "2",
+    "explanation": ""
+  },
+  {
+    "id": 377,
+    "subject": "혈액학",
+    "image_path": "images/377.png",
+    "type": "multiple_choice",
+    "question": "아래 사진의 화살표가 가리키는 세포질 내 봉입체에 대한 설명으로 옳은 것은?",
+    "options": [
+      "1. LAP 염색에서 양성이다.",
+      "2. 악성 림프모구에서 주로 나타난다.",
+      "3. 정상 골수모구에서 주로 나타난다.",
+      "4. Myeloperoxidase 염색에서 양성이다.",
+      "5. 급성 림프구성 백혈병을 의심할 수 있다."
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 378,
+    "subject": "유전학",
+    "image_path": "images/378.png",
+    "type": "multiple_choice",
+    "question": "보이는 염색체 이상은?",
+    "options": [
+      "1. 전좌",
+      "2. 중복",
+      "3. 결실",
+      "4. 등완",
+      "5. 삽입"
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 379,
+    "subject": "혈액학",
+    "image_path": "images/379.png",
+    "type": "multiple_choice",
+    "question": "사진은 어떤 검사법의 원리를 보여주는가?",
+    "options": [
+      "1. 혈전탄성계검사",
+      "2. 혈병수축검사",
+      "3. 혈소판응집능검사",
+      "4. 혈소판방출력검사",
+      "5. 혈소판점착능검사"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 380,
+    "subject": "혈액학",
+    "image_path": "images/380.png",
+    "type": "multiple_choice",
+    "question": "아래 그림이 설명하는 것은?",
+    "options": [
+      "1. 항응고기전 과정",
+      "2. 섬유소 용해과정",
+      "3. 혈액응고 내인계 과정",
+      "4. 혈액응고 외인계 과정",
+      "5. 순환 응혈소 분해과정"
+    ],
+    "answer": "2",
+    "explanation": ""
+  },
+  {
+    "id": 381,
+    "subject": "혈액학",
+    "image_path": "images/381.png",
+    "type": "multiple_choice",
+    "question": "환자의 말초혈액 도말표본이 아래와 같을 경우, 가장 믿을 수 없는 CBC 결과는?",
+    "options": [
+      "1. 단구 수",
+      "2. 림프구 수",
+      "3. 호산구 수",
+      "4. 혈소판 수",
+      "5. 적혈구 수"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 382,
+    "subject": "수혈학",
+    "image_path": "images/123.png",
+    "type": "multiple_choice",
+    "question": "혈구형 검사와 혈청형 검사의 결과이다. 혈액형은?",
+    "options": [
+      "1. A형",
+      "2. B형",
+      "3. AB형",
+      "4. O형",
+      "5. Bombay형"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 383,
+    "subject": "수혈학",
+    "image_path": "images/383.png",
+    "type": "multiple_choice",
+    "question": "다음은 어느 검사에 사용하는 검사용 sheet인가?",
+    "options": [
+      "1. 교차적합시험",
+      "2. 항체동정검사",
+      "3. 항체용출검사",
+      "4. 항체해리검사",
+      "5. 항체선별검사"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 384,
+    "subject": "수혈학",
+    "image_path": "images/384.png",
+    "type": "multiple_choice",
+    "question": "ZZAP 시약을 처리한 혈구의 용도는?",
+    "options": [
+      "1. 자가혈구 해리",
+      "2. 동종혈구 응집",
+      "3. 동종혈구 흡착응집",
+      "4. 동종항체 흡착해리",
+      "5. 자가항체 흡착제거"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 385,
+    "subject": "수혈학",
+    "image_path": "images/385.png",
+    "type": "multiple_choice",
+    "question": "다음은 헌혈 받은 제제를 분리하는 과정을 나타낸 것이다. 화살표 방향으로 이동하는 제제는?",
+    "options": [
+      "1. 농축혈소판",
+      "2. 동결침전제제",
+      "3. 혈소판 풍부혈장",
+      "4. 백혈구 포함된 혈장",
+      "5. 백혈구가 제거된 혈장"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 386,
+    "subject": "수혈학",
+    "image_path": "images/386.png",
+    "type": "multiple_choice",
+    "question": "다음 장비의 기능은?",
+    "options": [
+      "1. 항체 선별",
+      "2. 항체 동정",
+      "3. 적혈구 제거",
+      "4. T 림프구 억제",
+      "5. 약한 항원 검출"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 387,
+    "subject": "미생물학",
+    "image_path": "images/387.png",
+    "type": "multiple_choice",
+    "question": "아래 사진으로 미루어 동정하고자 하는 균은?",
+    "options": [
+      "1. Streptococcus bovis",
+      "2. Streptococcus mutans",
+      "3. Streptococcus pyogenes",
+      "4. Streptococcus agalactiae",
+      "5. Streptococcus pneumoniae"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 388,
+    "subject": "미생물학",
+    "image_path": "images/388.png",
+    "type": "multiple_choice",
+    "question": "아래는 배지 중앙에 접종 후 하루 배양된 사진이다. 예상 세균 속은?",
+    "options": [
+      "1. Vibrio",
+      "2. Serratia",
+      "3. Proteus",
+      "4. Citrobacter",
+      "5. Haemophillus"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 389,
+    "subject": "미생물학",
+    "image_path": "images/389.png",
+    "type": "multiple_choice",
+    "question": "아래는 건강한 여성의 질 도말 염색 표본의 사진이다. 화살표의 추정 미생물은?",
+    "options": [
+      "1. Bacillus cereus",
+      "2. Chlamydia spp.",
+      "3. Mobiluncus spp.",
+      "4. Lactobacillus spp.",
+      "5. Gardnerella vaginalis"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 390,
+    "subject": "미생물학",
+    "image_path": "images/390.png",
+    "type": "multiple_choice",
+    "question": "아래 사진은 Nutrient broth(A)와 Mueller Hinton agar(B)의 배 양 사진이다. 예상할 수 있는 세균은?",
+    "options": [
+      "1. Vibrio cholerae",
+      "2. Serratia marcescens",
+      "3. Neisseria gonorrhoeae",
+      "4. Acinetobacter baumannii",
+      "5. Pseudomonas aeruginosa"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 391,
+    "subject": "미생물학",
+    "image_path": "images/391.png",
+    "type": "multiple_choice",
+    "question": "Charcoal이 함유된 배지이다. 동정에 선택배지로 사용되는 균은?",
+    "options": [
+      "1. Vibrio cholerae",
+      "2. Klebsiella pneumoniae",
+      "3. Haemophilus influenzae",
+      "4. Legionella pneumophila",
+      "5. Geobacillus stearothermophilus"
+    ],
+    "answer": "4",
+    "explanation": "레지오넬라 선택배지인 buffered charcoal yeast extract (BCYE) agar이다."
+  },
+  {
+    "id": 392,
+    "subject": "미생물학",
+    "image_path": "images/392.png",
+    "type": "multiple_choice",
+    "question": "아래 배지에서 계란후라이(fried-egg)와 같은 집락을 보였다. 추정되는 세균 속은?",
+    "options": [
+      "1. Legionella",
+      "2. Rickettsia",
+      "3. Chlamydia",
+      "4. Mycoplasma",
+      "5. Mycobacterium"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 393,
+    "subject": "미생물학",
+    "image_path": "images/393.png",
+    "type": "multiple_choice",
+    "question": "아래 사진으로 미루어 A와 B는 어떤 세균을 위한 배지인가?",
+    "options": [
+      "1. 포도알균",
+      "2. 장내세균",
+      "3. 항산성 세균",
+      "4. 무산소성세균",
+      "5. 포도당 비발효 세균"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 394,
+    "subject": "진균학",
+    "image_path": "images/394.png",
+    "type": "multiple_choice",
+    "question": "먹물 검경한 사진이다. 예상되는 진균은?",
+    "options": [
+      "1. Alternaria spp.",
+      "2. Penicillium spp.",
+      "3. Candida albicans",
+      "4. Malassezia furfur",
+      "5. Cryptococcus neoformans"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 395,
+    "subject": "진균학",
+    "image_path": "images/395.png",
+    "type": "multiple_choice",
+    "question": "아래의 사진으로 미루어 추정할 수 있는 진균 속은?",
+    "options": [
+      "1. Aspergillus niger",
+      "2. Microsporum canis",
+      "3. Alternaria alternata",
+      "4. Trichophyton rubrum",
+      "5. Penicillium imranianum"
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 396,
+    "subject": "바이러스학",
+    "image_path": "images/396.png",
+    "type": "multiple_choice",
+    "question": "아래 사진으로 추정할 수 있는 바이러스는?",
+    "options": [
+      "1. 로타바이러스",
+      "2. 아데노바이러스",
+      "3. 광견병바이러스",
+      "4. 에이즈바이러스",
+      "5. 코로나바이러스"
+    ],
+    "answer": "3",
+    "explanation": ""
+  },
+  {
+    "id": 397,
+    "subject": "바이러스학",
+    "image_path": "images/397.png",
+    "type": "multiple_choice",
+    "question": "사진은 바이러스 및 세포주 보관용 액화질소 가스통이다. 통의 예상 온도는?",
+    "options": [
+      "1. 2-6°C",
+      "2. -20°C",
+      "3. -70°C",
+      "4. -196°C",
+      "5. 실온(25~30℃)"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 398,
+    "subject": "기생충학",
+    "image_path": "images/398.png",
+    "type": "multiple_choice",
+    "question": "아래 A는 성충, B는 충란이다. 예상 기생충은?",
+    "options": [
+      "1. 간흡충",
+      "2. 두비니구충",
+      "3. 광절열두조충",
+      "4. 아메리카구충",
+      "5. 요코가와흡충"
+    ],
+    "answer": "1",
+    "explanation": ""
+  },
+  {
+    "id": 399,
+    "subject": "기생충학",
+    "image_path": "images/399.png",
+    "type": "multiple_choice",
+    "question": "사진으로 예상되는 원충류는?",
+    "options": [
+      "1. 람불편모충",
+      "2. 삼일열원충",
+      "3. 사일열원충",
+      "4. 열대열원충",
+      "5. 말레이사상충"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 400,
+    "subject": "혈청학",
+    "image_path": "images/400.png",
+    "type": "multiple_choice",
+    "question": "HBsAg kit를 이용한 검체 혈청의 분석 결과이다. 이용된 검사법으로 옳은 것은?",
+    "options": [
+      "1. IRMA (Immunoradiometric analysis)",
+      "2. ICA (Immunochromatographic assay)",
+      "3. RPHA (Reverse Passive Hemagglutination)",
+      "4. MEIA (microparticle enzyme immunoassay)",
+      "5. ELISA (Enzyme Linked immunosorbent Assay)"
+    ],
+    "answer": "2",
+    "explanation": ""
+  },
+  {
+    "id": 401,
+    "subject": "혈청학",
+    "image_path": "images/401.png",
+    "type": "multiple_choice",
+    "question": "B형간염 혈청표지자 진행과정이다. 해당되는 표지자로 옳은 것은?",
+    "options": [
+      "1. A : HBsAg",
+      "2. B : HBeAg",
+      "3. D : anti-HBs",
+      "4. E : anti-HBe",
+      "5. C : anti-HBc IgM"
+    ],
+    "answer": "5",
+    "explanation": ""
+  },
+  {
+    "id": 402,
+    "subject": "혈청학",
+    "image_path": "images/402.png",
+    "type": "multiple_choice",
+    "question": "다음 형광표지 단클론성 항체(MAb: moclonal-Ab) 시약을 이 용하여 FACS 분석기에서 측정되는 세포는?",
+    "options": [
+      "1. RBC",
+      "2. B cell",
+      "3. Th cell",
+      "4. Tc cell",
+      "5. NK cell"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 403,
+    "subject": "혈청학",
+    "image_path": "images/403.png",
+    "type": "multiple_choice",
+    "question": "다음 분석기에 대한 설명으로 옳은 것은?",
+    "options": [
+      "1. singleplex 법",
+      "2. 기질발색측정",
+      "3. 형광표지자사용",
+      "4. 특이 IgE 농도 측정",
+      "5. non-패널(panel)검사법"
+    ],
+    "answer": "4",
+    "explanation": ""
+  },
+  {
+    "id": 404,
+    "subject": "조직학",
+    "image_path": "images/404.png",
+    "type": "multiple_choice",
+    "question": "사진에서 보여주는 장기의 고정방법에 대한 설명으로 옳은 것은?",
+    "options": [
+      "1. 검체를 절개하지 않고 고정",
+      "2. 작은굽이(lesser curvature)를 가위로 절개",
+      "3. 고정방법 중 코르크판에 고정",
+      "4. 시험소파술(exploratory curettage)로 절취",
+      "5. 중앙을 관통하는 큰굽이(greater curvature) 절취"
+    ],
+    "answer": "3",
+    "explanation": "사진은 위(Stomach)입니다. 위는 적출 후 즉시 병변 부위가 손상되지 않도록 큰굽이(greater curvature)를 가위로 절개하여 코르크판에 고정합니다."
+  },
+  {
+    "id": 405,
+    "subject": "조직학",
+    "image_path": "images/405.png",
+    "type": "multiple_choice",
+    "question": "사진과 같은 장비를 사용해야만 검출할 수 있는 조직 성분으로 옳은 것은?",
+    "options": [
+      "1. 당원",
+      "2. 점액",
+      "3. 지방",
+      "4. 진균",
+      "5. 핵산"
+    ],
+    "answer": "3",
+    "explanation": "사진은 동결절편기(Cryostat)입니다. 동결절편법은 파라핀 제작 과정(알코올, 자일렌)에서 소실되는 지방(lipid)이나 특정 효소, 항원 등을 검출하기 위해 조직을 급속 동결시켜 표본을 제작할 때 사용합니다."
+  },
+  {
+    "id": 406,
+    "subject": "조직학",
+    "image_path": "images/406.png",
+    "type": "multiple_choice",
+    "question": "파라핀 블록 박절 사진이다. 사진에서 관찰되는 박절 과정의 이상 원인으로 가장 적절한 것은?",
+    "options": [
+      "1. 탈수 불충분",
+      "2. 침투 불충분",
+      "3. 칼날 각도 부적절",
+      "4. 칼날에 이물질 및 홈",
+      "5. 칼날과 파라핀 블록 온도 상승"
+    ],
+    "answer": "4",
+    "explanation": "박절된 파라핀 리본에 수직으로 칼자국(줄)이 나 있습니다. 이는 칼날(knife edge)에 이물질이 붙어 있거나 홈(nick)이 파였을 때 발생하는 전형적인 결함입니다."
+  },
+  {
+    "id": 407,
+    "subject": "조직학",
+    "image_path": "images/407.png",
+    "type": "multiple_choice",
+    "question": "H&E 염색을 시행한 조직 사진에서 관찰되는 장기와 화살표가 가리키는 구조의 연결로 옳은 것은?",
+    "options": [
+      "1. 위 - 목점액층",
+      "2. 기관지 - 연골",
+      "3. 회장 - 파이어반",
+      "4. 십이지장 - 부루너샘",
+      "5. 식도 - 고유식도샘"
+    ],
+    "answer": "2",
+    "explanation": "사진은 호흡기계의 기관지 조직입니다. 점막상피는 거짓중층섬모원주상피이며, 화살표(↑)는 기관지 벽을 지지하는 유리연골(hyaline cartilage)을 가리킵니다."
+  },
+  {
+    "id": 408,
+    "subject": "조직학",
+    "image_path": "images/408.png",
+    "type": "multiple_choice",
+    "question": "신장의 특수 염색 사진이다. 이 염색에 대한 설명으로 맞는 것은?",
+    "options": [
+      "1. 종양진단에 사용된다.",
+      "2. 사구체 바닥막 관찰에 사용된다.",
+      "3. ammonia를 주 시약으로 사용한다.",
+      "4. 산화제로 chromic acid를 사용한다.",
+      "5. 절편의 두께가 10μm 이상 두께로 박절해야 한다."
+    ],
+    "answer": "2",
+    "explanation": "사진은 PAMS(Periodic Acid Methenamine Silver) 염색입니다. 신장(콩팥)의 사구체 바닥막(기저막) 관찰에 가장 많이 사용되며, 바닥막의 은친화성 성분을 이용해 검은색으로 염색시켜 관찰합니다."
+  },
+  {
+    "id": 409,
+    "subject": "조직학",
+    "image_path": "images/409.png",
+    "type": "multiple_choice",
+    "question": "간조직의 특수 염색표본이다. 매염을 위한 2차 고정액으로 가장 좋은 것은?",
+    "options": [
+      "1. Formalin",
+      "2. Helly 용액",
+      "3. Bouin 용액",
+      "4. Carnoy 용액",
+      "5. Zenker 용액"
+    ],
+    "answer": "3",
+    "explanation": "사진은 Masson trichrome 염색입니다. 이 염색을 시행할 때 매염과 염색 대비를 높이기 위한 2차 고정액으로 Bouin 용액이 가장 널리 사용됩니다."
+  },
+  {
+    "id": 410,
+    "subject": "조직학",
+    "image_path": "images/410.png",
+    "type": "multiple_choice",
+    "question": "작은창자 점막의 특수 염색 사진이다. 염색 결과로 청색으로 나타나는 세포와 그 분비물을 올바르게 연결한 것은?",
+    "options": [
+      "1. 흡수세포 - 당단백질",
+      "2. 술잔세포 - 산성 점액",
+      "3. 비만세포 - 산성 점액",
+      "4. 목점액세포 - 중성 점액",
+      "5. 파네트세포 - 라이소자임"
+    ],
+    "answer": "2",
+    "explanation": "사진은 Alcian blue 염색으로, 산성 점액(산성 점액다당류)을 청색으로 염색합니다. 작은창자의 술잔세포(goblet cell)는 산성 점액(mucin)을 분비하므로 청색으로 염색됩니다."
+  },
+  {
+    "id": 411,
+    "subject": "조직학",
+    "image_path": "images/411.png",
+    "type": "multiple_choice",
+    "question": "폐 조직에 GMS 염색(Grocott's Methenamine Silver stain)을 시행한 사진이다. 이 염색을 통해 진단할 수 있는 질환은?",
+    "options": [
+      "1. 진균증",
+      "2. 흑색종",
+      "3. 결핵균",
+      "4. 과각화증",
+      "5. 단순포진 바이러스 감염"
+    ],
+    "answer": "1",
+    "explanation": "GMS 염색은 세포벽에 다당류 성분이 있는 진균(fungi)을 검정색으로 염색하는 특수 염색법입니다. 폐 조직에서 Aspergillus, Candida 같은 진균 감염을 진단하는 데 사용됩니다."
+  },
+  {
+    "id": 412,
+    "subject": "조직학",
+    "image_path": "images/412.png",
+    "type": "multiple_choice",
+    "question": "면역조직화학(IHC) 염색 과정에서 사용하는 장비의 사진이다. 이 장비의 주요 기능으로 가장 적절한 것은?",
+    "options": [
+      "1. 자동봉입",
+      "2. 발색강화",
+      "3. 자동염색",
+      "4. 항원성 복원",
+      "5. 내인성 인자 억제"
+    ],
+    "answer": "4",
+    "explanation": "사진은 항원성 복원 장비(Pressure cooker 등)입니다. 포르말린 고정 과정에서 차폐된 항원(epitope)을 고온의 완충액으로 처리하여 그 구조를 회복시키는 '항원성 복원' 기능에 사용됩니다."
+  },
+  {
+    "id": 413,
+    "subject": "조직학",
+    "image_path": "images/413.png",
+    "type": "multiple_choice",
+    "question": "사진은 쉬프 시약(Schiff reagent)의 검정 과정 중 하나를 보여 준다. 이때 사용되는 검정 시약은?",
+    "options": [
+      "1. Xylene",
+      "2. Acetone",
+      "3. Formalin",
+      "4. Picric acid",
+      "5. Acid fuchsin"
+    ],
+    "answer": "3",
+    "explanation": "Schiff 시약은 알데하이드(aldehyde)와 반응하여 자홍색을 냅니다. Formalin(포르말린)은 알데하이드 계열이므로, Schiff 시약에 Formalin을 떨어뜨려 자홍색으로 변하는지 확인하여 시약의 정상 작동 여부를 검정할 수 있습니다."
+  },
+  {
+    "id": 414,
+    "subject": "세포학",
+    "image_path": "images/348.png",
+    "type": "multiple_choice",
+    "question": "사진은 세포검사에서 고정을 시행하는 장면이다. 이 고정에 사용된 고정제로 가장 적절한 것은?",
+    "options": [
+      "1. 자일렌",
+      "2. 피크르산",
+      "3. 카르노이 용액",
+      "4. 10% 중성 포르말린",
+      "5. 에탄올 + 폴리에틸렌글리콜"
+    ],
+    "answer": "5",
+    "explanation": "사진은 분사식 고정(spray fixation) 방법입니다. 세포검사에서 도말 표본을 운반할 때 사용하는 이 스프레이 고정액의 주성분은 에탄올(고정제)과 폴리에틸렌글리콜(PEG, 피복제)로 이루어져 있습니다."
+  },
+  {
+    "id": 415,
+    "subject": "세포학",
+    "image_path": "images/415.png",
+    "type": "multiple_choice",
+    "question": "사진은 세포검사 과정에서 사용되는 장비이다. 이 장비의 명칭은?",
+    "options": [
+      "1. 동결절편기",
+      "2. 분사세척기",
+      "3. 세포여과기",
+      "4. 고속혼합기",
+      "5. 세포원심분리기"
+    ],
+    "answer": "5",
+    "explanation": "사진은 세포원심분리기(Cytocentrifuge)입니다. 소변, 뇌척수액, 체액 등 세포 성분이 적은 검체에서 세포를 슬라이드에 효과적으로 모아주기(농축) 위해 사용합니다."
+  },
+  {
+    "id": 416,
+    "subject": "세포학",
+    "image_path": "images/416.png",
+    "type": "multiple_choice",
+    "question": "자궁의 질 도말표본(Pap smear) 사진이다. 이 표본에서 의심 되는 감염원은?",
+    "options": [
+      "1. 칸디다증(Candidiasis)",
+      "2. 단순포진 바이러스 감염(HSV infection)",
+      "3. 사람유두종바이러스 감염(HPV infection)",
+      "4. 트리코모나스 감염(Trichomoniasis)",
+      "5. 클라미디아 감염(Chlamydia infection)"
+    ],
+    "answer": "4",
+    "explanation": "사진의 서양배 모양의 원충(화살표)은 질편모충(Trichomonas vaginalis)입니다. 파파니콜라우 염색에서 회청색의 세포질과 작은 핵이 관찰되며, 주변에 염증세포(호중구)가 많이 보입니다."
+  },
+  {
+    "id": 417,
+    "subject": "세포학",
+    "image_path": "images/417.png",
+    "type": "multiple_choice",
+    "question": "자궁 질 도말표본(Pap smear) 사진이다. 사진에서 관찰되는 세포는?",
+    "options": [
+      "1. 무핵세포",
+      "2. 화생세포",
+      "3. 수복세포",
+      "4. 주상세포",
+      "5. 원주세포"
+    ],
+    "answer": "4",
+    "explanation": "사진의 세포들은 세포질이 두껍고 가장자리가 말린 '보트 모양'을 하고 있습니다. 이는 주상세포(Navicular cell)로, 임신 중 프로게스테론의 영향으로 글리코겐이 축적되어 나타나는 중간세포의 변형된 모습입니다."
+  },
+  {
+    "id": 418,
+    "subject": "세포학",
+    "image_path": "images/418.png",
+    "type": "multiple_choice",
+    "question": "자궁경부 세포검사(Pap smear)에서 관찰된 도말상이다. 도말 상의 성숙지수(maturation index: MI)로 옳은 것은?",
+    "options": [
+      "1. 0:0:100",
+      "2. 0:100:0",
+      "3. 50:50:0",
+      "4. 100:0:0",
+      "5. 20:50:30"
+    ],
+    "answer": "4",
+    "explanation": "성숙지수(MI)는 (방기저세포 : 중간세포 : 표층세포)의 비율입니다. 사진의 도말상은 거의 대부분이 방기저세포(parabasal cell)로 구성되어 있으므로 MI는 100:0:0 입니다."
+  },
+  {
+    "id": 419,
+    "subject": "세포학",
+    "image_path": "images/29.png",
+    "type": "multiple_choice",
+    "question": "자궁경부 세포검사(Pap smear)에서 관찰된 도말상이다. 이 세포 소견에 대한 진단명은?",
+    "options": [
+      "1. 편평세포암종",
+      "2. 비정형 내경부세포",
+      "3. 자궁내경부 선암종",
+      "4. 저등급편평상피내병변",
+      "5. 고등급편평상피내병변"
+    ],
+    "answer": "1",
+    "explanation": "사진은 각화성 편평세포암종(Keratinizing squamous cell carcinoma)의 소견입니다. 세포들이 각질화(keratinization)되어 세포질이 주황색/분홍색으로 짙게 염색되고, 기괴한 모양(방추형, 올챙이형)의 세포들이 관찰됩니다."
+  },
+  {
+    "id": 420,
+    "subject": "임상화학",
+    "image_path": "images/420.png",
+    "type": "multiple_choice",
+    "question": "신생아 발뒤꿈치 혈액을 채취하는 선천성대사이상 선별검사이다. 관련 있는 질환은?",
+    "options": [
+      "1. 멜라닌뇨증",
+      "2. 알캅톤뇨증",
+      "3. 인티칸뇨증",
+      "4. 포르피린뇨증",
+      "5. 페닐케톤뇨증"
+    ],
+    "answer": "5",
+    "explanation": "신생아 선천성 대사이상 선별검사는 신생아 발뒤꿈치 혈액으로 검사하며, 페닐케톤뇨증(PKU) 등을 조기에 발견하기 위한 검사입니다."
+  },
+  {
+    "id": 421,
+    "subject": "요화학",
+    "image_path": "images/32.png",
+    "type": "multiple_choice",
+    "question": "요시험지법의 반응과 원리를 나타낸 것이다. 반응성분으로 옳은 것은?",
+    "options": [
+      "1. urea",
+      "2. glucose",
+      "3. albumin",
+      "4. bilirubin",
+      "5. ketone body"
+    ],
+    "answer": "4",
+    "explanation": "요시험지법에서 빌리루빈(bilirubin) 검사는 디아조늄염(diazonium salt)과 빌리루빈이 강산성 환경에서 만나 아조색소(azo dye)를 형성하는 디아조 반응을 원리로 합니다."
+  },
+  {
+    "id": 422,
+    "subject": "요화학",
+    "image_path": "images/422.png",
+    "type": "multiple_choice",
+    "question": "소변을 채취한 후 검사결과와 관련 있는 것은?",
+    "options": [
+      "1. 혈뇨",
+      "2. 멜라닌뇨",
+      "3. 혈색소뇨",
+      "4. 포르피린뇨",
+      "5. 마이오글로빈뇨"
+    ],
+    "answer": "1",
+    "explanation": "사진 A는 육안적 혈뇨(적색뇨)입니다. 이를 원심분리(B)했을 때 상층액은 맑아지고 적혈구가 침전되었으며, 침전물을 현미경(C)으로 관찰 시 적혈구가 확인되었습니다. 이는 혈뇨(Hematuria)임을 의미합니다."
+  },
+  {
+    "id": 423,
+    "subject": "임상화학",
+    "image_path": "images/423.png",
+    "type": "multiple_choice",
+    "question": "피펫의 용도는?",
+    "options": [
+      "1. 비중 검사",
+      "2. 소변량 측정",
+      "3. 포도당 검사",
+      "4. 질관리물질 혼합",
+      "5. 물의 순수도 평가"
+    ],
+    "answer": "4",
+    "explanation": "사진은 용량 피펫(Volumetric pipette)입니다. 이는 표준용액이나 정도관리물질 조제 시 정확한 부피의 액체를 정밀하게 측정하여 옮길 때 사용됩니다."
+  },
+  {
+    "id": 424,
+    "subject": "임상화학",
+    "image_path": "images/424.png",
+    "type": "multiple_choice",
+    "question": "기구의 GC이다. 화살표가 가르치는 명칭은?",
+    "options": [
+      "1. valve",
+      "2. pump",
+      "3. column",
+      "4. injector",
+      "5. detector"
+    ],
+    "answer": "3",
+    "explanation": "사진은 가스크로마토그래피(GC)의 모식도입니다. 화살표가 가리키는 코일형의 긴 관은 컬럼(column)으로, 이 내부에서 시료 성분들이 분리됩니다."
+  },
+  {
+    "id": 425,
+    "subject": "임상화학",
+    "image_path": "images/425.png",
+    "type": "multiple_choice",
+    "question": "정상 혈청단백을 전기영동한 결과이다. 셀루로프라스민(Ceruloplasmin)이 포함된 분획은?",
+    "options": [
+      "1. Albumin",
+      "2. α1",
+      "3. α2",
+      "4. β",
+      "5. γ"
+    ],
+    "answer": "3",
+    "explanation": "혈청 단백 전기영동에서 셀룰로플라스민(Ceruloplasmin)은 α2 (알파2) 글로불린 분획에 포함됩니다."
+  },
+  {
+    "id": 426,
+    "subject": "임상화학",
+    "image_path": "images/426.png",
+    "type": "multiple_choice",
+    "question": "포도당 투여 후 시간별 당 처리 능력을 평가한 그래프이다. 관련 된 검사법은?",
+    "options": [
+      "1. 당부하시험",
+      "2. 당화혈색소",
+      "3. 프럭토사민",
+      "4. 당화알부민",
+      "5. 1,5-안히드로글루시톨"
+    ],
+    "answer": "1",
+    "explanation": "그래프는 포도당(당)을 투여한 후 시간(0, 20, 40...분)에 따라 혈당 수치가 어떻게 변하는지 추적한 것입니다. 이는 당뇨병 진단에 쓰이는 경구 당부하시험(GTT, Glucose Tolerance Test)입니다."
+  },
+  {
+    "id": 427,
+    "subject": "임상화학",
+    "image_path": "images/427.png",
+    "type": "multiple_choice",
+    "question": "혈중 약물농도 분석 위한 질량분석기이다. 심장활성 모니터링 약제에 해당하는 항목은?",
+    "options": [
+      "1. 디곡신(Digoxin)",
+      "2. 타크로리무스(Tacrolimus)",
+      "3. 페노바비탈(Phenobarbital)",
+      "4. 사이클로스포린(Cyclosporine)",
+      "5. 메토트렉세이트(Methotrexate)"
+    ],
+    "answer": "1",
+    "explanation": "치료적 약물 모니터링(TDM) 대상 약물 중, 디곡신(Digoxin)은 심장활성약물(강심제)에 해당합니다."
+  },
+  {
+    "id": 428,
+    "subject": "임상화학",
+    "image_path": "images/428.png",
+    "type": "multiple_choice",
+    "question": "사진과 같은 검사 항목에 해당 기구는?",
+    "options": [
+      "1. 전기영동(EP)",
+      "2. 질량분석(MS)",
+      "3. 이온선택전극(ISE)",
+      "4. 가스크로마토그래피(GC)",
+      "5. 고속액체크로마토그래피(HPLC)"
+    ],
+    "answer": "3",
+    "explanation": "사진은 K+(칼륨), Na+(소듐), Ca++(칼슘), pH, Cl-(염소) 등 전해질을 측정하는 전극을 보여줍니다. 이러한 이온을 선택적으로 측정하는 방식을 이온선택전극(ISE, Ion-Selective Electrode)법이라고 합니다."
+  },
+  {
+    "id": 429,
+    "subject": "임상화학",
+    "image_path": "images/429.png",
+    "type": "multiple_choice",
+    "question": "심장표지자 반감기를 나타내는 그래프이다. (A)에 해당하는 것은?",
+    "options": [
+      "1. ALT",
+      "2. LDH",
+      "3. CK-MB",
+      "4. Troponin",
+      "5. Myoglobin"
+    ],
+    "answer": "5",
+    "explanation": "심근경색 발병 후 가장 먼저(1~2시간) 상승했다가 가장 먼저 사라지는 표지자는 마이오글로빈(Myoglobin)입니다. 그래프 A가 이 패턴을 보입니다."
+  },
+  {
+    "id": 430,
+    "subject": "임상화학",
+    "image_path": "images/430.png",
+    "type": "multiple_choice",
+    "question": "생화학 검사 결과를 종합적으로 판단하여 평가할 수 있는 기관은?(화살표↑ 증가, ↓ 감소)",
+    "options": [
+      "1. 간",
+      "2. 뇌",
+      "3. 뼈",
+      "4. 근육",
+      "5. 신장"
+    ],
+    "answer": "1",
+    "explanation": "T. Bilirubin(빌리루빈), ALT, AST가 모두 증가(↑)하고, 간에서 합성되는 Albumin(알부민)이 감소(↓)한 소견은 전형적인 간(liver) 기능 저하 또는 간질환을 시사합니다."
+  },
+  {
+    "id": 431,
+    "subject": "임상화학",
+    "image_path": "images/431.png",
+    "type": "multiple_choice",
+    "question": "정상 성인의 뇌척수액을 채취하여 용기에 옮기는 과정이다. 설명으로 옳은 것은?",
+    "options": [
+      "1. 성인은 요추 4~5번에서 채취한다.",
+      "2. 소아는 요추 3~4번에서 채취한다.",
+      "3. 1번 검체는 화학적 검사용이다.",
+      "4. 2번 검체는 혈구수 계산용이다.",
+      "5. 3번 검체는 미생물 검사에 이용한다."
+    ],
+    "answer": "3",
+    "explanation": "뇌척수액(CSF)은 3개의 시험관에 순서대로 채취합니다. 1번은 화학/혈청 검사, 2번은 미생물 검사, 3번은 혈액학(세포 수) 검사에 사용합니다."
+  },
+  {
+    "id": 432,
+    "subject": "임상화학",
+    "image_path": "images/432.png",
+    "type": "multiple_choice",
+    "question": "웨스트가드 멀티룰의 규정(?)에 해당하는 설명으로 옳은 것은?",
+    "options": [
+      "1. 1-2S, 계통오차",
+      "2. 1-2S, 우연오차",
+      "3. 2-2S, 계통오차",
+      "4. 2-2S, 우연오차",
+      "5. 4-1S, 계통오차"
+    ],
+    "answer": "5",
+    "explanation": "그림의 동그라미(?) 부분은 연속된 4개의 관리물질 측정치가 평균선(Mean)을 기준으로 한쪽(-1s 아래)으로 치우친 '4-1S' 규칙 위반을 보여줍니다. 이는 계통 오차(Systemic error)에 해당합니다."
+  },
+  {
+    "id": 433,
+    "subject": "임상화학",
+    "image_path": "images/433.png",
+    "type": "multiple_choice",
+    "question": "진단검사실에서 주의해야 할 안전표시 Symbol을 나타낸 그림이다. 명칭은?",
+    "options": [
+      "1. 물리적 위험표시",
+      "2. 일반폐기물 표시",
+      "3. 재활용용기 표시",
+      "4. 화학적 위험표시",
+      "5. 생물학적 위험표시"
+    ],
+    "answer": "5",
+    "explanation": "사진의 표시는 생물학적 위험(Biohazard)을 경고하는 마크입니다. 감염성 물질이나 병원균 등 인체에 해를 끼칠 수 있는 생물학적 물질이 있음을 나타냅니다."
+  },
+  {
+    "id": 434,
+    "subject": "핵의학",
+    "image_path": "images/434.png",
+    "type": "multiple_choice",
+    "question": "125I를 이용한 감마선계수기이다. 시간당 검출된 방사선 입자의 수를 측정하는 단위로 옳은 것은?",
+    "options": [
+      "1. Bq",
+      "2. Sv",
+      "3. cpm",
+      "4. rpm",
+      "5. Radium"
+    ],
+    "answer": "3",
+    "explanation": "감마선계수기(Gamma counter)는 방사선 입자를 검출하여 그 수를 셉니다. 이때 '분당 계수(counts per minute)'를 의미하는 cpm을 측정 단위로 사용합니다."
+  },
+  {
+    "id": 435,
+    "subject": "핵의학",
+    "image_path": "images/435.png",
+    "type": "multiple_choice",
+    "question": "비경쟁적으로 방사성 동위원소를 항체에 표지 시켜 측정하는 검사법은?",
+    "options": [
+      "1. 포화분석법",
+      "2. 방사효소분석법",
+      "3. 방사면역측정법",
+      "4. 방사수용체분석법",
+      "5. 면역방사계수측정법"
+    ],
+    "answer": "5",
+    "explanation": "그림 A는 샌드위치(sandwich)법 원리를 보여줍니다. 검체의 항원(hormone)이 튜브 벽의 1차 항체와 결합한 뒤, 방사성동위원소(labeled)가 표지된 2차 항체와 결합합니다. 이는 비경쟁적 방법이며 '면역방사계수측정법(IRMA)'이라고 합니다."
+  },
+  {
+    "id": 436,
+    "subject": "혈액학",
+    "image_path": "images/436.png",
+    "type": "multiple_choice",
+    "question": "사진의 채혈관을 꼭 사용해야하는 검사는?",
+    "options": [
+      "1. 혈색소 검사",
+      "2. 혈액응고 검사",
+      "3. 온혈구 수 검사",
+      "4. 호산구 수 검사",
+      "5. 혈소판 수 검사"
+    ],
+    "answer": "2",
+    "explanation": "사진의 푸른색 캡(blue top) 튜브에는 항응고제로 3.2% Sod. citrate가 들어있습니다. 이 채혈관은 PT, aPTT와 같은 혈액응고 검사에 사용되며, 혈액 9 : 항응고제 1의 비율을 정확히 맞춰야 합니다."
+  },
+  {
+    "id": 437,
+    "subject": "혈액학",
+    "image_path": "images/437.png",
+    "type": "multiple_choice",
+    "question": "화살표의 A 영역을 크게 확대하면 오른 쪽과 같은 구획이 나타난다. 16 칸의 구획 내에 보이는 혈구의 대부분은?",
+    "options": [
+      "1. 적혈구",
+      "2. 백혈구",
+      "3. 혈소판",
+      "4. 호중구",
+      "5. 단핵구"
+    ],
+    "answer": "1",
+    "explanation": "사진은 혈구계산판(hemocytometer)입니다. 중앙의 큰 구획(A)은 적혈구 계산 구획(RBC counting area)입니다."
+  },
+  {
+    "id": 438,
+    "subject": "혈액학",
+    "image_path": "images/438.png",
+    "type": "multiple_choice",
+    "question": "말초혈액에서 사진과 같은 현상이 발견되었다. 자동혈구계산기에서 예상되는 거짓결과는?",
+    "options": [
+      "1. 적혈구 수 증가",
+      "2. 혈색소 감소",
+      "3. 적혈구 크기 증가",
+      "4. 백혈구 수 감소",
+      "5. 적혈구용적 감소"
+    ],
+    "answer": "3",
+    "explanation": "사진은 한냉응집소(cold agglutinin)에 의한 적혈구 자가 응집 현상입니다. 자동혈구계산기는 응집된 적혈구 덩어리를 하나의 큰 세포로 인식하므로, 적혈구 수(RBC)는 거짓 감소하고, 평균 적혈구 용적(MCV)은 거짓 증가하게 됩니다."
+  },
+  {
+    "id": 439,
+    "subject": "혈액학",
+    "image_path": "images/439.png",
+    "type": "multiple_choice",
+    "question": "혈구세포 histogram이다. 림프구에 해당하는 것은?",
+    "options": [
+      "1. A",
+      "2. B",
+      "3. C",
+      "4. D",
+      "5. E"
+    ],
+    "answer": "2",
+    "explanation": "자동혈구계산기 히스토그램에서 A는 Debris(세포파편), B는 림프구(Lymphocyte), C는 단핵구/과립구 등 비림프구, D는 적혈구(RBC), E는 혈소판(Platelet) 집단을 나타냅니다."
+  },
+  {
+    "id": 440,
+    "subject": "혈액학",
+    "image_path": "images/440.png",
+    "type": "multiple_choice",
+    "question": "화살표가 지시하는 세포는?",
+    "options": [
+      "1. Prusian blue에 염색된 Fe을 가진 적혈구다.",
+      "2. Wright's 염색액에 염색된 붕괴된 핵을 가진 적혈구다.",
+      "3. crystal violet에 염색된 방추사 잔여물을 가진 적혈구다.",
+      "4. new methylene blue에 염색된 RNA를 가지고 있는 적혈구다.",
+      "5. brilliant cresyl blue에 염색된 산화된혈색소를 가지고 있는 적혈구다."
+    ],
+    "answer": "4",
+    "explanation": "사진은 초생체 염색(new methylene blue 등)을 한 도말 표본입니다. 화살표가 가리키는 세포는 내부에 RNA 잔여물이 망상(그물)으로 염색된 그물적혈구(reticulocyte)입니다."
+  },
+  {
+    "id": 441,
+    "subject": "혈액학",
+    "image_path": "images/441.png",
+    "type": "multiple_choice",
+    "question": "철염색에서 관찰된 환상철적혈모구빈혈(ringed sideroblastic anemia)환자의 표본이다. 사용된 염색법은?",
+    "options": [
+      "1. PAS stain",
+      "2. Wright's stain",
+      "3. Prussian blue stain",
+      "4. Acid phosphatase stain",
+      "5. Alkaline phosphatase stain"
+    ],
+    "answer": "3",
+    "explanation": "환상철적혈모구(ringed sideroblast)는 적혈모구의 핵 주위에 철(Fe) 과립이 반지처럼 둘러싸고 있는 세포입니다. 이러한 철 성분을 증명(청색으로 염색)하는 데 사용되는 특수염색은 Prussian blue stain입니다."
+  },
+  {
+    "id": 442,
+    "subject": "혈액학",
+    "image_path": "images/442.png",
+    "type": "multiple_choice",
+    "question": "M/E ratio가 1:1인 골수표본사진이다. 정상보다 증가된 세포는?",
+    "options": [
+      "1. 골수모구(myleloblast)",
+      "2. 적혈모구(normoblast)",
+      "3. 형질세포(plasma cell)",
+      "4. 림프모구(lymphoblast)",
+      "5. 후골수구(metamyelocyte)"
+    ],
+    "answer": "2",
+    "explanation": "정상 골수의 M:E ratio(골수계/적혈구계 비율)는 2~4:1입니다. 사진처럼 M:E ratio가 1:1이라는 것은 정상보다 적혈구계 세포, 즉 적혈모구(normoblast)의 비율이 상대적으로 증가했음을 의미합니다."
+  },
+  {
+    "id": 443,
+    "subject": "유전학",
+    "image_path": "images/443.png",
+    "type": "multiple_choice",
+    "question": "사진은 염색체 검사 시 사용되는 시약으로 바르게 설명한 것은?",
+    "options": [
+      "1. 항응고제",
+      "2. 분열자극제",
+      "3. 분열정지제",
+      "4. 세포팽화제",
+      "5. 세포고정액"
+    ],
+    "answer": "3",
+    "explanation": "colcemid는 분열 중기 정지시키는 시약이다."
+  },
+  {
+    "id": 444,
+    "subject": "혈액학",
+    "image_path": "images/444.png",
+    "type": "multiple_choice",
+    "question": "다음 장비에 대한 설명으로 맞는 것은?",
+    "options": [
+      "1. 혈우병 측정용이",
+      "2. 응고인자 활성 측정",
+      "3. 2차 지혈과정 이상 확인",
+      "4. 섬유소 용해과정을 확인",
+      "5. 혈소판 기능부전을 선별"
+    ],
+    "answer": "5",
+    "explanation": "사진은 PFA(Platelet Function Analyzer) 장비입니다. 이는 출혈시간(Bleeding Time) 검사를 대체하여, 혈소판 부착 및 응집과 관련된 1차 지혈과정의 이상, 즉 혈소판 기능부전을 신속하게 선별하는 데 사용됩니다."
+  },
+  {
+    "id": 445,
+    "subject": "혈액학",
+    "image_path": "images/445.png",
+    "type": "multiple_choice",
+    "question": "혼합검사(mixing test)의 검사과정이다. B에 해당하는 검사는?",
+    "options": [
+      "1. Factor VIII 검사",
+      "2. Factor IX 검사",
+      "3. Factor XI 검사",
+      "4. Factor XII 검사",
+      "5. Lupus anticoagulant 검사"
+    ],
+    "answer": "5",
+    "explanation": "aPTT 등이 연장되었을 때, 환자 혈장과 정상 혈장을 1:1로 혼합하여 검사합니다. 이때 결과가 '보정됨'(A)이면 응고인자 결핍, '보정 안됨'(B)이면 억제제(inhibitor) 존재를 의미합니다. 대표적인 억제제가 루푸스 항응고인자(Lupus anticoagulant)입니다."
+  },
+  {
+    "id": 446,
+    "subject": "혈액학",
+    "image_path": "images/446.png",
+    "type": "multiple_choice",
+    "question": "검사가 촉진되는 경우는?",
+    "options": [
+      "1. 저온",
+      "2. albumin증가",
+      "3. 적혈구 증가",
+      "4. fibrinogen증가",
+      "5. 채혈 후 3시간 이상 방치"
+    ],
+    "answer": "4",
+    "explanation": "사진은 적혈구침강속도(ESR) 검사입니다. ESR을 촉진(증가)시키는 요인으로는 Fibrinogen 증가, globulin 증가, 빈혈(적혈구 감소), 고온 등이 있습니다. Albumin 증가는 지연 요인입니다."
+  },
+  {
+    "id": 447,
+    "subject": "수혈학",
+    "image_path": "images/447.png",
+    "type": "multiple_choice",
+    "question": "Rh 표현형은?",
+    "options": [
+      "1. cde",
+      "2. CDEe",
+      "3. cDEe",
+      "4. cdEe",
+      "5. CcDEe"
+    ],
+    "answer": "3",
+    "explanation": "원주응집법(Column agglutination)에서 응집이 일어나면(양성) 젤 상층부에, 응집이 없으면(음성) 바닥에 가라앉습니다. anti-C는 음성, anti-D, anti-E, anti-c, anti-e는 모두 양성이므로, 표현형은 cDEe입니다."
+  },
+  {
+    "id": 448,
+    "subject": "수혈학",
+    "image_path": "images/448.png",
+    "type": "multiple_choice",
+    "question": "교차시험 결과에서 의심되는 항체는?",
+    "options": [
+      "1. anti-C",
+      "2. anti-D",
+      "3. 온난항체",
+      "4. 한냉항체",
+      "5. anti-Fya"
+    ],
+    "answer": "4",
+    "explanation": "교차시험 결과, 실온식염수 단계(IS)에서만 응집이 관찰되고 37℃ 알부민 단계와 항글로불린(Coombs) 단계에서는 응집이 사라졌습니다. 이는 실온(저온)에서 반응하는 한냉항체(cold antibody)의 존재를 시사합니다."
+  },
+  {
+    "id": 449,
+    "subject": "수혈학",
+    "image_path": "images/449.png",
+    "type": "multiple_choice",
+    "question": "A 그룹은 4℃에서 30분 37℃에서 1시간을 두고 B그룹은 4℃ 에서 90분, C그룹은 37℃에서 90분을 둔 결과이다. 어떤 항체 검사인가?",
+    "options": [
+      "1. anti-M",
+      "2. anti-I",
+      "3. anti-K",
+      "4. anti-P",
+      "5. anti-D"
+    ],
+    "answer": "4",
+    "explanation": "이 검사는 Donath-Landsteiner 검사로, 한냉항체인 anti-P를 검출하는 방법입니다. Anti-P는 저온(4℃)에서 적혈구에 부착하고, 체온(37℃)으로 올라가면 보체를 활성화시켜 용혈을 일으킵니다. 따라서 저온과 고온을 순차적으로 거친 A 그룹에서만 용혈이 관찰됩니다."
+  },
+  {
+    "id": 450,
+    "subject": "수혈학",
+    "image_path": "images/450.png",
+    "type": "multiple_choice",
+    "question": "사진에 보이는 set의 용도는?",
+    "options": [
+      "1. 성분채집술 set",
+      "2. 혈구세척용 set",
+      "3. 혈소판세척용 set",
+      "4. 백혈구세척용 set",
+      "5. 백혈구제거 혈소판 set"
+    ],
+    "answer": "5",
+    "explanation": "사진은 백혈구 제거 필터가 부착된 혈소판 수혈 세트입니다. 백혈구제거 필터는 수혈 부작용(발열, 동종면역, CMV 감염 등)을 예방하기 위해 사용됩니다."
+  },
+  {
+    "id": 451,
+    "subject": "수혈학",
+    "image_path": "images/451.png",
+    "type": "multiple_choice",
+    "question": "다음 장비는 Water bath로 해동시키는 기기이다. 설명이 맞는 것은?",
+    "options": [
+      "1. 동결침전제제를 해동할 때는 사용하지 않는다.",
+      "2. 빨리 해동 시 온도를 45℃로 높여서 사용한다.",
+      "3. 신선동결혈장은 비닐에 넣어서 해동하지 않고 직접 녹인다.",
+      "4. 신선동결혈장을 Rack에 고정시켜서 25℃로 고정해 해동한다.",
+      "5. 해동 시 비닐이나 bucket을 이용해서 물이 닿지 않도록 해동한다."
+    ],
+    "answer": "5",
+    "explanation": "신선동결혈장(FFP)이나 동결침전제제(Cryoprecipitate)를 수조(Water bath)에서 해동할 때는, 혈액제제 주입구가 물에 오염되지 않도록 전용 비닐 백이나 버킷에 넣어 물이 직접 닿지 않게 해동해야 합니다."
+  },
+  {
+    "id": 452,
+    "subject": "미생물학",
+    "image_path": "images/452.png",
+    "type": "multiple_choice",
+    "question": "3% 과산화수소를 이용한 Catalase 시험이다. 왼쪽 화살표와 같은 반응을 보이는 균은?",
+    "options": [
+      "1. Proteus spp.",
+      "2. Bacillus spp.",
+      "3. Micrococcus spp.",
+      "4. Streptococcus spp.",
+      "5. Staphylococcus spp."
+    ],
+    "answer": "4",
+    "explanation": "Catalase 시험은 세균의 카탈라제 효소 유무를 확인하는 검사입니다. 과산화수소와 반응하여 기포가 발생하면(오른쪽) 양성, 기포가 없으면(왼쪽 화살표) 음성입니다. Streptococcus(사슬알균)는 Catalase 음성입니다."
+  },
+  {
+    "id": 453,
+    "subject": "미생물학",
+    "image_path": "images/453.png",
+    "type": "multiple_choice",
+    "question": "그람 염색한 사진이다. 예상되는 세균은?",
+    "options": [
+      "1. Clostridium novyi",
+      "2. Clostridium tetani",
+      "3. Clostridioides difficile",
+      "4. Clostridium botulinum",
+      "5. Clostridium perfringens"
+    ],
+    "answer": "2",
+    "explanation": "사진은 그람 양성 막대균이 균체의 끝 부분에 둥근 아포(terminal spore)를 형성하여 '북채' 모양을 하고 있습니다. 이는 파상풍균(Clostridium tetani)의 전형적인 형태입니다."
+  },
+  {
+    "id": 454,
+    "subject": "미생물학",
+    "image_path": "images/454.png",
+    "type": "multiple_choice",
+    "question": "SIM (sulfite indole motility) 배지의 운동성 모양으로 예상되는 세균은?",
+    "options": [
+      "1. Bacillus anthracis",
+      "2. Staphylococcus aureus",
+      "3. Listeria monocytogenes",
+      "4. Streptococcus pyogenes",
+      "5. Erysipelothrix rhusiopathiae"
+    ],
+    "answer": "3",
+    "explanation": "SIM 배지에서 Listeria monocytogenes는 실온(20-25℃) 배양 시 특징적인 '우산 모양(umbrella-shaped)'의 운동성을 보입니다."
+  },
+  {
+    "id": 455,
+    "subject": "미생물학",
+    "image_path": "images/455.png",
+    "type": "multiple_choice",
+    "question": "사진의 특징적인 집락으로 미루어 추정할 수 있는 세균은?",
+    "options": [
+      "1. Clostridium tetani",
+      "2. Bacteriodes fragilis",
+      "3. Actinomyces israelii",
+      "4. Prevotella melanogenica",
+      "5. Fusobacterium necrophorum"
+    ],
+    "answer": "3",
+    "explanation": "무산소성 방선균인 Actinomyces israelii는 배양 시 특징적으로 '어금니 모양(molar tooth)'의 집락을 형성합니다."
+  },
+  {
+    "id": 456,
+    "subject": "미생물학",
+    "image_path": "images/456.png",
+    "type": "multiple_choice",
+    "question": "아래와 같은 생물학적 안전상자(biological safety cabinet)를 사용해야 하는 미생물은?",
+    "options": [
+      "1. HIV",
+      "2. Ebola virus",
+      "3. Influenza",
+      "4. Escherichia coli",
+      "5. Pseudomonas aeruginosa"
+    ],
+    "answer": "2",
+    "explanation": "사진은 Class III 생물학적 안전상자입니다. 이 장비는 완전히 밀폐되어 있으며, 에볼라 바이러스(Ebola virus)와 같이 생물안전등급 4등급(Biosafety Level 4)의 매우 위험한 병원체를 다룰 때 사용됩니다."
+  },
+  {
+    "id": 457,
+    "subject": "미생물학",
+    "image_path": "images/457.png",
+    "type": "multiple_choice",
+    "question": "X, V 인자 요구도 시험 사진이다. 아래와 같이 나타날 수 있는 세균은?",
+    "options": [
+      "1. Haemophilus ducreyi",
+      "2. Haemophilus aegyptius",
+      "3. Haemophilus influenzae",
+      "4. Haemophilus haemolyticus",
+      "5. Haemophilus parainfluenzae"
+    ],
+    "answer": "5",
+    "explanation": "사진은 X인자와 V인자 요구도 시험입니다. 세균이 X, V, XV 디스크 중 XV, V인자 디스크 주변에서만 자라는 '위성 현상'을 보이고 있습니다. 이는 V인자(NAD)만 요구하는 Haemophilus parainfluenzae의 특징입니다."
+  },
+  {
+    "id": 458,
+    "subject": "미생물학",
+    "image_path": "images/458.png",
+    "type": "multiple_choice",
+    "question": "아래는 혈액우무배지 사진이다. 추정되는 세균은?",
+    "options": [
+      "1. Escherichia coli",
+      "2. Shigella sonnei",
+      "3. Salmonella Typhi",
+      "4. Klebsiella pneumoniae",
+      "5. Streptococcus pneumoniae"
+    ],
+    "answer": "5",
+    "explanation": "사진은 옵토신(Optochin, P disk) 감수성 시험입니다. 혈액우무배지에서 알파(α) 용혈을 보이며 옵토신 디스크 주변에 뚜렷한 생육 억제대(감수성)를 보이는 것은 Streptococcus pneumoniae(폐렴알균)입니다."
+  },
+  {
+    "id": 459,
+    "subject": "진균학",
+    "image_path": "images/459.png",
+    "type": "multiple_choice",
+    "question": "아래 Lactophenol cotton blue (LPCB) 사진으로 추정할 수 있는 진균은?",
+    "options": [
+      "1. Fusarium spp.",
+      "2. Candida albicans",
+      "3. Sporthrix schenckii",
+      "4. Microsporum canis",
+      "5. Penicillium notatum"
+    ],
+    "answer": "3",
+    "explanation": "LPCB 염색 사진에서 균사 끝에 작은 분생포자들이 '꽃 모양(rosette)'으로 배열되어 있습니다. 이는 이형성 진균인 Sporothrix schenckii의 25℃ 배양 시 균사형(사상형)의 특징적인 모습입니다."
+  },
+  {
+    "id": 460,
+    "subject": "진균학",
+    "image_path": "images/460.png",
+    "type": "multiple_choice",
+    "question": "사진과 같은 진균은?",
+    "options": [
+      "1. Alternaria spp.",
+      "2. Penicillium spp.",
+      "3. Sporothrix schenckii",
+      "4. Aspergillus fumigatus",
+      "5. Epidermophyton floccosum"
+    ],
+    "answer": "1",
+    "explanation": "사진은 LPCB 염색 소견으로, 수평 및 수직 격막을 모두 가지며 끝이 뾰족한 곤봉 또는 수류탄 모양의 다세포성 대분생포자(conidia)가 사슬 형태로 연결된 모습입니다. 이는 Alternaria spp.의 특징입니다."
+  },
+  {
+    "id": 461,
+    "subject": "바이러스학",
+    "image_path": "images/461.png",
+    "type": "multiple_choice",
+    "question": "아래는 전자현미경 사진이다. 추정할 수 있는 바이러스는?",
+    "options": [
+      "1. rotavirus",
+      "2. adenovirus",
+      "3. rabiesvirus",
+      "4. measlesvirus",
+      "5. bacteriophage"
+    ],
+    "answer": "2",
+    "explanation": "사진은 정이십면체(icosahedral)의 캡시드 구조를 가지며, 12개의 꼭짓점에서 특징적인 돌출 섬유(fiber)가 뻗어 나오는 Adenovirus(아데노바이러스)의 전자현미경 사진입니다."
+  },
+  {
+    "id": 462,
+    "subject": "바이러스학",
+    "image_path": "images/462.png",
+    "type": "multiple_choice",
+    "question": "아래 그림(A, B)에 해당하는 분자생물학적 방법은?",
+    "options": [
+      "1. RT-PCR",
+      "2. Inverse PCR",
+      "3. real time PCR",
+      "4. multiplex PCR",
+      "5. Asymmetric PCR"
+    ],
+    "answer": "3",
+    "explanation": "그림 A는 PCR 증폭 과정에서 형광물질(TaqMan probe)이 분해되며 형광이 발생하는 원리를, 그림 B는 사이클(Cycle number)이 증가함에 따라 형광(Fluorescence)이 증폭되는 것을 보여줍니다. 이는 실시간 중합효소연쇄반응(real-time PCR)의 원리입니다."
+  },
+  {
+    "id": 463,
+    "subject": "기생충학",
+    "image_path": "images/463.png",
+    "type": "multiple_choice",
+    "question": "아래 A는 두절이고 B는 편절이다. 사진으로 미루어 추정되는 기생충은?",
+    "options": [
+      "1. 고래회충",
+      "2. 무구조충",
+      "3. 유구조충",
+      "4. 두비니구충",
+      "5. 아메리카구충"
+    ],
+    "answer": "3",
+    "explanation": "사진 A의 두절(scolex)에 갈고리(rostellum)가 있고, B의 수태편절(gravid proglottid) 자궁가지(uterine branch)가 한쪽에 평균 9개 정도로 뻗어 있습니다. 이는 돼지고기를 통해 감염되는 유구조충(Taenia solium)의 특징입니다."
+  },
+  {
+    "id": 464,
+    "subject": "기생충학",
+    "image_path": "images/464.png",
+    "type": "multiple_choice",
+    "question": "사진으로 미루어 예상되는 원충류는?",
+    "options": [
+      "1. 질편모충",
+      "2. 톡소포자충",
+      "3. 람블편모충",
+      "4. 삼일열원충",
+      "5. 대장섬모충"
+    ],
+    "answer": "1",
+    "explanation": "사진은 서양배 모양의 영양형(trophoite)을 보여주며, 하나의 핵과 편모가 관찰됩니다. 이는 질편모충(Trichomonas vaginalis)입니다."
+  },
+  {
+    "id": 465,
+    "subject": "혈청학",
+    "image_path": "images/465.png",
+    "type": "multiple_choice",
+    "question": "다음 원리를 이용해서 측정될 수 있는 물질은?",
+    "options": [
+      "1. ANA",
+      "2. CRP",
+      "3. HCG",
+      "4. HLA",
+      "5. LE cell"
+    ],
+    "answer": "1",
+    "explanation": "그림은 간접면역형광법(IFA)의 원리입니다. HEP-2 세포가 부착된 슬라이드에 환자 혈청(항체)을 반응시키고, 형광물질(FITC)이 붙은 2차 항체(anti-IgG)로 염색합니다. 이는 항핵항체(ANA, Anti-nuclear antibody) 검사에 사용되는 표준 방법입니다."
+  },
+  {
+    "id": 466,
+    "subject": "핵의학",
+    "image_path": "images/466.png",
+    "type": "multiple_choice",
+    "question": "다음 도표의 표지자 분석법은?",
+    "options": [
+      "1. RIA (Radioimmunoassay) - 경쟁법",
+      "2. IRMA (Immunoradiometric analysis) - 간접법",
+      "3. IRMA (Immunoradiometric analysis) - sandwitch 법",
+      "4. ELISA (Enzyme Linked Immunosorbent Assay) - 경쟁법",
+      "5. ELISA (Enzyme Linked Immunosorbent Assay) - 비경쟁법"
+    ],
+    "answer": "1",
+    "explanation": "그림은 고정된 항체(Ab)에 표지된 항원(*Ag)과 검체의 비표지 항원(Ag)이 경쟁적으로 결합하는 원리를 보여줍니다. 이는 방사면역측정법(RIA)의 경쟁법(competitive) 원리입니다."
+  },
+  {
+    "id": 467,
+    "subject": "혈청학",
+    "image_path": "images/467.png",
+    "type": "multiple_choice",
+    "question": "Western-blot 검사결과이다. 결과 판독으로 옳은 것은?",
+    "options": [
+      "1. 환자는 HIV에 면역된 상태이다.",
+      "2. HIV 음성으로 추가검사가 불필요",
+      "3. HIV 양성으로 ELISA검사로 확진한다.",
+      "4. HIV 양성으로 T-cell (CD4) count필요",
+      "5. 대조(양성)분획이 불확실해서 재검필요"
+    ],
+    "answer": "4",
+    "explanation": "HIV Western-blot 판독 시, '검체' 밴드에서 Env(gp160, gp120, gp41) 중 2개와 Gag(p24) 또는 Pol(p31) 중 1개 이상이 나타나면 양성입니다. 사진의 검체는 gp160, gp120, p55, gp41, p24 등 여러 밴드에서 양성을 보이므로 'HIV 양성'이며, 확진 후에는 T-cell(CD4) 수치 확인 등 추가 검사가 필요합니다."
+  },
+  {
+    "id": 468,
+    "subject": "혈청학",
+    "image_path": "images/468.png",
+    "type": "multiple_choice",
+    "question": "PBS 농축액이다. 사용시 희석방법으로 옳은 것은?",
+    "options": [
+      "1. 농축액(2 mL) + 희석액(8 mL)",
+      "2. 농축액(10mL) + 희석액(190 mL)",
+      "3. 농축액(500 µL) + 희석액(4.5 mL)",
+      "4. 농축액(100 mL) + 희석액(990 mL)",
+      "5. 농축액(9mL) + 희석액(1.0mL)"
+    ],
+    "answer": "3",
+    "explanation": "사진의 라벨에 '10X PBS'라고 표시되어 있으므로, 10배 희석하여 1X PBS로 만들어 사용해야 합니다. 10배 희석은 (용질 1 : 용매 9)의 비율입니다. 3번 보기의 농축액(용질) 500µL(0.5mL)와 희석액(용매) 4.5mL는 1:9의 비율로, 총 5.0mL의 1X PBS를 만드는 올바른 방법입니다."
+  }
 ]
