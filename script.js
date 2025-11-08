@@ -1,30 +1,27 @@
-// --- 전역 상태 변수 ---
-let QUESTIONS_DB = [];
-let INCORRECT_LOG = [];
-let questionsForQuiz = [];  
-let currentQuestions = [];  
+// --- [수정] 전역 상태 변수 ---
+let QUESTIONS_DB_P3 = [];     // 3교시 (실기, 이미지) DB
+let QUESTIONS_DB_P1_2 = [];   // 1, 2교시 (이론) DB
+let currentMode = 'P3';     // 'P3' (기본) 또는 'P1_2'
+let questionsForQuiz = [];    
+let currentQuestions = [];    
 let currentIndex = 0;
 let score = 0;
 let newIncorrect = [];
 let isReviewMode = false;
 let isSingleProblemMode = false; 
-
-// ▼▼▼ 시험 모드 변수 추가 ▼▼▼
 let isExamMode = false; 
 let examTimer = null; 
 let timeRemaining = 0; 
-// ▲▲▲ 시험 모드 변수 추가 ▲▲▲
-
-// ▼▼▼ 시험 이력 변수 추가 ▼▼▼
-let EXAM_HISTORY = []; 
-const EXAM_HISTORY_KEY = "clinicalPathologyExamHistory";
-// ▲▲▲ 시험 이력 변수 추가 ▲▲▲
-
 let QUIZ_STATS = {}; 
+let EXAM_HISTORY = []; 
+let INCORRECT_LOG = []; // ▼▼▼ [버그 수정] 이 줄을 추가했습니다! ▼▼▼
 let currentQuizResults = []; 
 
-const INCORRECT_LOG_KEY = "clinicalPathologyQuizLog";
-const STATS_KEY = "clinicalPathologyQuizStats"; 
+// ▼▼▼ [수정] localStorage 키를 동적으로 생성하는 함수 ▼▼▼
+const INCORRECT_LOG_KEY = () => `clinicalPathologyQuizLog_${currentMode}`;
+const STATS_KEY = () => `clinicalPathologyQuizStats_${currentMode}`;
+const EXAM_HISTORY_KEY = () => `clinicalPathologyExamHistory_${currentMode}`;
+// ▲▲▲
 
 // --- DOM 요소 참조 ---
 const appContainer = document.getElementById('app-container');
@@ -38,25 +35,72 @@ const resultsScreen = document.getElementById('results-screen');
 const problemListScreen = document.getElementById('problem-list-screen');
 const statsScreen = document.getElementById('stats-screen');
 
+
 // --- 앱 초기화 ---
 window.addEventListener('DOMContentLoaded', loadApp);
 
 async function loadApp() {
     try {
-        await loadQuestionsFromJson();
-        loadIncorrectLog();
-        loadQuizStats(); 
-        loadExamHistory(); // ▼▼▼ 시험 이력 로드 ▼▼▼
-        if (QUESTIONS_DB.length === 0) {
-            throw new Error("questions.json 파일이 비어있습니다.");
+        // ▼▼▼ [수정] 두 JSON 파일을 병렬로 로드 ▼▼▼
+        const [p3Response, p1_2Response] = await Promise.all([
+            fetch('questions.json').catch(e => ({ error: e, file: 'questions.json' })),       // 3교시 (실기)
+            fetch('questions_1-2.json').catch(e => ({ error: e, file: 'questions_1-2.json' }))  // 1, 2교시 (이론)
+        ]);
+
+        let p3Loaded = false;
+        let p1_2Loaded = false;
+
+        if (p3Response && p3Response.ok) {
+            QUESTIONS_DB_P3 = await p3Response.json();
+            p3Loaded = true;
+        } else {
+            console.error("3교시(questions.json) 로드 실패");
         }
+
+        if (p1_2Response && p1_2Response.ok) {
+            QUESTIONS_DB_P1_2 = await p1_2Response.json();
+            p1_2Loaded = true;
+        } else {
+            console.error("1, 2교시(questions_1-2.json) 로드 실패. 파일이 있는지 확인하세요.");
+        }
+
+        if (!p3Loaded && !p1_2Loaded) {
+            throw new Error("어떤 문제 파일도 불러오지 못했습니다.");
+        }
+        // ▲▲▲
+
+        // [수정] P3(기본값) 데이터 로드
+        loadDataForCurrentMode(); 
         showScreen('main-menu-screen');
         showMainMenu();
-    } catch (error) {
+
+    } catch (error) { 
         console.error("앱 로딩 실패:", error);
-        errorMessage.textContent = `오류: ${error.message}. 'questions.json' 파일이 올바른 위치에 있는지 확인하세요.`;
+        errorMessage.textContent = `오류: ${error.message}. 'questions.json' 또는 'questions_1-2.json' 파일을 확인하세요.`;
         showScreen('loading-screen');
     }
+}
+
+// --- [신규] 모드 전환 로직 ---
+function switchMode(newMode) {
+    if (newMode === currentMode) return; 
+
+    // [신규] 1, 2교시 DB가 비어있으면 전환 안 함
+    if (newMode === 'P1_2' && QUESTIONS_DB_P1_2.length === 0) {
+        alert("1, 2교시 문제 파일(questions_1-2.json)을 불러오지 못했습니다.");
+        return;
+    }
+
+    currentMode = newMode;
+    loadDataForCurrentMode();
+    showMainMenu(); // 모드 전환 후 메인 메뉴 새로고침
+}
+
+// --- [신규] 현재 모드용 데이터 로드 헬퍼 ---
+function loadDataForCurrentMode() {
+    loadIncorrectLog();
+    loadQuizStats();
+    loadExamHistory();
 }
 
 // --- 화면 전환 헬퍼 ---
@@ -70,36 +114,32 @@ function showScreen(screenId) {
     } else {
         console.error("Screen not found:", screenId);
     }
-    document.body.className = '';
+    document.body.className = ''; // [수정] 피드백 클래스만 제거 (테마 클래스X)
 }
 
-// --- 데이터 로드 ---
-async function loadQuestionsFromJson() {
-    const response = await fetch('questions.json');
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    QUESTIONS_DB = await response.json();
+// --- [수정] 데이터 로드/저장 함수 (동적 키/DB 사용) ---
+function getCurrentDB() {
+    return (currentMode === 'P3') ? QUESTIONS_DB_P3 : QUESTIONS_DB_P1_2;
 }
 
 function loadIncorrectLog() {
-    INCORRECT_LOG = JSON.parse(localStorage.getItem(INCORRECT_LOG_KEY)) || [];
+    INCORRECT_LOG = JSON.parse(localStorage.getItem(INCORRECT_LOG_KEY())) || [];
+}
+function saveIncorrectLog() {
+    localStorage.setItem(INCORRECT_LOG_KEY(), JSON.stringify(INCORRECT_LOG));
 }
 
-// ▼▼▼ 시험 이력 저장/로드 함수 추가 ▼▼▼
 function loadExamHistory() {
-    EXAM_HISTORY = JSON.parse(localStorage.getItem(EXAM_HISTORY_KEY)) || [];
+    EXAM_HISTORY = JSON.parse(localStorage.getItem(EXAM_HISTORY_KEY())) || [];
 }
-
 function saveExamHistory() {
-    localStorage.setItem(EXAM_HISTORY_KEY, JSON.stringify(EXAM_HISTORY));
+    localStorage.setItem(EXAM_HISTORY_KEY(), JSON.stringify(EXAM_HISTORY));
 }
-// ▲▲▲ 시험 이력 저장/로드 함수 추가 ▲▲▲
 
 function loadQuizStats() {
-    QUIZ_STATS = JSON.parse(localStorage.getItem(STATS_KEY)) || {};
+    QUIZ_STATS = JSON.parse(localStorage.getItem(STATS_KEY())) || {};
     let statsUpdated = false;
-    const subjects = [...new Set(QUESTIONS_DB.map(q => q.subject || "기타"))];
+    const subjects = [...new Set(getCurrentDB().map(q => q.subject || "기타"))];
     subjects.forEach(subject => {
         if (!QUIZ_STATS[subject]) {
             QUIZ_STATS[subject] = { correct: 0, total: 0 };
@@ -110,27 +150,30 @@ function loadQuizStats() {
         saveQuizStats(); 
     }
 }
-
 function saveQuizStats() {
-    localStorage.setItem(STATS_KEY, JSON.stringify(QUIZ_STATS));
+    localStorage.setItem(STATS_KEY(), JSON.stringify(QUIZ_STATS));
 }
+// --- [수정] 끝 ---
 
-function saveIncorrectLog() {
-    localStorage.setItem(INCORRECT_LOG_KEY, JSON.stringify(INCORRECT_LOG));
-}
 
 // --- (신규) 시험 모드 시작 핸들러 ---
 function handleExamStart() {
     const examQuestions = generateExamQuestions();
     
     if (examQuestions.length > 0) {
-        timeRemaining = 65 * 60; // 65분 = 3900초
-        runQuiz(examQuestions, false, false, true); // isExamMode = true
+        timeRemaining = 65 * 60; 
+        runQuiz(examQuestions, false, false, true); 
     }
 }
 
-// --- (신규) 시험 문제 생성기 (요청하신 비율 기반) ---
+// --- (신규) 시험 문제 생성기 ---
 function generateExamQuestions() {
+    // [수정] 1, 2교시는 시험 모드 지원 안 함
+    if (currentMode === 'P1_2') {
+        alert("1, 2교시 모드에서는 시험 모드를 지원하지 않습니다.");
+        return [];
+    }
+    
     const EXAM_BLUEPRINT = [
         { subject: "조직학", count: 9 },
         { subject: "세포학", count: 7 },
@@ -149,7 +192,7 @@ function generateExamQuestions() {
     let examQuestions = [];
     
     const subjectPools = {};
-    QUESTIONS_DB.forEach(q => {
+    getCurrentDB().forEach(q => {
         const subject = q.subject || "기타";
         if (!subjectPools[subject]) {
             subjectPools[subject] = [];
@@ -178,7 +221,7 @@ function generateExamQuestions() {
     return examQuestions;
 }
 
-// --- (신규) 타이머 시작 ---
+// --- (신규) 타이머 함수 ---
 function startTimer() {
     const timerDisplay = document.getElementById('timer-display');
     
@@ -199,7 +242,6 @@ function startTimer() {
     }, 1000); 
 }
 
-// --- (신규) 타이머 정지 ---
 function stopTimer() {
     if (examTimer) {
         clearInterval(examTimer);
@@ -212,7 +254,7 @@ function showMainMenu() {
     showScreen('main-menu-screen'); 
     stopTimer(); 
 
-    const subjects = [...new Set(QUESTIONS_DB.map(q => q.subject || "기타"))].sort();
+    const subjects = [...new Set(getCurrentDB().map(q => q.subject || "기타"))].sort();
     
     let subjectCheckboxesHTML = subjects.map(subject => `
         <label class="subject-item">
@@ -221,8 +263,19 @@ function showMainMenu() {
         </label>
     `).join('');
 
+    // [수정] 시험 모드 버튼 HTML (1, 2교시일 때 숨김)
+    const examButtonHTML = (currentMode === 'P3') ? `
+        <h3 style="margin-bottom: 5px; margin-top: 20px;">시험 모드</h3>
+        <button id="exam-start-btn" class="btn-exam">⏱️ 국가고시 모의시험 (65문제)</button>
+    ` : '';
+    
+    // [수정] 교시 전환 버튼 텍스트/타겟 모드 동적 설정
+    const switchBtnText = (currentMode === 'P3') ? '1·2교시 문제 풀기' : '3교시 문제 풀기';
+    const targetMode = (currentMode === 'P3') ? 'P1_2' : 'P3';
+
     mainMenuScreen.innerHTML = `
-        <h1>풀고 싶은 과목을 모두 선택하세요</h1>
+        <h1>임상병리 퀴즈 (${currentMode === 'P3' ? '3교시' : '1·2교시'})</h1>
+
         <div style="width: 100%; max-width: 500px; display: flex; gap: 10px; margin: 10px 0;">
             <button id="select-all-btn" style="flex: 1;">전체 선택</button>
             <button id="deselect-all-btn" style="flex: 1;">전체 해제</button>
@@ -232,16 +285,19 @@ function showMainMenu() {
         <h3 style="margin-bottom: 5px;">연습 모드</h3>
         <button id="start-quiz-btn">선택한 과목으로 퀴즈 시작</button>
         <button id="review-btn">오답 노트 풀기 (${INCORRECT_LOG.length}개)</button>
-        <button id="problem-list-btn">문제 목록 보기 (전체 ${QUESTIONS_DB.length}개)</button>
+        <button id="problem-list-btn">문제 목록 보기 (전체 ${getCurrentDB().length}개)</button>
         
-        <h3 style="margin-bottom: 5px; margin-top: 20px;">시험 모드</h3>
-        <button id="exam-start-btn" style="background-color: #dc3545;">⏱️ 국가고시 모의시험 (65문제)</button>
+        ${examButtonHTML} 
         
         <h3 style="margin-bottom: 5px; margin-top: 20px;">기타</h3>
-        <button id="stats-btn" style="background-color: #6c757d;">📊 학습 통계</button>
-        <button id="exit-btn">종료 (새로고침)</button>
-    `;
+        <button id="stats-btn" class="btn-stats">📊 학습 통계</button>
+        <button id="exit-btn" style="background-color: #aaa;">종료 (새로고침)</button>
+
+        <h3 style="margin-bottom: 5px; margin-top: 20px;">교시 전환</h3>
+        <button id="switch-mode-btn" class="btn-mode-switch">${switchBtnText}</button>
+        `;
     
+    // --- 이벤트 리스너 연결 ---
     document.getElementById('select-all-btn').addEventListener('click', () => {
         document.querySelectorAll('.subject-checkbox').forEach(cb => cb.checked = true);
     });
@@ -251,8 +307,15 @@ function showMainMenu() {
     
     document.getElementById('start-quiz-btn').addEventListener('click', handleQuizStart);
     document.getElementById('problem-list-btn').addEventListener('click', showProblemList);
-    document.getElementById('exam-start-btn').addEventListener('click', handleExamStart); 
     document.getElementById('stats-btn').addEventListener('click', showStatsScreen);
+    
+    // [수정] 교시 전환 버튼 이벤트 연결
+    document.getElementById('switch-mode-btn').addEventListener('click', () => switchMode(targetMode));
+
+    const examBtn = document.getElementById('exam-start-btn');
+    if (examBtn) {
+        examBtn.addEventListener('click', handleExamStart); 
+    }
     
     const reviewBtn = document.getElementById('review-btn');
     reviewBtn.addEventListener('click', startReviewQuiz);
@@ -262,11 +325,12 @@ function showMainMenu() {
     
     document.getElementById('exit-btn').addEventListener('click', () => location.reload());
 }
+
 // --- (신규) 문제 목록 표시 ---
 function showProblemList() {
     showScreen('problem-list-screen');
     
-    const listItemsHTML = QUESTIONS_DB.map(q => {
+    const listItemsHTML = getCurrentDB().map(q => {
         const questionPreview = q.question.length > 50 ? q.question.substring(0, 50) + "..." : q.question;
         return `<li class="problem-list-item" data-id="${q.id}">
             <strong>ID ${q.id} (${q.subject}):</strong> ${questionPreview}
@@ -293,8 +357,8 @@ function showProblemList() {
 
 // --- (신규) 단일 문제 풀기 시작 ---
 function startSingleProblem(questionId) {
-    const question = [QUESTIONS_DB.find(q => q.id === questionId)];
-    runQuiz(question, false, true); // isSingleProblemMode = true
+    const question = [getCurrentDB().find(q => q.id === questionId)];
+    runQuiz(question, false, true); 
 }
 
 // --- 2. 퀴즈 시작 처리 (PyQt: handle_quiz_start) ---
@@ -307,7 +371,7 @@ function handleQuizStart() {
         return;
     }
     
-    questionsForQuiz = QUESTIONS_DB.filter(q => selectedSubjects.includes(q.subject));
+    questionsForQuiz = getCurrentDB().filter(q => selectedSubjects.includes(q.subject));
     showNumSelectScreen();
 }
 
@@ -434,6 +498,13 @@ function showQuestion() {
         if (timerDisplay) timerDisplay.style.display = 'none'; 
     }
 
+    // ▼▼▼ [수정] image_path가 존재할 때만 이미지 태그 생성 ▼▼▼
+    let imageHTML = '';
+    if (q.image_path) { 
+        imageHTML = `<img id="quiz-image" src="${q.image_path}" alt="문제 이미지 (${q.image_path})" onerror="this.src=''; this.alt='이미지 로드 실패: ${q.image_path}';">`;
+    }
+    // ▲▲▲
+
     let inputHTML = '';
     if (q.type === "multiple_choice") {
         const optionsHTML = q.options.map(option => `
@@ -453,7 +524,7 @@ function showQuestion() {
     if (quizContentWrapper) {
         quizContentWrapper.innerHTML = `
             ${backBtnHTML}
-            <img id="quiz-image" src="${q.image_path}" alt="문제 이미지 (${q.image_path})" onerror="this.src=''; this.alt='이미지 로드 실패: ${q.image_path}';">
+            ${imageHTML} 
             <p id="question-text">문제 ${currentIndex + 1}/${currentQuestions.length}\n\n${q.question}</p>
             <div id="feedback-label"></div>
             ${inputHTML}
@@ -535,12 +606,10 @@ function checkAnswer() {
             newIncorrect.push(q.id);
         }
         
-        // ▼▼▼ [버그 수정] 시험 모드 결과 저장 ▼▼▼
         currentQuizResults.push({
             subject: q.subject || "기타",
             isCorrect: isCorrect
         });
-        // ▲▲▲ [버그 수정] ▲▲▲
     }
     
     if (!isReviewMode && !isSingleProblemMode && !isExamMode) {
@@ -731,7 +800,7 @@ function reviewMistakes(incorrectIds) {
         showMainMenu();
         return;
     }
-    const reviewQuestions = QUESTIONS_DB.filter(q => incorrectIds.includes(q.id));
+    const reviewQuestions = getCurrentDB().filter(q => incorrectIds.includes(q.id));
     if (reviewQuestions.length === 0) {
         alert("틀린 문제 정보를 찾을 수 없습니다.");
         showMainMenu();
@@ -746,26 +815,47 @@ function startReviewQuiz() {
         alert("오답 노트에 문제가 없습니다.");
         return;
     }
-    const reviewQuestions = QUESTIONS_DB.filter(q => INCORRECT_LOG.includes(q.id));
+    const reviewQuestions = getCurrentDB().filter(q => INCORRECT_LOG.includes(q.id));
     runQuiz(reviewQuestions, true); 
 }
 
-// --- (신규) 3. 학습 통계 화면 표시 ---
-function showStatsScreen() {
+// --- 15. 학습 통계 화면 표시 ---
+function showStatsScreen(defaultTab = 'practice') { 
     showScreen('stats-screen');
+
+    // ▼▼▼ [수정] 모드 스위처 HTML 생성 ▼▼▼
+    const p1_2_active = currentMode === 'P1_2' ? 'active' : '';
+    const p3_active = currentMode === 'P3' ? 'active' : '';
+    const modeSwitcherHTML = `
+        <div id="mode-switcher">
+            <button id="mode-p1_2-btn" class="mode-btn ${p1_2_active}">1·2교시</button>
+            <button id="mode-p3-btn" class="mode-btn ${p3_active}">3교시</button>
+        </div>
+    `;
+    // ▲▲▲
 
     const { practiceStatsHTML, weakSubject, strongSubject, overallAccuracy, totalAttempts } = generatePracticeStats();
     const examHistoryHTML = renderExamHistoryGraph();
 
+    const examTabHTML = (currentMode === 'P3') ? 
+        '<button id="tab-exam" class="tab-btn">시험 이력</button>' : '';
+    const examContentHTML = (currentMode === 'P3') ? `
+        <div id="exam-stats-content" class="tab-content">
+            <h3>국가고시 모의시험 이력 (최근 10회)</h3>
+            ${examHistoryHTML} 
+        </div>
+    ` : '';
+
+
     statsScreen.innerHTML = `
-        <h2>📊 학습 통계</h2>
+        ${modeSwitcherHTML} <h2>📊 학습 통계 (${currentMode === 'P3' ? '3교시' : '1·2교시'})</h2>
         
         <div style="display: flex; width: 100%; max-width: 800px; border-bottom: 2px solid #eee; margin-bottom: 20px;">
-            <button id="tab-practice" class="tab-btn active">연습 통계</button>
-            <button id="tab-exam" class="tab-btn">시험 이력</button>
+            <button id="tab-practice" class="tab-btn">연습 통계</button>
+            ${examTabHTML}
         </div>
         
-        <div id="practice-stats-content" class="tab-content active">
+        <div id="practice-stats-content" class="tab-content">
             <div class="stats-summary">
                 <div class="summary-box total">
                     <h4>총 정답률</h4>
@@ -792,56 +882,65 @@ function showStatsScreen() {
             ${practiceStatsHTML} 
         </div>
 
-        <div id="exam-stats-content" class="tab-content">
-            <h3>국가고시 모의시험 이력 (최근 10회)</h3>
-            ${examHistoryHTML} 
-        </div>
+        ${examContentHTML}
         
         <button id="stats-back-to-main-btn" style="margin-top: 30px;">메인 메뉴로 돌아가기</button>
 
         <div id="session-modal" class="modal-backdrop">
             <div id="modal-content-inner" class="modal-content">
-                </div>
+            </div>
         </div>
     `;
 
     document.getElementById('stats-back-to-main-btn').addEventListener('click', showMainMenu);
+
+    // [버그 수정] 모드 스위처 이벤트 연결
+    document.getElementById('mode-p1_2-btn').addEventListener('click', () => { switchMode('P1_2'); showStatsScreen(defaultTab); });
+    document.getElementById('mode-p3-btn').addEventListener('click', () => { switchMode('P3'); showStatsScreen(defaultTab); });
 
     const tabPractice = document.getElementById('tab-practice');
     const tabExam = document.getElementById('tab-exam');
     const contentPractice = document.getElementById('practice-stats-content');
     const contentExam = document.getElementById('exam-stats-content');
     
-    tabPractice.addEventListener('click', () => {
-        tabPractice.classList.add('active');
-        tabExam.classList.remove('active');
-        contentPractice.classList.add('active');
-        contentExam.classList.remove('active');
-    });
-    
-    tabExam.addEventListener('click', () => {
-        tabExam.classList.add('active');
-        tabPractice.classList.remove('active');
-        contentExam.classList.add('active');
-        contentPractice.classList.remove('active');
-    });
-    
-    contentExam.addEventListener('click', (event) => {
-        const bar = event.target.closest('.bar-vertical');
-        if (bar) {
-            const sessionIndex = parseInt(bar.dataset.index, 10);
-            showExamSessionDetail(sessionIndex);
+    const showTab = (tabId) => {
+        if (tabId === 'exam' && tabExam && contentExam) {
+            tabExam.classList.add('active');
+            tabPractice.classList.remove('active');
+            contentExam.classList.add('active');
+            contentPractice.classList.remove('active');
+        } else {
+            tabPractice.classList.add('active');
+            if (tabExam) tabExam.classList.remove('active');
+            contentPractice.classList.add('active');
+            if (contentExam) contentExam.classList.remove('active');
         }
-    });
+    };
+    
+    tabPractice.addEventListener('click', () => showTab('practice'));
+    
+    if (tabExam && contentExam) {
+        tabExam.addEventListener('click', () => showTab('exam'));
+
+        contentExam.addEventListener('click', (event) => {
+            const bar = event.target.closest('.bar-vertical');
+            if (bar) {
+                const sessionIndex = parseInt(bar.dataset.index, 10);
+                showExamSessionDetail(sessionIndex);
+            }
+        });
+    }
     
     document.getElementById('session-modal').addEventListener('click', (event) => {
         if (event.target.id === 'session-modal') { 
             closeModal();
         }
     });
+
+    showTab(defaultTab);
 }
 
-// --- (신규) 1. 연습 통계 HTML 생성 (기존 showStatsScreen 로직 분리) ---
+// --- 16. 연습 통계 HTML 생성 ---
 function generatePracticeStats() {
     let totalCorrect = 0;
     let totalAttempts = 0;
@@ -898,7 +997,7 @@ function generatePracticeStats() {
     return { practiceStatsHTML, weakSubject, strongSubject, overallAccuracy, totalAttempts };
 }
 
-// --- (신규) 2. 시험 이력 세로 막대그래프 렌더링 ---
+// --- 17. 시험 이력 세로 막대그래프 렌더링 ---
 function renderExamHistoryGraph() {
     if (EXAM_HISTORY.length === 0) {
         return "<p style='text-align: center;'>아직 완료한 시험이 없습니다.</p>";
@@ -927,7 +1026,7 @@ function renderExamHistoryGraph() {
     return `<div class="exam-bar-graph-container">${barsHTML}</div>`;
 }
 
-// --- (신규) 3. 시험 상세 정보 모달 표시 ---
+// --- 18. 시험 상세 정보 모달 표시 ---
 function showExamSessionDetail(sessionIndex) {
     const session = EXAM_HISTORY[sessionIndex];
     if (!session) return;
@@ -972,7 +1071,7 @@ function showExamSessionDetail(sessionIndex) {
         ${subjectDetailsHTML}
         <hr>
         <button id="modal-review-btn">틀린 문제 복습하기 (${session.incorrectIds.length}개)</button>
-        <button id="modal-close-btn" style="background-color: #6c757d;">닫기</button>
+        <button id="modal-close-btn" class="btn-modal-close">닫기</button>
     `;
 
     document.getElementById('modal-review-btn').addEventListener('click', () => {
@@ -984,8 +1083,11 @@ function showExamSessionDetail(sessionIndex) {
     document.getElementById('session-modal').classList.add('active');
 }
 
-// --- (신규) 4. 모달 닫기 ---
+// --- 19. 모달 닫기 ---
 function closeModal() {
     document.getElementById('session-modal').classList.remove('active');
     document.getElementById('modal-content-inner').innerHTML = ''; 
 }
+
+// --- [수정] 20. 설정 화면 삭제 ---
+// (showSettingsScreen 함수 전체 삭제)
