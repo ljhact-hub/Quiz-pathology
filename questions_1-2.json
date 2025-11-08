@@ -15880,5 +15880,2915 @@
       "5. 방사성동위원소측정법"
     ],
     "subject": "혈청학"
+  },
+  {
+    "id": 1076,
+    "question": "「의료법」상 의료인에 속하지 않는 자는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 약사",
+      "2. 의사",
+      "3. 간호사",
+      "4. 한의사",
+      "5. 치과의사"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1077,
+    "question": "「의료법」상 의료인은 대통령령으로 정하는 바에 따라 최초로 면허를 받은 후부터 몇 년마다 그 실태와 취업상황 등을 보건복지부장관에게 신고하여야 하는가?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 1년",
+      "2. 2년",
+      "3. 3년",
+      "4. 5년",
+      "5. 10년"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1078,
+    "question": "「의료법」상 의료기관의 개설 특례로 설립한 의료기관에 해당하는 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 의료법인이 설립한 의료기관",
+      "2. 국가 또는 지방자치단체가 설립한 의료기관",
+      "3. 「민법」에 따라 설립된 비영리 법인이 설립한 의료기관",
+      "4. 「공공기관의 운영에 관한 법률」에 따른 준정부기관이 설립한 의료기관",
+      "5. 의료기관 개설권자 외의 자가 그 소속직원 또는 그 가족의 건강관리를 위해 설립한 부속 의료기관"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1079,
+    "question": "「의료법」상 의료인의 면허를 취소하여야 하는 경우는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 마약 중독자인 경우",
+      "2. 품위를 심하게 손상시키는 행위를 한 경우",
+      "3. 부정한 방법으로 진료비를 거짓 청구한 경우",
+      "4. 의료기사가 아닌 자에게 의료기사의 업무를 하게 한 경우",
+      "5. 의료기관 개설자가 될 수 없는 자에게 고용되어 의료행위를 한 경우"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1080,
+    "question": "「의료기사 등에 관한 법률」상 임상병리사의 구체적인 업무의 범위와 한계를 정하는 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 헌법",
+      "2. 법률",
+      "3. 대통령령",
+      "4. 보건복지부령",
+      "5. 조례"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1081,
+    "question": "「의료기사 등에 관한 법률」상 임상병리사 국가시험의 출제방법, 과목별 배점비율을 정하는 자는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 교육부장관",
+      "2. 중앙회의 장",
+      "3. 질병관리본부장",
+      "4. 행정안전부장관",
+      "5. 국가시험관리기관의 장"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1082,
+    "question": "「의료기사 등에 관한 법률」상 의료기사가 품위를 현저히 손상시키는 행위를 한 경우 면허자격을 정지시킬 수 있는 자는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 대통령",
+      "2. 보건복지부장관",
+      "3. 시∙도지사",
+      "4. 시장∙군수∙구청장",
+      "5. 보건소장"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1083,
+    "question": "「의료기사 등에 관한 법률」상 보수교육을 받은 의료기사에게 보수교육 이수증을 발급하여야 하는 자는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 보건소장",
+      "2. 질병관리본부장",
+      "3. 행정안전부장관",
+      "4. 시장∙군수∙구청장",
+      "5. 보수교육실시기관의 장"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1084,
+    "question": "「의료기사 등에 관한 법률」상 임상병리사가 업무상 알게 된 비밀을 누설하였을 때 처하는 벌칙은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 100만원 이하의 과태료",
+      "2. 500만원 이하의 벌금",
+      "3. 1년 이하의 징역 또는 1천만원 이하의 벌금",
+      "4. 3년 이하의 징역 또는 3천만원 이하의 벌금",
+      "5. 5년 이하의 징역 또는 5천만원 이하의 벌금"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1085,
+    "question": "「감염병의 예방 및 관리에 관한 법률」상 국내에서 새롭게 발생하였거나 발생할 우려가 있는 감염병 또는 국내 유입이 우려되는 해외 유행 감염병은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 제1군감염병",
+      "2. 제2군감염병",
+      "3. 제3군감염병",
+      "4. 제4군감염병",
+      "5. 제5군감염병"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1086,
+    "question": "「감염병의 예방 및 관리에 관한 법률」상 의료기관에 소속되지 아니한 의사 또는 한의사가 감염병환자등을 진단하거나 그 사체를 검안한 경우 그 사실을 누구에게 신고하여야 하는가?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 시∙도지사",
+      "2. 관할 보건소장",
+      "3. 관할 경찰서장",
+      "4. 질병관리본부장",
+      "5. 시장∙군수∙구청장"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1087,
+    "question": "「감염병의 예방 및 관리에 관한 법률」상 시장∙군수∙구청장이 관할 보건소를 통하여 필수예방접종을 실시하여야 하는 감염병은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 콜레라",
+      "2. C형간염",
+      "3. 말라리아",
+      "4. 인플루엔자",
+      "5. 중동호흡기증후군"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1088,
+    "question": "「감염병의 예방 및 관리에 관한 법률」상 감염병환자등으로부터 고위험병원체를 분리하거나 이미 분리된 고위험병원체를 이동하려는 자는 지체 없이 보건복지부장관에게 신고하여야 한다. 그 내용으로 옳지 않은 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 분리일시",
+      "2. 이동계획",
+      "3. 안전관리계획",
+      "4. 분리된 검체명",
+      "5. 고위험병원체의 명칭"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1089,
+    "question": "「지역보건법」상 지역주민의 만성질환 예방 및 건강한 생활습관 형성을 지원하기 위하여 읍∙면∙동에 설치할 수 있는 지역보건의료기관은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 보건소",
+      "2. 보건지소",
+      "3. 보건의료원",
+      "4. 보건진료소",
+      "5. 건강생활지원센터"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1090,
+    "question": "「지역보건법」상 보건소에 재직중인 전문인력을 대상으로 하는 직무 분야별 전문교육훈련 기간은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 1주 이상",
+      "2. 2주 이상",
+      "3. 3주 이상",
+      "4. 4주 이상",
+      "5. 5주 이상"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1091,
+    "question": "「지역보건법」상 보건소, 보건의료원, 보건지소 또는 건강생활지원센터가 아닌 자가 동일 명칭을 사용하였을 경우 벌칙은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 100만원 이하의 과태료",
+      "2. 300만원 이하의 과태료",
+      "3. 500만원 이하의 과태료",
+      "4. 1년 이하의 징역 또는 1천만원 이하의 벌금",
+      "5. 3년 이하의 징역 또는 3천만원 이하의 벌금"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1092,
+    "question": "「혈액관리법」상 사용하는 용어의 정의로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 특정수혈부작용: 헌혈 후 헌혈자에게 발생한 부작용",
+      "2. 헌혈자: 자기의 혈액을 혈액원에 유상으로 제공하는 사람",
+      "3. 혈액관리업무: 혈액제제의 제조에 필요한 혈액을 판매하는 업무",
+      "4. 혈액원: 혈액관리업무를 수행하기 위하여 보건소장의 허가를 받은 자",
+      "5. 부적격혈액: 채혈 시 또는 채혈 후에 이상이 발견된 혈액 또는 혈액제제"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1093,
+    "question": "「혈액관리법」상 혈액관리업무 중 채혈을 할 수 없는 자는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 의원",
+      "2. 병원",
+      "3. 종합병원",
+      "4. 대한적십자사",
+      "5. 혈액제제 제조업자"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1094,
+    "question": "「혈액관리법」상 헌혈자로부터 채혈한 수혈용 혈액의 적격여부 검사항목이 아닌 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 매독검사",
+      "2. B형간염검사",
+      "3. C형간염검사",
+      "4. 콩팥기능검사",
+      "5. 후천성면역결핍증검사"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1095,
+    "question": "「혈액관리법」상 특정수혈부작용 및 채혈부작용에 대한 보상금을 지급할 수 있는 곳은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 보건소",
+      "2. 혈액원",
+      "3. 시∙군∙구",
+      "4. 질병관리본부",
+      "5. 한국건강관리협회"
+    ],
+    "subject": "의료법규"
+  },
+  {
+    "id": 1096,
+    "question": "질병의 자연사와 예방단계에서 회복기에 필요한 예방활동은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 건강증진",
+      "2. 조기진단",
+      "3. 특수예방",
+      "4. 진단과 치료",
+      "5. 재활의학적 예방"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1097,
+    "question": "고압 환경에서 급속하게 정상기압 환경으로 이행 시 발생하는 잠함병 또는 감압병과 관련 있는 기체는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 산소",
+      "2. 오존",
+      "3. 질소",
+      "4. 이산화탄소",
+      "5. 일산화탄소"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1098,
+    "question": "기후변화협약의 실질적인 이행을 위해 온실가스 감축에 대한 의무를 규정한 국제협약은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 람사르협약",
+      "2. 교토의정서",
+      "3. 비엔나협약",
+      "4. 몬트리올의정서",
+      "5. 유엔인간환경회의"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1099,
+    "question": "고열 환경에서 오랜 시간 작업 시 체내 수분 및 염분 손실로 인한 열경련이 발생했을 때 적절한 응급조치는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 보호구 착용",
+      "2. 고압산소 요법",
+      "3. 고지방식 섭취",
+      "4. 체열방출 억제",
+      "5. 생리식염수 주사"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1100,
+    "question": "식품의 보존방법 중 물리적인 처리법은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 염장법",
+      "2. 훈연법",
+      "3. 산 첨가법",
+      "4. 방부제 첨가법",
+      "5. 자외선 이용법"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1101,
+    "question": "질병의 인과관계를 검증하는 데 확실한 정보를 얻는 방법이며, 윤리적 측면을 고려하여야 하는 역학적 연구는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 단면연구",
+      "2. 코호트 연구",
+      "3. 기술역학 연구",
+      "4. 실험역학 연구",
+      "5. 환자-대조군 연구"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1102,
+    "question": "인수공통감염병을 일으키는 병원체를 보유하고 있는 동물을 병원소와 감염병이 옳게 연결된 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 개 - 페스트",
+      "2. 소 - 광우병",
+      "3. 돼지 - 발진열",
+      "4. 고양이 - 탄저",
+      "5. 들쥐 - 렙토스피라증"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1103,
+    "question": "유사한 환자군을 질병명으로 구분하고 미리 책정된 의료비용을 지불하여 과잉 진료를 방지하는 의료비 지불 제도는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 인두제",
+      "2. 일당제",
+      "3. 한도액보제",
+      "4. 포괄수가제",
+      "5. 행위별수가제"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1104,
+    "question": "결핍 시 신체 발육이 부진하고, 빈혈, 부종, 신체 손모증 등이 오는 성장기 아동에게 필요한 영양소는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 지방",
+      "2. 당질",
+      "3. 단백질",
+      "4. 무기질",
+      "5. 비타민"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1105,
+    "question": "생산연령 인구가 많이 유입되는 도시 지역의 인구 구성 형태는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 종형",
+      "2. 별형",
+      "3. 기타형",
+      "4. 항아리형",
+      "5. 피라미드형"
+    ],
+    "subject": "공중보건"
+  },
+  {
+    "id": 1106,
+    "question": "다음에서 설명하는 뼈는? ・ 사람의 뼈 중에서 가장 긴 뼈 ・ 위팔, 몸통, 아래끝으로 구분 ・ 큰돌기, 작은돌기, 거친선, 가족관절융기가 관찰됨",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 자뼈",
+      "2. 정강뼈",
+      "3. 위팔뼈",
+      "4. 종아리뼈",
+      "5. 넓적다리뼈"
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1107,
+    "question": "정상 성인의 심장구조에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 심장벽은 2층으로 구성된다.",
+      "2. 승모판은 우심방과 우심실 사이에 위치한다.",
+      "3. 심장의 모든 판막은 3개의 첨판으로 구성된다.",
+      "4. 심장에서 가장 두꺼운 구조는 우심실의 벽이다.",
+      "5. 굴심방결절은 우심방과 위대정맥이 만나는 곳에 위치한다."
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1108,
+    "question": "혈중 칼슘농도 조절을 위해 부갑상샘호르몬과 대항(길항)작용을 하는 호르몬은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 인슐린",
+      "2. 옥시토신",
+      "3. 칼시토닌",
+      "4. 알도스테론",
+      "5. 항이뇨호르몬"
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1109,
+    "question": "다음에서 설명하는 호흡계통의 구조는? ・ 기관과 엽기관지 사이에 위치 ・ 다섯째 등뼈 높이에서 분지 ・ 오른쪽이 왼쪽에 비해 짧고 굵음",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 일차기관지",
+      "2. 이차기관지",
+      "3. 구역기관지",
+      "4. 종말세기관지",
+      "5. 호흡세기관지"
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1110,
+    "question": "다음의 특징을 가지는 중추신경은? ・ 중앙부는 벌레(충부)와 같은 외형 ・ 피질은 분자층, 조롱박신경세포층, 과립층으로 구성 ・ 속질은 치상핵, 마개핵, 둥근핵, 꼭지핵으로 순차적 배열",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 소뇌",
+      "2. 대뇌",
+      "3. 중간뇌",
+      "4. 숨뇌",
+      "5. 사이뇌"
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1111,
+    "question": "다음과 같은 세포막을 통한 물질운반 방식은? ・ 반투막을 통해 용액 농도가 낮은 쪽에서 높은 쪽으로 용매가 이동 ・ 저장액에서 적혈구의 용혈현상 발생",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 여과",
+      "2. 삼투",
+      "3. 단순확산",
+      "4. 촉진확산",
+      "5. 능동수송"
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1112,
+    "question": "다음과 같은 특징이 나타나는 심장주기는? ・ 심전도 QRS군에 해당 ・ 제 1심음 발생 시기에 해당 ・ 방실판막 및 반달판막 모두 폐쇄",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 심방수축기",
+      "2. 심실박출기",
+      "3. 심실이완기",
+      "4. 등(용)적수축기",
+      "5. 등(용)적확장기"
+    ],
+    "subject": "심전도"
+  },
+  {
+    "id": 1113,
+    "question": "정상 성인의 일회호흡량(tidal volume)은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 약 150 mL",
+      "2. 약 500 mL",
+      "3. 약 800 mL",
+      "4. 약 1,200 mL",
+      "5. 약 2,400 mL"
+    ],
+    "subject": "폐기능"
+  },
+  {
+    "id": 1114,
+    "question": "브루너샘(Brunner gland)이 위치하는 기관은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 이자",
+      "2. 공장자",
+      "3. 돌창자",
+      "4. 샘창자",
+      "5. 잘록창자"
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1115,
+    "question": "회전감각을 담당하는 내이 구조물은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 고막",
+      "2. 이관",
+      "3. 귓바퀴",
+      "4. 달팽이관",
+      "5. 반고리뼈관"
+    ],
+    "subject": "해부학"
+  },
+  {
+    "id": 1116,
+    "question": "생리적 상태에서 발생하는 예정된 세포의 죽음은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 응고괴사",
+      "2. 지방괴사",
+      "3. 만성염증",
+      "4. 급성염증",
+      "5. 세포자멸사"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1117,
+    "question": "색전증을 일으키는 가장 흔한 원인은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 부종",
+      "2. 혈전",
+      "3. 경색",
+      "4. 울혈",
+      "5. 출혈"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1118,
+    "question": "피부, 구강, 소화기 점막상피 등에서 관찰되며, 정상상태에서 계속적인 증식과 재생능력이 강한 세포는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 영구세포",
+      "2. 안정세포",
+      "3. 신경세포",
+      "4. 심근세포",
+      "5. 불안정세포"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1119,
+    "question": "일반적으로 피막에 의해 경계가 뚜렷하고 발육속도가 느리며, 팽창성 성장을 하는 종양은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 상피암",
+      "2. 육종",
+      "3. 섬유종",
+      "4. 림프종",
+      "5. 골육종"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1120,
+    "question": "성염색체 수의 이상에 의한 유전질환 중 핵형이 47, XXY인 질환은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 다운증후군",
+      "2. 터너증후군",
+      "3. 파타우증후군",
+      "4. 에드워즈증후군",
+      "5. 클라인펠터증후군"
+    ],
+    "subject": "유전학"
+  },
+  {
+    "id": 1121,
+    "question": "정상성인의 갑상샘여포를 구성하는 상피는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 단층편평",
+      "2. 단층입방",
+      "3. 중층편평",
+      "4. 중층원주",
+      "5. 거짓중층원주"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1122,
+    "question": "힘줄이나 인대에 가장 많이 있는 섬유는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 관통섬유",
+      "2. 근육섬유",
+      "3. 신경섬유",
+      "4. 탄력섬유",
+      "5. 아교(질)섬유"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1123,
+    "question": "소화기계, 생식기계, 호흡기계를 구성하는 것으로 외상이나 병변에 의해 손상을 받으면 유사분열 능력이 있는 근육은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 뼈대근육",
+      "2. 심장근육",
+      "3. 적색근육",
+      "4. 백색근육",
+      "5. 민무늬근육"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1124,
+    "question": "말초신경계통에서 말이집을 형성하는 세포는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 별아교세포",
+      "2. 뇌실막세포",
+      "3. 미세아교세포",
+      "4. 슈반(신경집)세포",
+      "5. 희소돌기아교세포"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1125,
+    "question": "소장에 존재하며 호산성 과립을 가진 세포는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. M세포",
+      "2. 술잔세포",
+      "3. 으뜸세포",
+      "4. 파네트세포",
+      "5. 독창액세포"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1126,
+    "question": "간, 신장과 같이 실질장기에 투과침을 이용하여 조직검체를 채취하는 방법은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 바늘생검",
+      "2. 절개생검",
+      "3. 펀치생검",
+      "4. 원뿔생검",
+      "5. 소파생검"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1127,
+    "question": "조직의 미세구조 보존 효과가 우수하며, 전자현미경검사의 1차 고정제는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 피크르산",
+      "2. 중크롬산염",
+      "3. 염화제2수은",
+      "4. 포름알데하이드",
+      "5. 글루타르알데하이드"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1128,
+    "question": "파라핀절편 제작 과정에서 알코올을 제거하는 과정은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 탈회",
+      "2. 수세",
+      "3. 투명",
+      "4. 침투",
+      "5. 포매"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1129,
+    "question": "박절된 파라핀블록 상태로 노출된 조직을 직접 탈회액에 담가 칼슘을 제거하는 방법은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 표면 탈회법",
+      "2. 초음파 탈회법",
+      "3. 전기분해 탈회법",
+      "4. 극초단파 탈회법",
+      "5. 이온교환수지 탈회법"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1130,
+    "question": "Hematoxylin & Eosin 염색에서 Eosin 용액의 적정 수소이온농도(pH)는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 1.6 ~ 2.0",
+      "2. 2.6 ~ 3.0",
+      "3. 4.6 ~ 5.0",
+      "4. 7.6 ~ 8.0",
+      "5. 8.6 ~ 9.0"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1131,
+    "question": "박절 시 절편에 수직으로 금이 생기면서 갈라지는 결함의 원인은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 블록이 지나치게 클 때",
+      "2. 칼과 블록이 따뜻할 때",
+      "3. 탈수, 투명, 침투가 불완전하게 되었을 때",
+      "4. 블록재물대나 칼고정대가 헐겁게 죄어졌을 때",
+      "5. 조직편의 석회화나 파라핀에 이물질 등이 끼어 있을 때"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1132,
+    "question": "탄력섬유를 증명하기 위해 hematoxylin-ferric chloride-iodine의 용해성 레이크(lake)를 이용한 염색법은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. Gill hematoxylin",
+      "2. Harris hematoxylin",
+      "3. Mayer hematoxylin",
+      "4. Verhoeff iron hematoxylin",
+      "5. Mallory phosphotungstic acid hematoxylin"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1133,
+    "question": "Masson trichrome 염색에서 분별제는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. aniline blue",
+      "2. Bouin solution",
+      "3. glacial acetic acid",
+      "4. biebrich scarlet-acid fuchsin",
+      "5. phosphomolybdic acid-phosphotungstic acid"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1134,
+    "question": "산성점액과 중성점액을 감별하기 위한 염색법은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. oil red O",
+      "2. van Gieson",
+      "3. Masson trichrome",
+      "4. prussian blue reaction",
+      "5. alcian blue-periodic acid Schiff"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1135,
+    "question": "종양으로 의심되는 조직표본에서 흑색의 색소가 관찰되었을 때 멜라닌 색소 확인을 위한 표백법의 산화제는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. Absolute alcohol",
+      "2. mercuric chloride",
+      "3. osmium tetroxide",
+      "4. sodium thiosulfate",
+      "5. potassium permanganate"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1136,
+    "question": "면역조직화학 염색에서 3% H₂O₂를 사용하여 조직절편을 처리하는 목적은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 비특이반응 차단",
+      "2. 일차항체 반응 차단",
+      "3. 내인성 바이오틴 활성 억제",
+      "4. 내인성 과산화효소 활성 억제",
+      "5. 내인성 알칼리성인산분해효소 활성 억제"
+    ],
+    "subject": "조직학"
+  },
+  {
+    "id": 1137,
+    "question": "중합효소연쇄(사슬)반응(PCR)에서 90~95℃로 가열하여 두 가닥의 주형 DNA로부터 한 가닥의 DNA사슬로 분리하는 과정은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 신장(extension)",
+      "2. 어닐링(annealing)",
+      "3. 변성(denaturation)",
+      "4. DNA 합성(synthesis)",
+      "5. DNA 추출(extraction)"
+    ],
+    "subject": "분자생물학"
+  },
+  {
+    "id": 1138,
+    "question": "가는바늘흡인세포(FNAC)검사가 가능한 부위는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 식도",
+      "2. 피부",
+      "3. 방광",
+      "4. 갑상샘",
+      "5. 자궁경부"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1139,
+    "question": "Papanicolaou 염색의 세포질 염색에 사용되는 EA 용액의 종류는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. thionine",
+      "2. alcian blue",
+      "3. light green",
+      "4. hematoxylin",
+      "5. toluidine blue"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1140,
+    "question": "검체의 양이 적은 뇌척수액의 표본 제작 방법은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 날인도말법",
+      "2. 압착도말법",
+      "3. 직접도말법",
+      "4. 세포원심침전법",
+      "5. 세포균집침전법"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1141,
+    "question": "자궁-질 도말표본에서 소포성 핵과 다각형 및 호염기성 세포질의 형태학적 특징을 가진 세포는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 무색세포",
+      "2. 기저세포",
+      "3. 중간세포",
+      "4. 방기저세포",
+      "5. 표재(층)세포"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1142,
+    "question": "호르몬평가에서 성숙지수(MI)가 0:5:95로 관찰되었을 때 해당되는 시기는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 배란기",
+      "2. 분비기",
+      "3. 소아기",
+      "4. 폐경기",
+      "5. 수유기"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1143,
+    "question": "자궁-질 도말표본에서 다핵성, 핵밀착, 젖빛유리상, 핵내 호산성 봉입체의 세포학적 특징을 관찰할 수 있는 감염원은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. Candida albicans",
+      "2. Gardnerella vaginalis",
+      "3. Herpes simplex virus",
+      "4. Trichomonas vaginalis",
+      "5. Human papilloma virus"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1144,
+    "question": "자궁-질 도말표본에서 오렌지색의 다각형 무핵세포가 관찰되는 경우는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 자궁근종",
+      "2. 자궁탈출",
+      "3. 엽산결핍",
+      "4. 조직수복",
+      "5. 메비포메증식"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1145,
+    "question": "진단분류법인 '베데스다 체계(TBS)'에서 부인과 검체의 적합판정을 위해 포함되어야 할 세포는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 원주세포",
+      "2. 입방세포",
+      "3. 각화성 편평세포",
+      "4. 비각화성 편평세포",
+      "5. 원주세포 또는 화생세포"
+    ],
+    "subject": "세포학"
+  },
+  {
+    "id": 1146,
+    "question": "심전도 파형에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. P파: 심실의 탈분극",
+      "2. QRS군: 심실의 재분극",
+      "3. ST 분절: 심실흥분시간",
+      "4. PR 간격: 방실흥분전도시간",
+      "5. QTC 간격: 전기적 심실확장시간"
+    ],
+    "subject": "심전도"
+  },
+  {
+    "id": 1147,
+    "question": "표준팔다리유도에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 단극유도이다.",
+      "2. 수평면유도이다.",
+      "3. 관전극만 이용한다.",
+      "4. aVR, aVL, aVF 유도가 해당한다.",
+      "5. 심장의 회전을 측정할 수 있다."
+    ],
+    "subject": "심전도"
+  },
+  {
+    "id": 1148,
+    "question": "발생기전에 따른 분류에서 자극전도장애 부정맥은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 동빈맥",
+      "2. 심방조동",
+      "3. 심실빈맥",
+      "4. 모비츠 1형",
+      "5. 심방조기수축"
+    ],
+    "subject": "심전도"
+  },
+  {
+    "id": 1149,
+    "question": "심근섬유의 수축을 자극하는 탈분극이 진행하는 평균 방향은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 회전",
+      "2. 전압",
+      "3. 심박수",
+      "4. 전기축",
+      "5. 이행부위"
+    ],
+    "subject": "심전도"
+  },
+  {
+    "id": 1150,
+    "question": "24시간(홀터) 심전도검사에 관한 특징으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 침습적검사",
+      "2. 단극가슴유도",
+      "3. 3채널 검사법",
+      "4. 브루스 프로토콜",
+      "5. 증폭단극팔다리유도"
+    ],
+    "subject": "심전도"
+  },
+  {
+    "id": 1151,
+    "question": "뇌파의 구성요소에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 진폭의 단위는 mV이다.",
+      "2. 베타파는 감은 눈 뜬 중에 나타난다.",
+      "3. 델타파는 알파파보다 주파수가 높다.",
+      "4. 알파파는 후두엽에서 우세하게 나타난다.",
+      "5. 주파수는 1분 동안에 반복되는 파의 수이다."
+    ],
+    "subject": "뇌파"
+  },
+  {
+    "id": 1152,
+    "question": "얕은 수면 초기에 봉우리가 가장 높은 진폭으로 출현하는 부위는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. F₇, F₈",
+      "2. C₃, C₄",
+      "3. T₇, T₈",
+      "4. O₁, O₂",
+      "5. A₁, A₂"
+    ],
+    "subject": "뇌파"
+  },
+  {
+    "id": 1153,
+    "question": "뇌파의 단극유도법에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 기준전극을 사용하지 않는다.",
+      "2. 전체 위상 관계를 파악하는 데 적합하다.",
+      "3. G₁에 기준전극, G₂에 활성전극을 연결한다.",
+      "4. 위상역전에 의한 뇌전증 초점발견이 용이하다.",
+      "5. 미세한 국소차이 확인과 근접부 비교가 용이하다."
+    ],
+    "subject": "뇌파"
+  },
+  {
+    "id": 1154,
+    "question": "과호흡유발법에서 나타나는 정상 뇌파 반응은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 증강(build up)",
+      "2. 광자극유도(photic driving)",
+      "3. 광범성 알파파(diffuse α wave)",
+      "4. 역설적 알파-차단(paradoxical α-blocking)",
+      "5. 광경련반응(photic convulsive response)"
+    ],
+    "subject": "뇌파"
+  },
+  {
+    "id": 1155,
+    "question": "뇌파 기록과 함께 근전도, 심전도, 눈전위도, 호흡운동, 산소포화도를 동시에 기록하는 검사는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 와다검사",
+      "2. 수면다원검사",
+      "3. 유발전위검사",
+      "4. 동맥경직도검사",
+      "5. 24시간 비디오뇌파검사"
+    ],
+    "subject": "뇌파"
+  },
+  {
+    "id": 1156,
+    "question": "운동신경전도검사에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. H파의 잠복기를 측정한다.",
+      "2. 자극기는 활전극을 사용한다.",
+      "3. 기록전극은 양극, 기준전극은 음극이다.",
+      "4. 힘살에 기준전극, 힘줄에 기록전극을 부착한다.",
+      "5. 최대상자극을 주어 복합근육활동전위를 기록한다."
+    ],
+    "subject": "근전도"
+  },
+  {
+    "id": 1157,
+    "question": "다음에서 설명하는 검사는? ・ 중증근무력증 진단에 이용 ・ 신경·근육접합 전, 후 질환의 감별에 이용 ・ 저빈도 및 고빈도 자극에 의한 M파 진폭변화 관찰",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 후기반응검사",
+      "2. 눈깜박반사검사",
+      "3. 얼굴신경전도검사",
+      "4. 반복신경자극검사",
+      "5. 음경척수유발전위검사"
+    ],
+    "subject": "근전도"
+  },
+  {
+    "id": 1158,
+    "question": "팔 또는 다리 신경에 전기자극을 주었을 때 감각신경경로를 따라 활성화되는 신경계의 반응을 평가하는 검사는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 운동유발전위검사",
+      "2. 시각유발전위검사",
+      "3. 자극유발전위검사",
+      "4. 몸감각유발전위검사",
+      "5. 뇌줄기청각유발전위검사"
+    ],
+    "subject": "근전도"
+  },
+  {
+    "id": 1159,
+    "question": "다음에서 설명하는 기체표시법은? ・ 검사실, 실험실 내 가스량 측정 ・ 실온, 대기압, 수증기 포화 상태",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. ATPD",
+      "2. ATPS",
+      "3. BTPD",
+      "4. BTPS",
+      "5. STPD"
+    ],
+    "subject": "폐기능"
+  },
+  {
+    "id": 1160,
+    "question": "다음에서 설명하는 폐기능 검사는? ・ 단위는 L/min ・ 정상은 예측값의 80 % 이상 ・ 호흡의 깊이는 폐활량의 1/3 ~ 1/2 ・ 12초 또는 15초간 깊고 빠른 호흡 실시",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 총폐용량(TLC)",
+      "2. 폐확산능(DLco) ",
+      "3. 최대환기량(MVV)",
+      "4. 기능잔기용량(FRC)",
+      "5. 강제(노력성)폐활량(FVC)"
+    ],
+    "subject": "폐기능"
+  },
+  {
+    "id": 1161,
+    "question": "메타콜린, 마니톨(mannitol)을 이용해 천식을 진단하는 검사는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 약물알레르기검사",
+      "2. 한랭알레르기검사",
+      "3. 기관지과민성검사",
+      "4. 운동부하심폐기능검사",
+      "5. 알레르기피부반응검사"
+    ],
+    "subject": "폐기능"
+  },
+  {
+    "id": 1162,
+    "question": "다음 검사로 측정하는 것은? ・ 비디오 눈운동기록법 ・ 주시안진검사(주시눈떨림검사) ・ 자발안진검사(자발눈떨림검사)",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 청각기능",
+      "2. 시각기능",
+      "3. 미각기능",
+      "4. 후각기능",
+      "5. 평형기능"
+    ],
+    "subject": "근전도"
+  },
+  {
+    "id": 1163,
+    "question": "혈관미주신경성 실신 진단에 유용한 검사는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 동맥산소검사",
+      "2. 추적운동검사",
+      "3. 기립경사검사",
+      "4. 인체동작분석검사",
+      "5. 비디오두부충동검사"
+    ],
+    "subject": "근전도"
+  },
+  {
+    "id": 1164,
+    "question": "다음에서 설명하는 심장초음파 검사창은? ・ 폐동맥, 대동맥활, 오름대동맥, 내림대동맥 관찰에 적합 ・ 바로누운 자세에서 목을 가볍게 뒤로 젖힌 상태로 검사",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 심첨창(심장끝창)",
+      "2. 갈비밑창(갈비활아래창)",
+      "3. 복장뼈위파임창(복장뼈위오목창)",
+      "4. 복장뼈곁창(복장뼈주위왼측창)",
+      "5. 복장뼈곁짧은축창(복장뼈주위단축창)"
+    ],
+    "subject": "심초음파"
+  },
+  {
+    "id": 1165,
+    "question": "다음에서 설명하는 심초음파 표시법은? ・ 세로축은 깊이, 가로축은 시간을 의미 ・ 순간적인 해상력이 높아 심장 크기, 판막운동의 변화 관찰에 적합 ・ 탐촉자 위치를 고정시켜 일정시간 내에 반사파의 위치 변화를 기록",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. A-모드",
+      "2. B-모드",
+      "3. M-모드",
+      "4. 간헐파형 도플러",
+      "5. 연속파형 도플러"
+    ],
+    "subject": "심초음파"
+  },
+  {
+    "id": 1166,
+    "question": "대뇌동맥고리(Willis circle)에 속하는 혈관은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 눈동맥",
+      "2. 척추동맥",
+      "3. 바깥목동맥",
+      "4. 앞교통동맥",
+      "5. 뇌바닥동맥"
+    ],
+    "subject": "심초음파"
+  },
+  {
+    "id": 1167,
+    "question": "전혈 검체를 실온에 방치하면 감소하는 검사항목은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. urea",
+      "2. lactate",
+      "3. glucose",
+      "4. protein",
+      "5. ammonia"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1168,
+    "question": "수산화나트륨(NaOH) 4 g을 증류수 1,000 mL에 녹였을 때의 몰 농도(M)는? (NaOH 분자량 40)",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 0.01",
+      "2. 0.04",
+      "3. 0.10",
+      "4. 0.20",
+      "5. 0.40"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1169,
+    "question": "아래 결괏값에 대한 변이계수(CV)는? ・ 평균(X): 100 mg/dL ・ 표준편차(SD): 2 mg/dL",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 0.1%",
+      "2. 0.2%",
+      "3. 1.0%",
+      "4. 2.0%",
+      "5. 50.0%"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1170,
+    "question": "희석이나 농축 등의 전처리 과정 없이 측정량을 타당성 있게 측정할 수 있는 농도 구간은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 정밀도(precision)",
+      "2. 상관 검색(logic check)",
+      "3. 변화치 검색(delta check)",
+      "4. 표준편차(standard deviation)",
+      "5. 분석측정가능구간(analytical measurement interval)"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1171,
+    "question": "다항목 자동화학분석기의 일반적인 장점은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 질관리가 필요없다.",
+      "2. 재현성이 우수하다.",
+      "3. 검사 소요 시간이 길다.",
+      "4. 용혈의 영향을 받지 않는다.",
+      "5. 검사 시 많은 검체량이 요구된다."
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1172,
+    "question": "빛의 산란광을 이용한 분석기기는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 네펠로미터",
+      "2. 분광광도계",
+      "3. 질량분석기",
+      "4. 원자흡광광도계",
+      "5. 화학발광분석기"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1173,
+    "question": "분광광도계 기본 구성 요소의 배열 순서로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 광원부 → 분광부 → 시료부 → 수광부 → 판독부",
+      "2. 광원부 → 시료부 → 분광부 → 수광부 → 판독부",
+      "3. 분광부 → 판독부 → 광원부 → 시료부 → 수광부",
+      "4. 시료부 → 광원부 → 판독부 → 수광부 → 분광부",
+      "5. 시료부 → 광원부 → 수광부 → 판독부 → 분광부"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1174,
+    "question": "혈청 단백질 전기영동에 사용되는 pH 8.6 완충액에서 분리 대상의 전하 상태는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 알부민, 글로불린 모두 무극성",
+      "2. 알부민(-), 글로불린(+)로 하전",
+      "3. 알부민(-), 글로불린(-)로 하전",
+      "4. 알부민(+), 글로불린(+)로 하전",
+      "5. 알부민(+), 글로불린(-)로 하전"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1175,
+    "question": "혈액 pO₂ 측정 원리로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 양극과 음극 사이에 흐르는 전류 측정",
+      "2. 양극과 음극 사이에 발생하는 전위차 측정",
+      "3. 기준전극과 측정전극 사이의 전량 측정",
+      "4. 기준전극과 측정전극 사이의 저항도 측정",
+      "5. 기준전극과 측정전극 사이의 전도도 측정"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1176,
+    "question": "다발골수종 환자에게서 나타나는 M단백질의 전기영동분획 위치는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 알부민",
+      "2. α1-글로불린",
+      "3. α2-글로불린",
+      "4. β-글로불린",
+      "5. γ-글로불린"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1177,
+    "question": "혈청단백 성분 중 BCG(pH 4.2) 시약을 이용하여 측정하는 것은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 알부민",
+      "2. 페리틴",
+      "3. 합토글로빈",
+      "4. 포도당단백질",
+      "5. C반응단백질"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1178,
+    "question": "지용성비타민의 원인 규명을 위해 질량분석법으로 검사하는 항목은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 비타민 A",
+      "2. 비타민 B",
+      "3. 비타민 C",
+      "4. 비타민 D",
+      "5. 비타민 K"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1179,
+    "question": "40대 남자 환자의 중증 신장질환이 악화되어 신장이식 수술을 하였다. 수술 후 면역거부반응을 억제하기 위해 투여하는 약물은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 디곡신",
+      "2. 테오필린",
+      "3. 겐타마이신",
+      "4. 페노바비탈",
+      "5. 사이클로스포린 A"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1180,
+    "question": "디아조(Diazo) 반응의 원리를 이용하여 검사하는 항목은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 지방산",
+      "2. 포도당",
+      "3. 빌리루빈",
+      "4. 중성지방",
+      "5. 콜레스테롤"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1181,
+    "question": "심장표지자 중 급성심근경색 발생 후 7일 ~ 10일 동안 고농도로 지속되는 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. CK-MB",
+      "2. amylase",
+      "3. myoglobin",
+      "4. troponin I",
+      "5. alanine aminotransferase"
+    ],
+    "subject": "임상화학"
+  },
+  {
+    "id": 1182,
+    "question": "보존제를 넣지 않은 요검체를 실온에 2시간 이상 방치했을 때 일어나는 변화는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 세균 감소",
+      "2. 케톤체 증가",
+      "3. 포도당 증가",
+      "4. 아질산염 감소",
+      "5. 수소이온농도(pH) 증가"
+    ],
+    "subject": "요화학"
+  },
+  {
+    "id": 1183,
+    "question": "요시험지법 항목 중 요로감염 판단에 유용한 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 케톤체",
+      "2. 빌리루빈",
+      "3. 포도당",
+      "4. 유로빌리노겐",
+      "5. 백혈구 에스터분해효소"
+    ],
+    "subject": "요화학"
+  },
+  {
+    "id": 1184,
+    "question": "굴절계로 측정하는 요검사 항목은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 비중",
+      "2. 케톤체",
+      "3. 빌리루빈",
+      "4. 유로빌리노겐",
+      "5. 수소이온농도(pH)"
+    ],
+    "subject": "요화학"
+  },
+  {
+    "id": 1185,
+    "question": "요시험지법 중 아세토아세트산과 나이트로프루사이드나트륨 반응 원리로 검사하는 것은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 단백질",
+      "2. 케톤체",
+      "3. 포도당",
+      "4. 빌리루빈",
+      "5. 아질산염"
+    ],
+    "subject": "요화학"
+  },
+  {
+    "id": 1186,
+    "question": "요침사 현미경 검사에서 콜레스테롤 결정과 난원형 지방체가 검출되는 질환은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 통풍",
+      "2. 급성간염",
+      "3. 신증후군",
+      "4. 신장증후군",
+      "5. 심근경색증"
+    ],
+    "subject": "요화학"
+  },
+  {
+    "id": 1187,
+    "question": "납중독에 의한 후천성 대사질환은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 멜라닌뇨증",
+      "2. 알캅톤뇨증",
+      "3. 인디칸뇨증",
+      "4. 포르피린뇨증",
+      "5. 페닐케톤뇨증"
+    ],
+    "subject": "요화학"
+  },
+  {
+    "id": 1188,
+    "question": "급성세균뇌수막염 환자의 뇌척수액 검사결과로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 세균 감소",
+      "2. 젖산 감소",
+      "3. 단백질 감소",
+      "4. 백혈구 감소",
+      "5. 포도당 감소"
+    ],
+    "subject": "요화학"
+  },
+  {
+    "id": 1189,
+    "question": "방사성동위원소가 생체 내에서 배설, 대사 등의 생리학적 기전에 의해 처음 양의 절반으로 줄어들 때까지 걸리는 시간은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 유효 반감기",
+      "2. 광학적 반감기",
+      "3. 물리적 반감기",
+      "4. 생물학적 반감기",
+      "5. 이화학적 반감기"
+    ],
+    "subject": "핵의학"
+  },
+  {
+    "id": 1190,
+    "question": "감마선의 외부 피폭을 방지하기 위해 사용하는 차폐 중 가장 효과적인 것은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 납",
+      "2. 유리",
+      "3. 종이",
+      "4. 알루미늄",
+      "5. 플라스틱"
+    ],
+    "subject": "핵의학"
+  },
+  {
+    "id": 1191,
+    "question": "¹²⁵I를 이용하여 유리 티록신(free thyroxine)을 측정하는 기기는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 포텐셜계",
+      "2. 알파선 계측기",
+      "3. 베타선 계측기",
+      "4. 감마선 계측기",
+      "5. 환경오염측정계"
+    ],
+    "subject": "핵의학"
+  },
+  {
+    "id": 1192,
+    "question": "방사면역측정법(RIA)에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 비경쟁적 반응이다.",
+      "2. 샌드위치법이라고 한다.",
+      "3. 알파선 계측기로 측정한다.",
+      "4. 방사능량은 항원 농도에 비례한다.",
+      "5. 항원에 방사성동위원소를 표지하는 방법이다."
+    ],
+    "subject": "핵의학"
+  },
+  {
+    "id": 1193,
+    "question": "그물적혈구에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 핵이 존재한다.",
+      "2. 재생불량빈혈에서 증가한다.",
+      "3. 정상 성인의 참고치는 6~8%이다.",
+      "4. Wright 염색에서 그물구조가 관찰된다.",
+      "5. 적혈구의 조혈기능이 항진되었을 경우 증가한다."
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1194,
+    "question": "적혈구계 세포가 성숙할수록 나타나는 특징은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 세포 크기가 커진다.",
+      "2. 핵 염색질이 농축된다.",
+      "3. 핵소체는 증가하고 더 뚜렷해진다.",
+      "4. 핵과 세포질(N/C)의 비율이 증가한다.",
+      "5. 세포질의 색은 진한 청색으로 변한다."
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1195,
+    "question": "정상 성인 혈색소 내에 1~2% 정도 존재하고, 산소와 친화성이 강하며 산과 알칼리에 저항성이 증가하는 혈색소는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 혈색소 A",
+      "2. 혈색소 C",
+      "3. 혈색소 F",
+      "4. 혈색소 M",
+      "5. 혈색소 S"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1196,
+    "question": "다음과 같은 특징을 갖는 세포는? ・ MCHC 증가 ・ 삼투압 취약성 증가 ・ 세포막 단백질 결핍 ・ 소구성 고색소 적혈구",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 낫적혈구",
+      "2. 구형적혈구",
+      "3. 분열적혈구",
+      "4. 표적적혈구",
+      "5. 입모양적혈구"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1197,
+    "question": "핵 잔존물로 DNA 성분 함유 때문에 Feulgen 반응이 양성이며, 거대적혈모구빈혈에서 관찰되는 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 하인즈소체",
+      "2. 호염기반점",
+      "3. 혈색소결정체",
+      "4. 하월-졸리소체",
+      "5. 파펜하이머소체"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1198,
+    "question": "IgE 매개 면역반응에 관여하고 정상인의 말초혈액에서 가장 적은 수의 세포는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 단핵구",
+      "2. 림프구",
+      "3. 호산구",
+      "4. 중성구",
+      "5. 호염기구"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1199,
+    "question": "페르가나 패혈증과 같은 중증감염 환자의 중성구 세포질에서 관찰되는 진한 특청색의 구조물은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 독성과립",
+      "2. 하인즈소체",
+      "3. 하월-졸리소체",
+      "4. 파펜하이머소체",
+      "5. 아우어(어)막대"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1200,
+    "question": "거핵구에서 합성되고 손상된 혈관내피세포 아래에 노출된 콜라겐과 결합하여 혈소판부착(점착)에 관여하는 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 세로토닌",
+      "2. 리스토세틴",
+      "3. 에피네프린",
+      "4. 트롬복세인 A₂",
+      "5. 본빌레브란트인자"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1201,
+    "question": "혈소판 응집 과정에서 활성화된 혈소판 막의 GPIIb/IIIa 복합체와 결합하는 물질은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 헤파린",
+      "2. 섬유소원",
+      "3. 세로토닌",
+      "4. 항트롬빈-III",
+      "5. 프로트롬빈"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1202,
+    "question": "혈액 응고 과정에서 교차연결된 섬유소 응괴(cross-linked fibrin clot)를 안정화하는 데 주된 역할을 하는 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 플라스민",
+      "2. 섬유소원",
+      "3. 플라스미노겐",
+      "4. α₂-항플라스민",
+      "5. 활성화된 XIII인자"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1203,
+    "question": "골수도말의 철염색 결과, 고리철적혈모구(ringed sideroblast)와 저장철이 증가되는 대표적인 질환은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 악성빈혈",
+      "2. 철결핍빈혈",
+      "3. 혈색소증",
+      "4. 유전구형적혈구증",
+      "5. 거대적혈모구빈혈"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1204,
+    "question": "진성적혈구증가증 진단 시 나타나는 특징은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 적혈구 수 감소",
+      "2. 백혈구 수 감소",
+      "3. JAK2 유전자 변이",
+      "4. 적혈구용적률 감소",
+      "5. 적혈구형성호르몬 증가"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1205,
+    "question": "감염단핵구증 환자에서 특징적으로 증가하는 림프구는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 형질세포",
+      "2. 중성구",
+      "3. 그물적혈구",
+      "4. 성숙적혈구",
+      "5. 비정형림프구"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1206,
+    "question": "골수도말염색상 MPO(myeloperoxidase), SBB(Sudan Black B) 염색에 강한 양성반응을 보이며, t(15;17) 염색체와 PML-RARA 유전자의 존재를 확인하였다. 예상되는 질환은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 다발골수종(MM)",
+      "2. 털세포백혈병(HCL)",
+      "3. 진성적혈구증가증(PV)",
+      "4. 만성골수성백혈병(CML)",
+      "5. 급성골수성백혈병(APL)"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1207,
+    "question": "프로트롬빈시간(PT)은 정상이지만 활성화부분트롬보플라스틴시간(aPTT)이 연장되었을 때 예상되는 결핍인자는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. I 인자",
+      "2. II 인자",
+      "3. V 인자",
+      "4. VII 인자",
+      "5. VIII 인자"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1208,
+    "question": "환자 혈액의 적혈구용적률이 65%일 경우 혈액응고 검사 시 해결 방법으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 가온한다.",
+      "2. 혼합검사를 실시한다.",
+      "3. 항응고제 양을 줄인다.",
+      "4. 알부민 한 방울을 첨가한다.",
+      "5. 헤파린 항응고제를 사용한다."
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1209,
+    "question": "적혈구 부동증(anisocytosis)을 가장 잘 나타내는 지표는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 적혈구크기분포폭(RDW)",
+      "2. 평균혈소판용적(MPV)",
+      "3. 평균적혈구용적(MCV)",
+      "4. 평균적혈구혈색소(MCH)",
+      "5. 평균적혈구혈색소농도(MCHC)"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1210,
+    "question": "이상 혈색소 검사 중 sodium dithionite 용해도 검사 결과가 양성일 경우, 확인 검사는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 철염색",
+      "2. PAS 염색",
+      "3. 실링검사",
+      "4. 엽산검사",
+      "5. 혈색소전기영동검사"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1211,
+    "question": "정상 성인의 골수도말검사에서 myeloid : erythroid(M:E)의 비율은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 1:1~2",
+      "2. 1:3~4",
+      "3. 1:5~8",
+      "4. 2~5:1",
+      "5. 8~10:1"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1212,
+    "question": "급성골수성백혈병(AML) FAB 분류 중 M5에서 증가하고, 비특이에스테라아제효소(NSE) 염색에 양성을 보이며 NaF 저해시험에서 억제되는 세포는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 단핵구계",
+      "2. 거핵구계",
+      "3. 적혈구계",
+      "4. 호산구계",
+      "5. 호염기구계"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1213,
+    "question": "비타민 K 의존 단백질로 와파린 복용 시 혈중 수치가 저하되어 지혈 지연이 나타나는 응고인자는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. I 인자",
+      "2. II 인자",
+      "3. III 인자",
+      "4. IV 인자",
+      "5. V 인자"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1214,
+    "question": "1차 지혈 검사 결과는 정상이고, PT와 aPTT가 모두 연장되었을 때 다음으로 시행해야 하는 검사는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 혼합검사",
+      "2. 출혈시간 검사",
+      "3. 혈병수축능검사",
+      "4. 혈소판응집능 검사",
+      "5. 혈소판점착능 검사"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1215,
+    "question": "만성골수성백혈병(CML) 진단에 유용한 필라델피아염색체의 유전자 배열은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. t(9;22), BCR-ABL1",
+      "2. t(1;19), PBX1-TCF3",
+      "3. t(9;11), MLLT3-MLL",
+      "4. t(15;17), PML-RARA",
+      "5. t(8;21), RUNX1-RUNX1T1"
+    ],
+    "subject": "혈액학"
+  },
+  {
+    "id": 1216,
+    "question": "Rh 항원계 중 가장 면역원성이 강한 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. C",
+      "2. c",
+      "3. D",
+      "4. E",
+      "5. e"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1217,
+    "question": "Anti-A₁ lectin과 강하게 반응하는 혈액형은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. A₁",
+      "2. A₂",
+      "3. A₂B",
+      "4. B3",
+      "5. O"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1218,
+    "question": "ABO 혈액형 검사 시, 혈구형 검사 Anti-A, Anti-B에는 비응집을, 혈청형 검사 A cell, B cell, O cell에는 모두 응집을 보이는 혈액형은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. A형",
+      "2. B형",
+      "3. O형",
+      "4. Cis-AB형",
+      "5. Bombay(Oh)형"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1219,
+    "question": "Weak D형 혈액형에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. Rh(D) 음성으로 판정한다.",
+      "2. 실온식염수법에서 반응성이 강하다.",
+      "3. 반드시 Rh(D) 양성 혈액을 수혈받는다.",
+      "4. 간접항글로불란법(IAT)을 이용하여 검사한다.",
+      "5. 수혈자와 공여자 모두 Rh(D) 음성으로 취급한다."
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1220,
+    "question": "수혈관련이식편대숙주병(TA-GVHD)을 예방하기 위해 혈액에 방사선을 조사하는 주된 목적은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 항체 기능 억제",
+      "2. T 세포 기능 억제",
+      "3. 혈소판 기능 억제",
+      "4. 대식세포 기능 억제",
+      "5. 거대세포바이러스 활성 억제"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1221,
+    "question": "보존기간이 가장 짧은 혈액제제는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 농축적혈구",
+      "2. 농축혈소판",
+      "3. 세척적혈구",
+      "4. 성분채집혈소판",
+      "5. 혈소판풍부혈장"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1222,
+    "question": "자가수혈에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 최대 6단위까지 가능하다.",
+      "2. 동종면역의 위험성이 있다.",
+      "3. 희귀혈액 확보에 유리하다.",
+      "4. 만 16세 미만은 실시하지 않는다.",
+      "5. 혈색소(Hb)가 9.0 g/dL 이상이어야 한다."
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1223,
+    "question": "항글로불린검사에 쓰이는 쿰즈 컨트롤 시약은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 효소",
+      "2. 알부민",
+      "3. IgG 감작적혈구",
+      "4. 저이온강도식염수(LISS)",
+      "5. 폴리에틸렌글리콜(PEG)"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1224,
+    "question": "Type & Screen(T&S)에 포함되는 검사는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 교차시험",
+      "2. 항체용출검사",
+      "3. 약제유발용혈검사",
+      "4. 직접항글로불린검사",
+      "5. 비예기항체선별검사"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1225,
+    "question": "주교차적합시험은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. O형 혈청 + 환자혈청",
+      "2. 환자혈청 + 환자적혈구",
+      "3. 환자혈청 + 공혈자적혈구",
+      "4. 환자적혈구 + 공혈자혈청",
+      "5. 공혈자혈청 + 공혈자적혈구"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1226,
+    "question": "인체 내 조직세포 표면, 혈소판, 백혈구에서 표현되기 때문에 장기 및 골수이식 시 중요하게 다루는 항원은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. P",
+      "2. HLA",
+      "3. Kell",
+      "4. Lewis",
+      "5. Lutheran"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1227,
+    "question": "성분채집혈소판의 보존기간은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 24시간",
+      "2. 120시간",
+      "3. 10일",
+      "4. 21일",
+      "5. 35일"
+    ],
+    "subject": "수혈학"
+  },
+  {
+    "id": 1228,
+    "question": "urease 시험에 사용하는 배지 제조 시 urea의 멸균 방법은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 간헐멸균",
+      "2. 자비멸균",
+      "3. 여과멸균",
+      "4. 화염멸균",
+      "5. 가압증기멸균"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1229,
+    "question": "산소성 세균과 무산소성 세균을 배양할 수 있으며, 실온에 보관하는 배지는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. Chocolate agar",
+      "2. MacConkey agar",
+      "3. Blood agar plate",
+      "4. Thioglycollate broth",
+      "5. Gram-Negative broth"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1230,
+    "question": "Staphylococcus aureus의 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. mannitol 비분해",
+      "2. DNase 시험 음성",
+      "3. catalase 시험 음성",
+      "4. coagulase 시험 양성",
+      "5. novobiocin 시험 내성"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1231,
+    "question": "Staphylococcus 속와 Streptococcus 속을 감별하는 검사는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. oxidase 시험",
+      "2. catalase 시험",
+      "3. optochin 시험",
+      "4. coagulase 시험",
+      "5. glucose oxidation-fermentation 시험"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1232,
+    "question": "Streptococcus pneumoniae에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 그람음성알균",
+      "2. 담즙용해시험에 음성",
+      "3. optochin 시험에 감수성",
+      "4. 6.5 % NaCl broth에서 증식",
+      "5. 혈액우무배지(BAP)에서 완전용혈"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1233,
+    "question": "Neisseria gonorrhoeae와 Neisseria meningitidis를 감별하는 검사는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. oxidase 시험",
+      "2. catalase 시험",
+      "3. lactose 분해능",
+      "4. glucose 분해능",
+      "5. maltose 분해능"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1234,
+    "question": "아포형성 그람양성막대균이며, 협막 보유, 운동성 음성, 혈액우무배지(BAP)에 비용혈을 보이는 균은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. Bacillus anthracis",
+      "2. Clostridium tetani",
+      "3. Helicobacter pylori",
+      "4. Bacteroides fragilis",
+      "5. Actinomyces israelii"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1235,
+    "question": "폐결핵이 의심되는 환자의 가래(객담)를 검사하기 위해 균질화하고 오염균을 제거하는 시약은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. HCl",
+      "2. H₂SO₄",
+      "3. phenol red",
+      "4. carbolfuchsin",
+      "5. NALC-2%NaOH"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1236,
+    "question": "Escherichia coli O157:H7을 감별하기 위한 배지로 가장 적합한 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. Bismuth Sulfite",
+      "2. Hektoen Enteric",
+      "3. Salmonella-Shigella",
+      "4. sorbitol MacConkey",
+      "5. Xylose Lysine Desoxycholate"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1237,
+    "question": "장티푸스 발병 1주일 이내에 균의 분리율이 가장 높은 검체는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 대변",
+      "2. 소변",
+      "3. 위액",
+      "4. 혈액",
+      "5. 가래(객담)"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1238,
+    "question": "TSI 배지에서 A/AG이며 인돌 시험 양성, MR(methyl red) 시험 양성인 균은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. Shigella sonnei",
+      "2. Escherichia coli",
+      "3. Klebsiella pneumoniae",
+      "4. Yersinia enterocolitica",
+      "5. Salmonella Paratyphi A"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1239,
+    "question": "다음 결과로 예상되는 균은? ・ TSI 배지: K/AG H₂S ・ PAD 시험: 양성 ・ 인돌 시험: 음성 ・ ODC 시험: 양성",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. Proteus mirabilis",
+      "2. Edwardsiella tarda",
+      "3. Citrobacter freundii",
+      "4. Morganella morganii",
+      "5. Klebsiella pneumoniae"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1240,
+    "question": "그람음성막대균으로 운동성이 없으며 협막이 있는 균은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. Proteus vulgaris",
+      "2. Salmonella Typhi",
+      "3. Citrobacter freundii",
+      "4. Serratia marcescens",
+      "5. Klebsiella pneumoniae"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1241,
+    "question": "어패류 섭취 후 장염을 보이는 환자의 결과이다. 예상되는 균은? ・ TCBS 배지: 녹색집락 ・ Kanagawa 현상: 양성 ・ 3 %, 6 %, 8 % NaCl broth: 발육",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. Vibrio cholerae",
+      "2. Vibrio mimicus",
+      "3. Vibrio vulnificus",
+      "4. Vibrio alginolyticus",
+      "5. Vibrio parahaemolyticus"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1242,
+    "question": "Pseudomonas aeruginosa의 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 주모성 편모",
+      "2. 포도당 비발효",
+      "3. TSI 배지에서 A/A",
+      "4. oxidase 시험 음성",
+      "5. catalase 시험 음성"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1243,
+    "question": "산소성 그람음성 짧은 막대균이며, 운동성 음성, oxidase 시 to 시험 양성인 균은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. Alcaligenes faecalis",
+      "2. Moraxella catarrhalis",
+      "3. Acinetobacter baumannii",
+      "4. Pseudomonas aeruginosa",
+      "5. Chryseobacterium meningosepticum"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1244,
+    "question": "혈액우무배지(BAP)에서 Staphylococcus aureus 집락 주위에 위성현상을 보이며 X, V 인자를 필요로 하는 균은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. Haemophilus ducreyi",
+      "2. Haemophilus influenzae",
+      "3. Haemophilus aphrophilus",
+      "4. Haemophilus parainfluenzae",
+      "5. Haemophilus parahaemolyticus"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1245,
+    "question": "백일해를 일으키며 Bordet-Gengou 배지에서 배양되는 균은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. Vibrio cholerae",
+      "2. Bordetella pertussis",
+      "3. Campylobacter jejuni",
+      "4. Neisseria meningitidis",
+      "5. Haemophilus influenzae"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1246,
+    "question": "장기간 항생제 복용 환자의 대변검체를 CCFA 배지에 접종한 후, 무산소 배양하였더니 황색집락을 보였다. 예상되는 균은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. Vibrio vulnificus",
+      "2. Helicobacter pylori",
+      "3. Nocardia asteroides",
+      "4. Campylobacter jejuni",
+      "5. Clostridioides(Clostridium) difficile"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1247,
+    "question": "Campylobacter jejuni의 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. 미세산소균",
+      "2. 아포 형성균",
+      "3. urease 시험 양성",
+      "4. oxidase 시험 음성",
+      "5. 그람양성막대균"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1248,
+    "question": "위염을 일으키는 미세산소성 그람음성막대균으로 urease를 생성하는 균은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. Yersinia pestis",
+      "2. Helicobacter pylori",
+      "3. Campylobacter jejuni",
+      "4. Salmonella typhimurium",
+      "5. Pseudomonas aeruginosa"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1249,
+    "question": "중합효소연쇄(사슬)반응으로 검출하는 MRSA(methicillin-resistant Staphylococcus aureus)의 표적 유전자는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. mecA",
+      "2. polA",
+      "3. recA",
+      "4. rpoB",
+      "5. vanA"
+    ],
+    "subject": "미생물학"
+  },
+  {
+    "id": 1250,
+    "question": "거짓(가성)균사, 후막포자, 발아관(germ tube) 형성을 보이는 효모양 진균은?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. Candida albicans",
+      "2. Malassezia furfur",
+      "3. Coccidioides immitis",
+      "4. Geotrichum candidum",
+      "5. Cryptococcus neoformans"
+    ],
+    "subject": "진균학"
+  },
+  {
+    "id": 1251,
+    "question": "SDA 배지 절편을 사용하여 진균의 구조와 형태를 용이하게 관찰할 수 있는 검사법은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 그람염색",
+      "2. 항산성염색",
+      "3. 10 % KOH 법",
+      "4. Germ tube 법",
+      "5. 슬라이드배양법"
+    ],
+    "subject": "진균학"
+  },
+  {
+    "id": 1252,
+    "question": "25℃에서 사상형으로 국화꽃(꽃잎) 모양의 형태를 보이고, 37℃에서 효모형으로 길쭉한 손가락 모양의 cigar body 모양의 분아세포를 형성하는 두형태곰팡이는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. Microsporum canis",
+      "2. Sporothrix schenckii",
+      "3. Trichophyton rubrum",
+      "4. Histoplasma capsulatum",
+      "5. Epidermophyton floccosum"
+    ],
+    "subject": "진균학"
+  },
+  {
+    "id": 1253,
+    "question": "바이러스의 일반적인 특징으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 항균제에 감수성이다.",
+      "2. 인공배지에서 증식한다.",
+      "3. 이분열 방식으로 증식한다.",
+      "4. DNA, RNA 중 하나를 보유한다.",
+      "5. 광학현미경으로 관찰 가능하다."
+    ],
+    "subject": "바이러스학"
+  },
+  {
+    "id": 1254,
+    "question": "호흡기와 결막에 감염을 일으키는 외피 비보유 DNA 바이러스는?",
+    "type": "multiple_choice",
+    "answer": "1",
+    "explanation": "",
+    "options": [
+      "1. Adenovirus",
+      "2. Coronavirus",
+      "3. Rubella virus",
+      "4. Cytomegalovirus",
+      "5. Herpes simplex virus"
+    ],
+    "subject": "바이러스학"
+  },
+  {
+    "id": 1255,
+    "question": "선천기형과 관련 있는 외피 보유 RNA 바이러스는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. Rotavirus",
+      "2. Poliovirus",
+      "3. Adenovirus",
+      "4. Rubella virus",
+      "5. Smallpox virus"
+    ],
+    "subject": "바이러스학"
+  },
+  {
+    "id": 1256,
+    "question": "영양형의 세포질 내에 탐식한 적혈구가 관찰되며, 중심성 핵소체의 특징을 보이는 원충은?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. 대장아메바",
+      "2. 왜소아메바",
+      "3. 이질아메바",
+      "4. 이핵아메바",
+      "5. 요오드아메바"
+    ],
+    "subject": "기생충학"
+  },
+  {
+    "id": 1257,
+    "question": "폐흡충에 관한 설명으로 옳은 것은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 자웅이체이다.",
+      "2. 위족으로 운동한다.",
+      "3. 충란에 난개가 없다.",
+      "4. 제2중간숙주는 은어이다.",
+      "5. 검체는 대변과 가래(객담)이다."
+    ],
+    "subject": "기생충학"
+  },
+  {
+    "id": 1258,
+    "question": "액취, 갈고리, 4개의 흡반이 있는 두절과 한 쪽에 평균 9개의 자궁측지가 있다. 예상되는 기생충은?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 무구조충",
+      "2. 유구조충",
+      "3. 왜소조충",
+      "4. 만손주혈흡충",
+      "5. 광절열두조충"
+    ],
+    "subject": "기생충학"
+  },
+  {
+    "id": 1259,
+    "question": "미생물에 감염되고 회복된 후 항체가 생성되었다. 면역의 종류는?",
+    "type": "multiple_choice",
+    "answer": "4",
+    "explanation": "",
+    "options": [
+      "1. 선천성면역",
+      "2. 인공능동면역",
+      "3. 인공수동면역",
+      "4. 자연능동면역",
+      "5. 자연수동면역"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1260,
+    "question": "면역 반응의 초기에 나타나고 결합력(avidity)이 가장 큰 항체는?",
+    "type": "multiple_choice",
+    "answer": "3",
+    "explanation": "",
+    "options": [
+      "1. IgG",
+      "2. IgA",
+      "3. IgM",
+      "4. IgD",
+      "5. IgE"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1261,
+    "question": "보체의 대체경로(alternative pathway)에서 C5전환효소는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. C1qrs",
+      "2. C4b2a",
+      "3. C3bBb",
+      "4. C4b2a3b",
+      "5. C3bBbC3b"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1262,
+    "question": "자연살해(NK) 세포가 인터루킨-2(IL-2)에 의해 활성화된 세포는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 중성구(neutrophil)",
+      "2. 대식세포(macrophage)",
+      "3. B 림프구(B lymphocyte)",
+      "4. 도움T세포(helper T cell)",
+      "5. 림포카인활성화살해세포(lymphokine-activated killer cell)"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1263,
+    "question": "이란성쌍둥이가 서로에게 신장을 이식했다면 이식의 종류는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. 동계이식",
+      "2. 동종이식",
+      "3. 이종이식",
+      "4. 자가이식",
+      "5. 타종이식"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1264,
+    "question": "4배 희석한 혈청 0.2 mL를 생리식염수 0.8 mL와 혼합하였다면 혈청의 최종 희석배수는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 10배",
+      "2. 15배",
+      "3. 20배",
+      "4. 25배",
+      "5. 30배"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1265,
+    "question": "매독이 의심되는 환자에게서 RPR(rapid plasma reagin) test의 결과가 'reactive'로 판정되었다. 매독 확인을 위해 수행해야 하는 특이적 혈청검사는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. Widal test",
+      "2. antistreptolysin O(ASO) test",
+      "3. rheumatoid factor(RF) test",
+      "4. Venereal Disease Research Laboratory(VDRL) test",
+      "5. Treponema pallidum particle agglutination(TP-PA) test"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1266,
+    "question": "B형 간염 바이러스 환자에게서 높은 전염력을 확인하는 혈청학적 지표는?",
+    "type": "multiple_choice",
+    "answer": "2",
+    "explanation": "",
+    "options": [
+      "1. HBcAg",
+      "2. HBeAg",
+      "3. anti-HBc",
+      "4. anti-HBe",
+      "5. anti-HBs"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1267,
+    "question": "도움T세포(helper T cell)의 CD4와 결합하는 사람면역결핍 바이러스(HIV-1) 단백질은?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. p8",
+      "2. p12",
+      "3. p21",
+      "4. gp31",
+      "5. gp120"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1268,
+    "question": "자가면역질환 의심환자에 대한 ANA(anti nuclear antibody) 검사에서 기질로 사용하는 세포는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 호산구(eosinophil)",
+      "2. 호염기구(basophil)",
+      "3. 적혈구(erythrocyte)",
+      "4. 림프구(lymphocyte)",
+      "5. 인간상피세포(HEp-2 cell)"
+    ],
+    "subject": "혈청학"
+  },
+  {
+    "id": 1269,
+    "question": "생체 내(in vivo) 알레르기 검사는?",
+    "type": "multiple_choice",
+    "answer": "5",
+    "explanation": "",
+    "options": [
+      "1. 호산구 수 검사",
+      "2. 총 IgE 정량검사",
+      "3. 호염기구 수 검사",
+      "4. 특이 IgE 정량검사",
+      "5. 알레르기피부반응검사"
+    ],
+    "subject": "혈청학"
   }
 ]
