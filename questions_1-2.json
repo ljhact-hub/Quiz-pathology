@@ -16923,7 +16923,7 @@
     "answer": "5",
     "explanation": "",
     "options": [
-      "1. 원주세포",
+      "1. 이행세포",
       "2. 입방세포",
       "3. 각화성 편평세포",
       "4. 비각화성 편평세포",
@@ -18388,7 +18388,7 @@
   },
   {
     "id": 1243,
-    "question": "산소성 그람음성 짧은 막대균이며, 운동성 음성, oxidase 시 to 시험 양성인 균은?",
+    "question": "산소성 그람음성 짧은 막대균이며, 운동성 음성, oxidase 음성인 균은?",
     "type": "multiple_choice",
     "answer": "3",
     "explanation": "",
